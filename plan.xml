@@ -12,7 +12,7 @@
 	</release_deliverables>
 	<release_milestones>
 		<preamble>
-			<html:div>Milestones are sill to be scheduled.</html:div>
+			<html:div>Milestones are still to be scheduled.</html:div>
 		</preamble>
 		<!--
 			<milestone date="7/1/2008" milestone="M1"> <html:div>optional
@@ -39,11 +39,11 @@
 	</compatibility_with_previous_releases>
 	<themes_and_priorities>
 		<preamble>
-			<html:div>The upcomming tasks are:</html:div>
+			<html:div>The upcoming tasks are:</html:div>
 		</preamble>
 		<theme name="Migrate existing code to Eclipse SVN">
-			<description>The projects COPE and Metapatch have to pass the
-				IP-Review and be committed to SVN.</description>
+			<description><html:div>The projects COPE and MetaPatch have to pass the
+				IP-Review and be committed to SVN.</html:div></description>
 			<!--
 				<committed bugzilla="...(recommended) bugzilla search url...">
 				...(optional alternate) html...</committed> <proposed
@@ -53,13 +53,13 @@
 			-->
 		</theme>
 		<theme name="Define a common infrastructure for model migration">
-			<description>The infrastructure has to be able to identify the
+			<description><html:div>The infrastructure has to be able to identify the
 				version of EMF-Models independently of their serialization format.
 				Then, there is a hook needed to prepare the meta model needed for
 				this version. It should be possible to register transformations
 				(independently of their transformation language). These
 				transformations should be called automatically to migrate the model
-				to the currently needed version. </description>
+				to the currently needed version. </html:div></description>
 			<!--
 				<committed bugzilla="...(recommended) bugzilla search url...">
 				...(optional alternate) html... </committed> <proposed
