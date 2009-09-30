@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan"
+	xmlns:html="http://www.w3.org/1999/xhtml" name="Edapt">
+	<release projectid="emft.edapt" version="1.0" />
+	<introduction>
+		<html:div>Edapt is a framework for Ecore model adaptation and instance
+			migration.</html:div>
+	</introduction>
+	<release_deliverables>
+		<html:div>Eclipse plugins and features.</html:div>
+	</release_deliverables>
+	<release_milestones>
+		<preamble>
+			<html:div>Milestones are sill to be scheduled.</html:div>
+		</preamble>
+		<!--
+			<milestone date="7/1/2008" milestone="M1"> <html:div>optional
+			html</html:div> </milestone> <milestone date="8/1/2008"
+			milestone="M2"> <html:div>optional html</html:div> </milestone>
+			<milestone date="9/1/2008" milestone="RC1"> <html:div>optional
+			html</html:div> </milestone> <milestone date="6/28/2009"
+			milestone="1.0" /> <postamble> <html:div>html content</html:div>
+			</postamble>
+		-->
+	</release_milestones>
+	<target_environments>
+		<html:div>The target environment is the latest milestone release of
+			Eclipse and EMF.</html:div>
+		<!--
+			<internationalization> <html:div>Some xhtml content here. Make sure
+			to use the prefix before the elements</html:div>
+			</internationalization>
+		-->
+	</target_environments>
+	<compatibility_with_previous_releases>
+		<html:div>No compatibility with previous releases is needed since
+			there have been no previous releases.</html:div>
+	</compatibility_with_previous_releases>
+	<themes_and_priorities>
+		<preamble>
+			<html:div>The upcomming tasks are:</html:div>
+		</preamble>
+		<theme name="Migrate existing code to Eclipse SVN">
+			<description>The projects COPE and Metapatch have to pass the
+				IP-Review and be committed to SVN.</description>
+			<!--
+				<committed bugzilla="...(recommended) bugzilla search url...">
+				...(optional alternate) html...</committed> <proposed
+				bugzilla="...(recommended) bugzilla search url..."> ...(optional
+				alternate) html...</proposed> <deferred bugzilla="...(recommended)
+				bugzilla search url..."> ...(optional alternate) html...</deferred>
+			-->
+		</theme>
+		<theme name="Define a common infrastructure for model migration">
+			<description>The infrastructure has to be able to identify the
+				version of EMF-Models independently of their serialization format.
+				Then, there is a hook needed to prepare the meta model needed for
+				this version. It should be possible to register transformations
+				(independently of their transformation language). These
+				transformations should be called automatically to migrate the model
+				to the currently needed version. </description>
+			<!--
+				<committed bugzilla="...(recommended) bugzilla search url...">
+				...(optional alternate) html... </committed> <proposed
+				bugzilla="...(recommended) bugzilla search url..."> ...(optional
+				alternate) html... </proposed> <deferred bugzilla="...(recommended)
+				bugzilla search url..."> ...(optional alternate) html... </deferred>
+			-->
+		</theme>
+	</themes_and_priorities>
+	<!--
+		<appendix name="Project Refactoring"> ...html... </appendix>
+	-->
+</plan>
