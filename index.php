@@ -33,6 +33,17 @@
 	<div id="midcolumn">
 	  This project was just provisioned, so there is nothing here yet. Here is the original <a href="http://www.eclipse.org/proposals/edapt/">proposal</a>.
 	</div>
+	
+	<div id="rightcolumn">
+		<div class="sideitem">
+			<h6>Incubation</h6>
+			<div align="center">
+				<a href="/projects/what-is-incubation.php">
+					<img align="center" src="/images/egg-incubation.png" border="0" alt="Incubation" />
+				</a>
+			</div>
+ 		</div>
+	</div>
 
 EOHTML;
 
