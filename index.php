@@ -31,7 +31,15 @@
 	$html = <<<EOHTML
 
 	<div id="midcolumn">
-	  This project was just provisioned, so there is nothing here yet. Here is the original <a href="http://www.eclipse.org/proposals/edapt/">proposal</a>.
+		<h1>Edapt</h1>
+		<h2>Framework for Ecore model adaptation and instance migration</h2>
+		
+	 Here is the original <a href="http://www.eclipse.org/proposals/edapt/">proposal</a>.
+	 
+	 <p/>
+	 
+	 The operation-based part COPE is currently under review in the <a href="http://dev.eclipse.org/ipzilla/show_bug.cgi?id=3642">parallel IP process</a>.
+	 In the meantime, you can try out COPE directly from its <a href="http://cope.in.tum.de">website</a>.
 	</div>
 	
 	<div id="rightcolumn">
