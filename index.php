@@ -39,7 +39,7 @@
 	 <p/>
 	 
 	 The operation-based part COPE is currently under review in the <a href="http://dev.eclipse.org/ipzilla/show_bug.cgi?id=3642">parallel IP process</a>.
-	 In the meantime, you can try out COPE directly from its <a href="http://cope.in.tum.de">website</a>.
+	 In the meantime, you can try out COPE directly from its <a href="http://cope.in.tum.de" target="_blank">website</a>.
 	</div>
 	
 	<div id="rightcolumn">
