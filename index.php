@@ -15,8 +15,8 @@
 	#
 	# Begin: page-specific settings.  Change these. 
 	$pageTitle 		= "Edapt";
-	$pageKeywords	= "Type, page, keywords, here";
-	$pageAuthor		= "Type your name here";
+	$pageKeywords	= "model migration, metamodel adaptation, Ecore adaptation, instance migration";
+	$pageAuthor		= "Markus Herrmannsdoerfer";
 	
 	# Add page-specific Nav bars here
 	# Format is Link text, link URL (can be http://www.someothersite.com/), target (_self, _blank), level (1, 2 or 3)
@@ -27,34 +27,8 @@
 	# End: page-specific settings
 	#
 		
-	# Paste your HTML content between the EOHTML markers!	
-	$html = <<<EOHTML
-
-	<div id="midcolumn">
-		<h1>Edapt</h1>
-		<h2>Framework for Ecore model adaptation and instance migration</h2>
-		
-	 Here is the original <a href="http://www.eclipse.org/proposals/edapt/">proposal</a>.
-	 
-	 <p/>
-	 
-	 The operation-based part COPE is currently under review in the <a href="http://dev.eclipse.org/ipzilla/show_bug.cgi?id=3642">parallel IP process</a>.
-	 In the meantime, you can try out COPE directly from its <a href="http://cope.in.tum.de" target="_blank">website</a>.
-	</div>
-	
-	<div id="rightcolumn">
-		<div class="sideitem">
-			<h6>Incubation</h6>
-			<div align="center">
-				<a href="/projects/what-is-incubation.php">
-					<img align="center" src="/images/egg-incubation.png" border="0" alt="Incubation" />
-				</a>
-			</div>
- 		</div>
-	</div>
-
-EOHTML;
-
+	# Paste your HTML content between the EOHTML markers!
+	$html = file_get_contents('pages/_index.html');
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
