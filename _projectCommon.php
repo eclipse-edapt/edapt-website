@@ -15,11 +15,11 @@
 	# $Nav->addCustomNav("FAQ", 				"faq.php", 			"_self", 2);
 
 	# Break the navigation into sections
-	$Nav->addNavSeparator("MyProject", 	"/default");
-	$Nav->addCustomNav("Download", "/project/download.php", "_self", 3);
-	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
-	$Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
-	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
+	# $Nav->addNavSeparator("MyProject", 	"/default");
+	# $Nav->addCustomNav("Download", "/project/download.php", "_self", 3);
+	# $Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
+	# $Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
+	# $Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
 
 	# To define additional CSS or other pre-body headers
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>');
