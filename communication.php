@@ -28,7 +28,7 @@
 	<li><b><a
 		href="mailto:herrmama@in.tum.de"
 		title="mailto:herrmama@in.tum.de"
-		rel="nofollow">Professional Support</a></b> - contact us directly</li>
+		rel="nofollow">Plain Email</a></b> - contact us directly</li>
 </ul>
 
 </div>
