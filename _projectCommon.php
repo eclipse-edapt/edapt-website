@@ -19,7 +19,7 @@
 	$Nav->addCustomNav("Home", "/edapt", "_self", 3);
 	$Nav->addCustomNav("Download", "/edapt/download.php", "_self", 3);
 	# $Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
-	# $Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
+	$Nav->addCustomNav("Support", "/edapt/support.php", "_blank", 3);
 	# $Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
 
 	# top navigation bar
@@ -27,12 +27,12 @@
 	$Menu->setMenuItemList(array());
 	$Menu->addMenuItem("Home", "/edapt", "_self");
 	$Menu->addMenuItem("Download", "/edapt/download.php", "_self");
-	# $Menu->addMenuItem("Communication", "/emf-store/communication.php", "_self");
-	# $Menu->addMenuItem("Getting started", "/emf-store/gettingstarted.php", "_self");
-	# $Menu->addMenuItem("Support", "/emf-store/support.php", "_self");
-	# $Menu->addMenuItem("Documentation", "/emf-store/documentation.php", "_self");
-	# $Menu->addMenuItem("Support", "/emf-store/support.php", "_self");
-	# $Menu->addMenuItem("Developers", "/emf-store/developers", "_self");
+	# $Menu->addMenuItem("Communication", "/edapt/communication.php", "_self");
+	# $Menu->addMenuItem("Getting started", "/edapt/gettingstarted.php", "_self");
+	$Menu->addMenuItem("Support", "/edapt/support.php", "_self");
+	# $Menu->addMenuItem("Documentation", "/edapt/documentation.php", "_self");
+	# $Menu->addMenuItem("Support", "/edapt/support.php", "_self");
+	# $Menu->addMenuItem("Developers", "/edapt/developers", "_self");
 
 	# To define additional CSS or other pre-body headers
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>');
