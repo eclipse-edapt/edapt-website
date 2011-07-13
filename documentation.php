@@ -10,15 +10,26 @@
  *    
  *******************************************************************************/
 
-	$pageTitle 		= "Edapt - Download";
+	$pageTitle 		= "Edapt - Documentation";
 
 	$html  = <<<EOHTML
 <div id="midcolumn">
 <h2>$pageTitle</h2>
-<p>All downloads are provided under the terms and conditions of the <a href="/legal/epl/notice.php">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
+<p>We are currently setting up the documentation for Edapt. 
+In the meantime, there is some documentation available for the predecessor project COPE:</p>
 
 <ul>
-<li><a href="http://download.eclipse.org/edapt/update-site/">Update Site</a> - install Edapt in your Eclipse workbench</li>
+	<li><b><a href="http://cope.in.tum.de/pmwiki.php?n=Demo.Main"
+		title="http://cope.in.tum.de/pmwiki.php?n=Demo.Main"
+		rel="nofollow">Demo</a></b> - getting started with COPE</li>
+	<li><b><a
+		href="http://cope.in.tum.de/pmwiki.php?n=Documentation.Main"
+		title=http://cope.in.tum.de/pmwiki.php?n=Documentation.Main"
+		rel="nofollow">Documentation</a></b> - read about the details</li>
+	<li><b><a
+		href="http://cope.in.tum.de/pmwiki.php?n=Publications.Main"
+		title="http://cope.in.tum.de/pmwiki.php?n=Publications.Main"
+		rel="nofollow">Publications</a></b> - learn about scientific results</li>
 </ul>
 
 

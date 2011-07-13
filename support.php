@@ -14,6 +14,8 @@
 
 	$html  = <<<EOHTML
 <div id="midcolumn">
+<h2>$pageTitle</h2>
+There are different ways to get support:
 <ul>
 	<li><b><a href="documentation.php"
 		title="Documentation">Documentation</a></b> - read to learn about Edapt</li>
@@ -22,9 +24,13 @@
 		title="http://www.eclipse.org/forums/index.php/f/19/"
 		rel="nofollow">EMFT Newsgroup</a></b> - get an answer to your questions</li>
 	<li><b><a
-		href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=EMFT.edapt"
-		title="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=EMFT.edapt"
+		href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=EMFT&component=Edapt"
+		title="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=EMFT&component=Edapt"
 		rel="nofollow">File a bug</a></b> - file bugs and feature requests</li>
+	<li><b><a
+		href="mailto:herrmama@in.tum.de"
+		title="mailto:herrmama@in.tum.de"
+		rel="nofollow">Professional Support</a></b> - contact us if you need professional support</li>
 </ul>
 
 </div>

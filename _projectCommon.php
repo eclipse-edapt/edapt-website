@@ -18,7 +18,7 @@
 	$Nav->addNavSeparator("Edapt", 	"/default");
 	$Nav->addCustomNav("Home", "/edapt", "_self", 3);
 	$Nav->addCustomNav("Download", "/edapt/download.php", "_self", 3);
-	# $Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
+	$Nav->addCustomNav("Documentation", "/edapt/documentation.php", "_blank", 3);
 	$Nav->addCustomNav("Support", "/edapt/support.php", "_blank", 3);
 	# $Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
 
@@ -29,8 +29,8 @@
 	$Menu->addMenuItem("Download", "/edapt/download.php", "_self");
 	# $Menu->addMenuItem("Communication", "/edapt/communication.php", "_self");
 	# $Menu->addMenuItem("Getting started", "/edapt/gettingstarted.php", "_self");
+	$Menu->addMenuItem("Documentation", "/edapt/documentation.php", "_self");
 	$Menu->addMenuItem("Support", "/edapt/support.php", "_self");
-	# $Menu->addMenuItem("Documentation", "/edapt/documentation.php", "_self");
 	# $Menu->addMenuItem("Support", "/edapt/support.php", "_self");
 	# $Menu->addMenuItem("Developers", "/edapt/developers", "_self");
 
