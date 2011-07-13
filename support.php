@@ -16,6 +16,7 @@
 <div id="midcolumn">
 <h2>$pageTitle</h2>
 There are different ways to get support:
+
 <ul>
 	<li><b><a href="documentation.php"
 		title="Documentation">Documentation</a></b> - read to learn about Edapt</li>
