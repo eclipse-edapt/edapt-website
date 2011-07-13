@@ -17,10 +17,9 @@
 <h2>$pageTitle</h2>
 <p>All downloads are provided under the terms and conditions of the <a href="/legal/epl/notice.php">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 
-<h3>Update Site</h3>
-<p>You can get the latest builds from <a href="http://download.eclipse.org/edapt/update-site/">this update site (http://download.eclipse.org/edapt/update-site/)</a>. 
-
-
+<ul>
+<li>Update Site: <a href="http://download.eclipse.org/edapt/update-site/">http://download.eclipse.org/edapt/update-site/</a></li>
+</ul>
 
 
 </div>
