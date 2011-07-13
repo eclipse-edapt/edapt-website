@@ -15,7 +15,7 @@
 	$html  = <<<EOHTML
 <div id="midcolumn">
 <h2>$pageTitle</h2>
-There are different ways to get support:
+<p>There are different ways to get support:</p>
 
 <ul>
 	<li><b><a href="documentation.php"
