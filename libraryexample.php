@@ -48,6 +48,18 @@ The operations can be performed directly in the editor and their execution is re
 To e.g. rename an attribute, the attribute is selected, the Rename operation is selected and a new name be chosen, and even surgery can be performed. 
 The history that is recorded when executing change operations can be used to automatically migrate the existing models.
 </p>
+<p>
+Edapt is a framework. 
+It consists of a runtime that is required to perform the migration, and an integration into the Ecore editor to record the history. 
+The runtime can be integrated into an existing application to be able to migrate models. 
+In addition, Edapt can be extended with new reusable operations. 
+The runtime is based only on EMF, which is used to specify the manually defined migration, and the editor integration is based on EMF Compare, which is used for advanced features.
+</p>
+<p>
+In this article, we describe the main features of Edapt to adapt metamodels and to migrate their models. 
+Therefore, we show how a history can be created for a metamodel, how the different types of operations can be recorded, and how a history can be integrated into an existing application for migrating models. 
+Finally, we provide a brief overview of the advanced features of Edapt.
+</p>
 
 <h3>Ecore Model History</h3>
 
