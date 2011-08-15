@@ -98,9 +98,9 @@ Also, the OPERATION BROWSER shows constraints that must be satisfied before the 
 </p>
 <p>
 We first show the application of a simple operation. 
-In the library metamodel, the class Library currently has the attribute name. 
+In the library metamodel, the class <i>Library</i> currently has the attribute <i>name</i>. 
 This attribute is no longer needed and should be removed. 
-To remove the attribute, we choose it in the Ecore editor and the operation Delete feature in the OPERATION BROWSER. 
+To remove the attribute, we choose it in the Ecore editor and the operation <i>Delete Feature</i> in the OPERATION BROWSER. 
 In addition, no other parameters are set. 
 The operation can be executed via the EXECUTE button in the OPERATION BROWSER. 
 Thus, the operation is applied to the metamodel and recorded in the history (see Figure 2, top right). 
@@ -114,8 +114,17 @@ It is therefore better to model the category of the book as an enumeration.
 To convert the subclasses to an enumeration, the operation <i>Enumeration to Subclasses</i> can be used. 
 For the first parameter, the superclass <i>Book</i> has to be selected in the Ecore editor. 
 As an additional parameter, we must specify the name of the enumeration (<i>enumName</i> = "book category") and the name of the attribute (<i>attributeName</i> = "category"), before the operation can be executed. 
-In the metamodel, the subclasses of the book will be removed and the attribute will be added to Book, which has the added type as enumeration.
-
+In the metamodel, the subclasses of <i>Book</i> will be removed and the attribute will be added to <i>Book</i>, which has the added type as enumeration.
+</p>
+<p>
+These were just two examples of operations. 
+Edapt currently offers the user over 60 reusable operations. 
+In addition, new operations can be added via an extension point. 
+Listing 1 shows the implementation of Operation <i>Delete Feature</i> for which Edapt provides a language embedded in Java. 
+Reusable operations are implemented as Java classes, parameters of the operation as attributes of the class and preconditions as methods. 
+In addition, the metamodel change and the model migration must be defined by implemeting the method <i>execute</i>. 
+In the case of <i>Delete Feature</i>, only the feature is deleted on the metamodel level, but on the model level, the values ​​of the feature are removed. 
+Therefor, a helper method is used, which ensures that in case of a containment reference, also all values ​​of all children will be deleted.
 </p>
 
 <h3>Custom Coupled Operations</h3>
