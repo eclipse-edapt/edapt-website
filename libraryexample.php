@@ -117,7 +117,7 @@ Thus, the operation is applied to the metamodel and recorded in the history (see
 The attribute can be deleted directly in the editor, but then the migration has to be specified manually.
 </p><p>
 Of course, Edapt also provides more complex operations. 
-Currently, in the library metamodel, there are subclasses for different categories of books (see Figure 1). 
+Currently, in the library metamodel, there are subclasses for different categories of books (see <a href="#figure1">Figure 1</a>). 
 This makes it impossible for the category of a book to change at runtime, because EMF does not allow type changes. 
 It is therefore better to model the category of the book as an enumeration. 
 To convert the subclasses to an enumeration, the operation <i>Enumeration to Subclasses</i> can be used. 
@@ -179,7 +179,7 @@ Our case studies have also shown that the migrations are sometimes so specific t
 In these cases, the migration can be specified manually. 
 In order to do so, the metamodel change is first performed manually in the Ecore editor and the recorded changes are later enriched by the migration.
 </p><p>
-In the library metamodel, the author of a book is currently modeled by the attribute <i>author</i> type <i>EString</i> (see Figure 1). 
+In the library metamodel, the author of a book is currently modeled by the attribute <i>author</i> type <i>EString</i> (see <a href="#figure1">Figure 1</a>). 
 However, it would be better to define a separate class for authors so that recurring author names can be grouped together. 
 To specify the necessary migration manually, the corresponding metamodel changes have to be carried out first: 
 the class <i>Writer</i> for authors must be created and suitably connected.
