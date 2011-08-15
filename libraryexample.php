@@ -65,14 +65,14 @@ Finally, we provide a brief overview of the advanced features of Edapt.
 <h3>Metamodel History</h3>
 
 <p>
-To record operations, a history need to be created for the metamodel. 
-In order to do so, the metamodel must be opened in Ecore editor: in our case the library metamodel. 
-The metamodel history can be created using the Eclipse-View OPERATION BROWSER (see <a href="#figure2">Figure 2</a>, right). 
+To record operations, we first need to create a history for the metamodel. 
+In order to do so, the metamodel must be opened in Ecore editor; in our case the library metamodel as shown in <a href="#figure1">Figure 1</a>. 
+The metamodel history can be created using the Eclipse view OPERATION BROWSER (see <a href="#figure2">Figure 2</a>, right). 
 The OPERATION BROWSER can be opened by means of WINDOW -> OTHER ... -> SHOW VIEW.
 </p><p>
 In the OPERATION BROWSER, there is the CREATE HISTORY button to create the history. 
 In a dialog the location of the history can be selected. 
-If the metamodel consists of several files, the set of files can be selected, for which history is recorded. 
+If the metamodel consists of several files, the set of files can be selected, for which the history is recorded. 
 If the dialog is finished, the file in which the history is recorded appears in the Ecore editor (see <a href="#figure2">Figure 2</a>, top left).
 </p><p>
 The history consists of a sequence of releases. 
@@ -80,7 +80,7 @@ A release is a version of the metamodel for which models may exist.
 A release in turn consists of a sequence of recorded operations. 
 The initial history contains a release that contains the operations to create the metamodel. 
 This initial release is still open, i.e. it must be completed to mark the initial version of the metamodel as a release. 
-Completing the release can be performed by the RELEASE button in the OPERATION BROWSER. 
+The release can be completed by selecting the RELEASE button in the OPERATION BROWSER. 
 After that, a new release in the history appears in which the operations carried out from now on will be recorded.
 </p>
 
