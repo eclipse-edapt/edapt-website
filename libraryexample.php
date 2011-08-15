@@ -201,7 +201,7 @@ The writer must either be created or has already been created.
 
 <p>
 <hr/>
-<a name="listing2">Listing 2</a> - Custom Migration
+<a name="listing2">Listing 2</a> - Custom Migration to extract the class <i>Writer</i>
 <pre class="codebox">
 public class WriterCustomMigration extends CustomMigration {
 
@@ -248,22 +248,22 @@ public class WriterCustomMigration extends CustomMigration {
 
 <p>
 If we have performed all the desired changes, the release must be completed again with RELEASE in the OPERATION BROWSER. 
-Edapt automatically prompts the user through a dialog, if the namespace URI should be adapted. 
-Since in EMF the namespace URI is used for recognizing the metamodel version, the adaptation should be performed normally. 
+Edapt automatically prompts the user through a dialog, whether the namespace URI should be adapted. 
+Since in EMF the namespace URI is used for recognizing the metamodel version, the adaptation should be performed in most cases. 
 By changing the namespace URI for new releases, Edapt can automatically detect the metamodel version of models and migrate them suitably. 
 Of course, there are also cases where one does not want to adapt the namespace URI. 
 Then, the user must, however, care for the recognition of the metamodel version themselves.
 </p><p>
 To be able to migrate models, the history can be registered using the extension point <i>org.eclipse.emf.edapt.migrators</i>.
-This extension point is defined in the plugin "org.eclipse.emf.edapt.history" which we have to add to the dependencies of the plugin.
+This extension point is defined in the plugin <i>org.eclipse.emf.edapt.history</i> which we have to add to the dependencies of the plugin.
 Edapt interprets the history to reconstruct the metamodel versions for loading models and for performing the appropriate migration. 
 By delivering the history together with the Edapt runtime, an application can automatically migrate models.
 </p><p>
 In addition to that, we also have to regenerate the code for the library editor. 
-In order to do so, we first have to reload the genmodel my means of RELOAD ... in the context menu, after which it will be opened.
+In order to do so, we first have to reload the genmodel my means of RELOAD ... in the context menu, after which it is opened.
 In the open genmodel, we then have to select GENERATE ALL in the context menu. 
 This can lead to compile errors, because EMF does not delete the subclasses, which we converted into an enumeration, during the regeneration. 
-These classes can easily be removed manually.
+However, these classes can easily be removed manually.
 </p><p>
 The migration execution can be integrated directly into the editor code, as <a href="#listing3">Listing 3</a> shows. 
 The method <i>checkMigration</i> must be called at the beginning of the method <i>createModel</i> in the library editor. 
@@ -271,7 +271,7 @@ It first checks whether a migration is necessary, asks the user whether they wan
 The progress is displayed by means of a progress monitor dialog. 
 So that the method works, a dependency on <i>org.eclipse.emf.edapt.migration</i> must be inserted in the library editor plugin.
 </p><p>
-Now the customized library editor in a second Eclipse instance can be restarted. 
+Now the customized library editor can be started in a second Eclipse instance. 
 When a model is opened, which conforms to the old model, the user is asked whether they want to migrate it. 
 Then the migrated model is opened in the editor. 
 </p>
@@ -341,12 +341,12 @@ private void performMigration(final Migrator migrator,
 
 <p>
 We now have shown the typical use case of Edapt. 
-But there are some advanced features that we can not explain in detail, but we want at least to raise it here.
+But there are some advanced features that we can not explain in detail, but we want to at least mention here.
 </p><p>
-It does not have a second Eclipse instance to be started by calling the Migrator. 
-It can also be accessed in the same Eclipse instance in which he is present in the workspace. 
-This requires the migrator migrator plug-in directory and a model can be selected and the context menu, the Migrator on EDAPT -> MIGRATE be called. 
-This makes debugging easier by manually specified migrations.
+A second Eclipse instance is not required to execute the migration defined by a history on the model.
+It can also be executed in the same Eclipse instance in which the history is available in the workspace.
+In order to do so, a run configuration needs to be defined in the Eclipse instance by selecting the history and the model. 
+This makes debugging easier for manually specified migrations.
 </p><p>
 Edapt also offers some functionality for reconstructing the history. 
 By means of the RECONSTRUCTION VIEW, old metamodel versions can be displayed interactively. 
@@ -376,7 +376,7 @@ Edapt adapts the difference automatically after each execution of an operation.
 <p>
 Edapt supports the user to create an automated model migration for a metamodel change. 
 For this purpose, Edapt records the operations that are executed on the metamodel in a history, and enriches them with migrations. 
-Recurrent migrations are provided by means of operations. 
+Recurrent migrations are provided by means of reusable operations. 
 The history can be interpreted to automatically migrate models, which can be embedded into the application.
 <p>
 
