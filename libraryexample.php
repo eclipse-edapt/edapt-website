@@ -263,7 +263,8 @@ Then the migrated model is opened in the editor.
 			if (!release.isLatestRelease()) {
 				if (MessageDialog.openQuestion(Display.getDefault().getActiveShell(),
 						"Migration necessary",
-						"A migration of the model is necessary. Do you want to proceed?")) {
+						"A migration of the model is necessary. " +
+						"Do you want to proceed?")) {
 					performMigration(migrator, resourceURI, release);
 				}
 			}
