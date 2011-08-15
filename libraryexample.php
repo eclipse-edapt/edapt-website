@@ -261,10 +261,9 @@ Then the migrated model is opened in the editor.
 			final Release release = migrator.getRelease(resourceURI).iterator()
 					.next();
 			if (!release.isLatestRelease()) {
-				if (MessageDialog
-						.openQuestion(Display.getDefault().getActiveShell(),
-								"Migration necessary",
-								"A migration of the model is necessary. Do you want to proceed?")) {
+				if (MessageDialog.openQuestion(Display.getDefault().getActiveShell(),
+						"Migration necessary",
+						"A migration of the model is necessary. Do you want to proceed?")) {
 					performMigration(migrator, resourceURI, release);
 				}
 			}
@@ -296,11 +295,11 @@ Then the migrated model is opened in the editor.
 			new ProgressMonitorDialog(Display.getCurrent().getActiveShell())
 					.run(false, false, runnable);
 		} catch (InvocationTargetException e) {
-			MessageDialog
-					.openError(
-							Display.getDefault().getActiveShell(),
-							"Migration error",
-							"An error occured during migration of the model. More information on the error can be found in the error log.");
+			MessageDialog.openError(
+					Display.getDefault().getActiveShell(),
+					"Migration error",
+					"An error occured during migration of the model. " + 
+					"More information on the error can be found in the error log.");
 			LibraryEditorPlugin.getPlugin().log(e.getCause());
 		} catch (InterruptedException e) {
 			LibraryEditorPlugin.getPlugin().log(e);
