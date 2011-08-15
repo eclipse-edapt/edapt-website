@@ -55,6 +55,13 @@ Therefore, we show how a history can be created for a metamodel, how the differe
 Finally, we provide a brief overview of the advanced features of Edapt.
 </p>
 
+<p>
+<hr/>
+<a name="figure1">Figure 1</a> - Library Example
+<img src="images/libraryexample.png" alt="Library Example" width="100%">
+<hr/>
+</p>
+
 <h3>Metamodel History</h3>
 
 <p>
@@ -79,7 +86,7 @@ After that, a new release in the history appears in which the operations carried
 
 <p>
 <hr/>
-<a name="figure2"><a href="#figure2">Figure 2</a></a> - User Interface of Edapt
+<a name="figure2">Figure 2</a> - User Interface of Edapt
 <img src="images/userinterface.png" alt="User Interface of Edapt" width="100%">
 <hr/>
 </p>
