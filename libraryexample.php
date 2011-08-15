@@ -62,14 +62,12 @@ To record operations, a history need to be created for the metamodel.
 In order to do so, the metamodel must be opened in Ecore editor: in our case the library metamodel. 
 The metamodel history can be created using the Eclipse-View OPERATION BROWSER (see Figure 2, right). 
 The OPERATION BROWSER can be opened by means of WINDOW -> OTHER ... -> SHOW VIEW.
-</p>
-<p>
+</p><p>
 In the OPERATION BROWSER, there is the CREATE HISTORY button to create the history. 
 In a dialog the location of the history can be selected. 
 If the metamodel consists of several files, the set of files can be selected, for which history is recorded. 
 If the dialog is finished, the file in which the history is recorded appears in the Ecore editor (see Figure 2, top left).
-</p>
-<p>
+</p><p>
 The history consists of a sequence of releases. 
 A release is a version of the metamodel for which models may exist. 
 A release in turn consists of a sequence of recorded operations. 
@@ -87,16 +85,14 @@ Using case studies, we found that most metamodel changes can be covered by reusa
 Edapt already implements a large number of reusable operations, 
 so that according to our case studies, more than 90% of the migrations that occur in practice can be covered by reusable operations. 
 A reusable operation encapsulates both the adaptation of the metamodel and the specification of migration.
-</p>
-<p>
+</p><p>
 Reusable operations can be invoked via the OPERATION BROWSER. 
 The OPERATION BROWSER shows the possible operations depending on the metamodel element which is selected in the Ecore editor (see Figure 2, right). 
 Double clicking on an operation, the user receives a brief description of the operation. 
 Furthermore, the OPERATION BROWSER shows the parameters of the operation, which must be assigned values​​, so that the operation can be applied. 
 The first parameter is determined by the selection in the Ecore editor. 
 Also, the OPERATION BROWSER shows constraints that must be satisfied before the operation can be executed.
-</p>
-<p>
+</p><p>
 We first show the application of a simple operation. 
 In the library metamodel, the class <i>Library</i> currently has the attribute <i>name</i>. 
 This attribute is no longer needed and should be removed. 
@@ -105,8 +101,7 @@ In addition, no other parameters are set.
 The operation can be executed via the EXECUTE button in the OPERATION BROWSER. 
 Thus, the operation is applied to the metamodel and recorded in the history (see Figure 2, top right). 
 The attribute can be deleted directly in the editor, but then the migration has to be specified manually.
-</p>
-<p>
+</p><p>
 Of course, Edapt also provides more complex operations. 
 Currently, in the library metamodel, there are subclasses for different categories of books (see Figure 1). 
 This makes it impossible for the category of a book to change at runtime, because EMF does not allow type changes. 
@@ -115,8 +110,7 @@ To convert the subclasses to an enumeration, the operation <i>Enumeration to Sub
 For the first parameter, the superclass <i>Book</i> has to be selected in the Ecore editor. 
 As an additional parameter, we must specify the name of the enumeration (<i>enumName</i> = "book category") and the name of the attribute (<i>attributeName</i> = "category"), before the operation can be executed. 
 In the metamodel, the subclasses of <i>Book</i> will be removed and the attribute will be added to <i>Book</i>, which has the added type as enumeration.
-</p>
-<p>
+</p><p>
 These were just two examples of operations. 
 Edapt currently offers the user over 60 reusable operations. 
 In addition, new operations can be added via an extension point. 
@@ -165,22 +159,19 @@ public class DeleteFeature2 extends OperationImplementation {
 Our case studies have also shown that the migrations are sometimes so specific that reuse makes no sense. 
 In these cases, the migration can be specified manually. 
 In order to do so, the metamodel change is first performed manually in the Ecore editor and the recorded changes are later enriched by the migration.
-</p>
-<p>
+</p><p>
 In the library metamodel, the author of a book is currently modeled by the attribute <i>author</i> type <i>EString</i> (see Figure 1). 
 However, it would be better to define a separate class for authors so that recurring author names can be grouped together. 
 To specify the necessary migration manually, the corresponding metamodel changes have to be carried out first: 
 the class <i>Writer</i> for authors must be created and suitably connected.
-</p>
-<p>
+</p><p>
 To create classes and references, reusable operations can be used. 
 Using <i>Create Class</i>, we create the class <i>Writer</i>, and using <i>Create Reference</i>, we create the containment reference <i>writers</i> from <i>Library</i> to <i>Writer</i>. 
 Then, we move the attribute <i>author</i> from <i>Book</i> to <i>Writer</i> in the Ecore editor and rename it to "name" using the operation <i>Rename</i>. 
 Finally, we create the cross reference <i>author</i> from <i>Book</i> to <i>Writer</i> using <i>Create Reference</i>. 
 The recorded operations should look like in Figure 2, top left. 
 In this case, the metamodel can also be changed directly in Ecore editor, since migration is specified manually anyway.
-</p>
-<p>
+</p><p>
 By means of EDAPT -> CUSTOM MIGRATION TO ATTACH CHANGES in the context menu, a migration can be added to the changes.
 A Java class creation wizard opens that lets the user select the name of the class that implements the custom migration.
 After that, the Java editor opens for the newly created class that inherits from a special superclass (see Figure 2). 
@@ -228,7 +219,94 @@ public class WriterCustomMigration extends CustomMigration {
 	}
 }
 </pre>
+
 <h3>Migrator</h3>
+
+<p>
+If we have performed all the desired changes, the release must be completed again with RELEASE in the OPERATION BROWSER. 
+Edapt automatically prompts the user through a dialog, if the namespace URI should be adapted. 
+Since in EMF the namespace URI is used for recognizing the metamodel version, the adaptation should be performed normally. 
+By changing the namespace URI for new releases, Edapt can automatically detect the metamodel version of models and migrate them suitably. 
+Of course, there are also cases where one does not want to adapt the namespace URI. 
+Then, the user must, however, care for the recognition of the metamodel version themselves.
+</p><p>
+To be able to migrate models, the history can be registered using the extension point <i>org.eclipse.emf.edapt.migrators</i>.
+This extension point is defined in the plugin "org.eclipse.emf.edapt.history" which we have to add to the dependencies of the plugin.
+Edapt interprets the history to reconstruct the metamodel versions for loading models and for performing the appropriate migration. 
+By delivering the history together with the Edapt runtime, an application can automatically migrate models.
+</p><p>
+In addition to that, we also have to regenerate the code for the library editor. 
+In order to do so, we first have to reload the genmodel my means of RELOAD ... in the context menu, after which it will be opened.
+In the open genmodel, we then have to select GENERATE ALL in the context menu. 
+This can lead to compile errors, because EMF does not delete the subclasses, which we converted into an enumeration, during the regeneration. 
+These classes can easily be removed manually.
+</p><p>
+The migration execution can be integrated directly into the editor code, as Listing 3 shows. 
+The method <i>checkMigration</i> must be called at the beginning of the method <i>createModel</i> in the library editor. 
+It first checks whether a migration is necessary, asks the user whether they want to do it, and then performs the migration. 
+The progress is displayed by means of a progress monitor dialog. 
+So that the method works, a dependency on <i>org.eclipse.emf.edapt.migration</i> must be inserted in the library editor plugin.
+</p><p>
+Now the customized library editor in a second Eclipse instance can be restarted. 
+When a model is opened, which conforms to the old model, the user is asked whether they want to migrate it. 
+Then the migrated model is opened in the editor. 
+</p>
+
+<pre class="codebox">
+	private void checkMigration(final URI resourceURI) {
+		String nsURI = ReleaseUtils.getNamespaceURI(resourceURI);
+		final Migrator migrator = MigratorRegistry.getInstance().getMigrator(
+				nsURI);
+		if (migrator != null) {
+			final Release release = migrator.getRelease(resourceURI).iterator()
+					.next();
+			if (!release.isLatestRelease()) {
+				if (MessageDialog
+						.openQuestion(Display.getDefault().getActiveShell(),
+								"Migration necessary",
+								"A migration of the model is necessary. Do you want to proceed?")) {
+					performMigration(migrator, resourceURI, release);
+				}
+			}
+		} else {
+			MessageDialog.openError(Display.getDefault().getActiveShell(),
+					"Error", "No migrator found");
+		}
+	}
+
+	private void performMigration(final Migrator migrator,
+			final URI resourceURI, final Release release) {
+		IRunnableWithProgress runnable = new IRunnableWithProgress() {
+
+			public void run(IProgressMonitor monitor)
+					throws InvocationTargetException {
+				try {
+					ResourceSet resourceSet = migrator.migrateAndLoad(
+							Collections.singletonList(resourceURI), release,
+							null, monitor);
+					editingDomain.getResourceSet().getResources()
+							.addAll(resourceSet.getResources());
+				} catch (MigrationException e) {
+					throw new InvocationTargetException(e);
+				}
+			}
+
+		};
+		try {
+			new ProgressMonitorDialog(Display.getCurrent().getActiveShell())
+					.run(false, false, runnable);
+		} catch (InvocationTargetException e) {
+			MessageDialog
+					.openError(
+							Display.getDefault().getActiveShell(),
+							"Migration error",
+							"An error occured during migration of the model. More information on the error can be found in the error log.");
+			LibraryEditorPlugin.getPlugin().log(e.getCause());
+		} catch (InterruptedException e) {
+			LibraryEditorPlugin.getPlugin().log(e);
+		}
+	}
+</pre>
 
 <h3>Advanced Functions</h3>
 
