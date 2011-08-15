@@ -60,13 +60,13 @@ Finally, we provide a brief overview of the advanced features of Edapt.
 <p>
 To record operations, a history need to be created for the metamodel. 
 In order to do so, the metamodel must be opened in Ecore editor: in our case the library metamodel. 
-The metamodel history can be created using the Eclipse-View OPERATION BROWSER (see Figure 2, right). 
+The metamodel history can be created using the Eclipse-View OPERATION BROWSER (see <a href="#figure2">Figure 2</a>, right). 
 The OPERATION BROWSER can be opened by means of WINDOW -> OTHER ... -> SHOW VIEW.
 </p><p>
 In the OPERATION BROWSER, there is the CREATE HISTORY button to create the history. 
 In a dialog the location of the history can be selected. 
 If the metamodel consists of several files, the set of files can be selected, for which history is recorded. 
-If the dialog is finished, the file in which the history is recorded appears in the Ecore editor (see Figure 2, top left).
+If the dialog is finished, the file in which the history is recorded appears in the Ecore editor (see <a href="#figure2">Figure 2</a>, top left).
 </p><p>
 The history consists of a sequence of releases. 
 A release is a version of the metamodel for which models may exist. 
@@ -75,6 +75,11 @@ The initial history contains a release that contains the operations to create th
 This initial release is still open, i.e. it must be completed to mark the initial version of the metamodel as a release. 
 Completing the release can be performed by the RELEASE button in the OPERATION BROWSER. 
 After that, a new release in the history appears in which the operations carried out from now on will be recorded.
+</p>
+
+<p>
+<a name="figure2"><a href="#figure2">Figure 2</a></a> - User Interface of Edapt
+<img src="images/userinterface.png" alt="User Interface of Edapt">
 </p>
 
 <h3>Reusable Operations</h3>
@@ -87,7 +92,7 @@ so that according to our case studies, more than 90% of the migrations that occu
 A reusable operation encapsulates both the adaptation of the metamodel and the specification of migration.
 </p><p>
 Reusable operations can be invoked via the OPERATION BROWSER. 
-The OPERATION BROWSER shows the possible operations depending on the metamodel element which is selected in the Ecore editor (see Figure 2, right). 
+The OPERATION BROWSER shows the possible operations depending on the metamodel element which is selected in the Ecore editor (see <a href="#figure2">Figure 2</a>, right). 
 Double clicking on an operation, the user receives a brief description of the operation. 
 Furthermore, the OPERATION BROWSER shows the parameters of the operation, which must be assigned values​​, so that the operation can be applied. 
 The first parameter is determined by the selection in the Ecore editor. 
@@ -99,7 +104,7 @@ This attribute is no longer needed and should be removed.
 To remove the attribute, we choose it in the Ecore editor and the operation <i>Delete Feature</i> in the OPERATION BROWSER. 
 In addition, no other parameters are set. 
 The operation can be executed via the EXECUTE button in the OPERATION BROWSER. 
-Thus, the operation is applied to the metamodel and recorded in the history (see Figure 2, top right). 
+Thus, the operation is applied to the metamodel and recorded in the history (see <a href="#figure2">Figure 2</a>, top right). 
 The attribute can be deleted directly in the editor, but then the migration has to be specified manually.
 </p><p>
 Of course, Edapt also provides more complex operations. 
@@ -121,6 +126,7 @@ In the case of <i>Delete Feature</i>, only the feature is deleted on the metamod
 Therefor, a helper method is used, which ensures that in case of a containment reference, also all values ​​of all children will be deleted.
 </p>
 
+<p>
 <a name="listing1">Listing 1</a> - Reusable Operation
 <hr/>
 <pre class="codebox">
@@ -155,6 +161,7 @@ public class DeleteFeature2 extends OperationImplementation {
 }
 </pre>
 <hr/>
+</p>
 
 <h3>Manually Specifying a Migration</h3>
 
@@ -172,17 +179,18 @@ To create classes and references, reusable operations can be used.
 Using <i>Create Class</i>, we create the class <i>Writer</i>, and using <i>Create Reference</i>, we create the containment reference <i>writers</i> from <i>Library</i> to <i>Writer</i>. 
 Then, we move the attribute <i>author</i> from <i>Book</i> to <i>Writer</i> in the Ecore editor and rename it to "name" using the operation <i>Rename</i>. 
 Finally, we create the cross reference <i>author</i> from <i>Book</i> to <i>Writer</i> using <i>Create Reference</i>. 
-The recorded operations should look like in Figure 2, top left. 
+The recorded operations should look like in <a href="#figure2">Figure 2</a>, top left. 
 In this case, the metamodel can also be changed directly in Ecore editor, since migration is specified manually anyway.
 </p><p>
 By means of EDAPT -> CUSTOM MIGRATION TO ATTACH CHANGES in the context menu, a migration can be added to the changes.
 A Java class creation wizard opens that lets the user select the name of the class that implements the custom migration.
-After that, the Java editor opens for the newly created class that inherits from a special superclass (see Figure 2). 
+After that, the Java editor opens for the newly created class that inherits from a special superclass (see <a href="#figure2">Figure 2</a>). 
 The user only needs to specify the model migration embedded using an API that is embedded in Java (see <a href="#listing2">Listing 2</a>). 
 The migration iterates over all the books, removes the author and associates a book with the appropriate writer. 
 The writer must either be created or has already been created.
 </p>
 
+<p>
 <a name="listing2">Listing 2</a> - Custom Migration
 <hr/>
 <pre class="codebox">
@@ -225,6 +233,7 @@ public class WriterCustomMigration extends CustomMigration {
 }
 </pre>
 <hr/>
+</p>
 
 <h3>Migrator</h3>
 
@@ -258,6 +267,7 @@ When a model is opened, which conforms to the old model, the user is asked wheth
 Then the migrated model is opened in the editor. 
 </p>
 
+<p>
 <a name="listing3">Listing 3</a> - Editor Integration
 <hr/>
 <pre class="codebox">
@@ -316,6 +326,7 @@ Then the migrated model is opened in the editor.
 	}
 </pre>
 <hr/>
+</p>
 
 <h3>Advanced Functions</h3>
 
