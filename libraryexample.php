@@ -10,7 +10,7 @@
  *    
  *******************************************************************************/
 
-	$pageTitle 		= "Edapt - Library Example";
+	$pageTitle 		= "Edapt - An Overview using the Library Example";
 
 	$html  = <<<EOHTML
 <div id="midcolumn">
