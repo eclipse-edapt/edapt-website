@@ -122,6 +122,7 @@ Therefor, a helper method is used, which ensures that in case of a containment r
 </p>
 
 <a name="listing1">Listing 1</a> - Reusable Operation
+<hr/>
 <pre class="codebox">
 @EdaptOperation(identifier = "deleteFeature2", label = "Delete Feature", 
 		description = "In the metamodel, a feature is deleted. "
@@ -153,6 +154,7 @@ public class DeleteFeature2 extends OperationImplementation {
 	}
 }
 </pre>
+<hr/>
 
 <h3>Manually Specifying a Migration</h3>
 
@@ -182,6 +184,7 @@ The writer must either be created or has already been created.
 </p>
 
 <a name="listing2">Listing 2</a> - Custom Migration
+<hr/>
 <pre class="codebox">
 public class WriterCustomMigration extends CustomMigration {
 
@@ -221,6 +224,7 @@ public class WriterCustomMigration extends CustomMigration {
 	}
 }
 </pre>
+<hr/>
 
 <h3>Migrator</h3>
 
@@ -255,6 +259,7 @@ Then the migrated model is opened in the editor.
 </p>
 
 <a name="listing3">Listing 3</a> - Editor Integration
+<hr/>
 <pre class="codebox">
 	private void checkMigration(final URI resourceURI) {
 		String nsURI = ReleaseUtils.getNamespaceURI(resourceURI);
@@ -310,6 +315,7 @@ Then the migrated model is opened in the editor.
 		}
 	}
 </pre>
+<hr/>
 
 <h3>Advanced Functions</h3>
 
