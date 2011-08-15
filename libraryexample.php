@@ -57,7 +57,66 @@ Finally, we provide a brief overview of the advanced features of Edapt.
 
 <h3>Metamodel History</h3>
 
+<p>
+To record operations, a history need to be created for the metamodel. 
+In order to do so, the metamodel must be opened in Ecore editor: in our case the library metamodel. 
+The metamodel history can be created using the Eclipse-View OPERATION BROWSER (see Figure 2, right). 
+The OPERATION BROWSER can be opened by means of WINDOW -> OTHER ... -> SHOW VIEW.
+</p>
+<p>
+In the OPERATION BROWSER, there is the CREATE HISTORY button to create the history. 
+In a dialog the location of the history can be selected. 
+If the metamodel consists of several files, the set of files can be selected, for which history is recorded. 
+If the dialog is finished, the file in which the history is recorded appears in the Ecore editor (see Figure 2, top left).
+</p>
+<p>
+The history consists of a sequence of releases. 
+A release is a version of the metamodel for which models may exist. 
+A release in turn consists of a sequence of recorded operations. 
+The initial history contains a release that contains the operations to create the metamodel. 
+This initial release is still open, i.e. it must be completed to mark the initial version of the metamodel as a release. 
+Completing the release can be performed by the RELEASE button in the OPERATION BROWSER. 
+After that, a new release in the history appears in which the operations carried out from now on will be recorded.
+</p>
+
 <h3>Reusable Coupled Operations</h3>
+
+<p>
+Reusable operations allow to reuse recurring migrations. 
+Using case studies, we found that most metamodel changes can be covered by reusable operations. 
+Edapt already implements a large number of reusable operations, 
+so that according to our case studies, more than 90% of the migrations that occur in practice can be covered by reusable operations. 
+A reusable operation encapsulates both the adaptation of the metamodel and the specification of migration.
+</p>
+<p>
+Reusable operations can be invoked via the OPERATION BROWSER. 
+The OPERATION BROWSER shows the possible operations depending on the metamodel element which is selected in the Ecore editor (see Figure 2, right). 
+Double clicking on an operation, the user receives a brief description of the operation. 
+Furthermore, the OPERATION BROWSER shows the parameters of the operation, which must be assigned values​​, so that the operation can be applied. 
+The first parameter is determined by the selection in the Ecore editor. 
+Also, the OPERATION BROWSER shows constraints that must be satisfied before the operation can be executed.
+</p>
+<p>
+We first show the application of a simple operation. 
+In the library metamodel, the class Library currently has the attribute name. 
+This attribute is no longer needed and should be removed. 
+To remove the attribute, we choose it in the Ecore editor and the operation Delete feature in the OPERATION BROWSER. 
+In addition, no other parameters are set. 
+The operation can be executed via the EXECUTE button in the OPERATION BROWSER. 
+Thus, the operation is applied to the metamodel and recorded in the history (see Figure 2, top right). 
+The attribute can be deleted directly in the editor, but then the migration has to be specified manually.
+</p>
+<p>
+Of course, Edapt also provides more complex operations. 
+Currently, in the library metamodel, there are subclasses for different categories of books (see Figure 1). 
+This makes it impossible for the category of a book to change at runtime, because EMF does not allow type changes. 
+It is therefore better to model the category of the book as an enumeration. 
+To convert the subclasses to an enumeration, the operation <it>Enumeration to Subclasses</it> can be used. 
+For the first parameter, the superclass <it>Book</it> has to be selected in the Ecore editor. 
+As an additional parameter, we must specify the name of the enumeration (<it>enumName</it> = "book category") and the name of the attribute (<it>attributeName</it> = "category"), before the operation can be executed. 
+In the metamodel, the subclasses of the book will be removed and the attribute will be added to Book, which has the added type as enumeration.
+
+</p>
 
 <h3>Custom Coupled Operations</h3>
 
