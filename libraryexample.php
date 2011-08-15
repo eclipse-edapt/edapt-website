@@ -179,7 +179,7 @@ Our case studies have also shown that the migrations are sometimes so specific t
 In these cases, the migration can be specified manually. 
 In order to do so, the metamodel change is first performed manually in the Ecore editor and the recorded changes are later enriched by the migration.
 </p><p>
-In the library metamodel, the author of a book is currently modeled by the attribute <i>author</i> type <i>EString</i> (see <a href="#figure1">Figure 1</a>). 
+In the library metamodel, the author of a book is currently modeled by the attribute <i>author</i> of type <i>EString</i> (see <a href="#figure1">Figure 1</a>). 
 However, it would be better to define a separate class for authors so that recurring author names can be grouped together. 
 To specify the necessary migration manually, the corresponding metamodel changes have to be carried out first: 
 the class <i>Writer</i> for authors must be created and suitably connected.
@@ -189,12 +189,12 @@ Using <i>Create Class</i>, we create the class <i>Writer</i>, and using <i>Creat
 Then, we move the attribute <i>author</i> from <i>Book</i> to <i>Writer</i> in the Ecore editor and rename it to "name" using the operation <i>Rename</i>. 
 Finally, we create the cross reference <i>author</i> from <i>Book</i> to <i>Writer</i> using <i>Create Reference</i>. 
 The recorded operations should look like in <a href="#figure2">Figure 2</a>, top left. 
-In this case, the metamodel can also be changed directly in Ecore editor, since migration is specified manually anyway.
+In this case, the metamodel can also be changed directly in Ecore editor, since the migration is specified manually anyway.
 </p><p>
-By means of EDAPT -> CUSTOM MIGRATION TO ATTACH CHANGES in the context menu, a migration can be added to the changes.
+By means of EDAPT -> ATTACH CUSTOM MIGRATION TO CHANGES in the context menu, a migration can be added to the changes.
 A Java class creation wizard opens that lets the user select the name of the class that implements the custom migration.
 After that, the Java editor opens for the newly created class that inherits from a special superclass (see <a href="#figure2">Figure 2</a>). 
-The user only needs to specify the model migration embedded using an API that is embedded in Java (see <a href="#listing2">Listing 2</a>). 
+The user only needs to specify the model migration using an API that is embedded in Java (see <a href="#listing2">Listing 2</a>). 
 The migration iterates over all the books, removes the author and associates a book with the appropriate writer. 
 The writer must either be created or has already been created.
 </p>
