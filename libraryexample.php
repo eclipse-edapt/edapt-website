@@ -17,15 +17,15 @@
 <h2>$pageTitle</h2>
 
 <p>
-The Eclipse Modeling Framework (EMF) supports the developers to build modeling tools using metamodels in Ecore. 
+The Eclipse Modeling Framework (EMF) supports the developers to build modeling tools using Ecore metamodels. 
 Due to the changing requirements of these modeling tools, the metamodels are often subject to change. 
-But when the metamodel changes, models created with the modeling tools often can not be loaded. 
+But when the metamodel changes, models created with the modeling tools often can no longer be completely loaded. 
 In order not to lose the information stored in these models, the models must be migrated.
 </p><p>
 Even established frameworks such as for example the Graphical Modeling Framework (GMF) have adapted their metamodel to changing requirements in the past and therefore had to implement a migrator. 
 Conversely, not few existing modeling tools use aged metamodels that do no longer fully support the current requirements.
-The reason is the enormous effort for the migration of existing models in response to changes to the metamodel. 
-This migration is also more error prone and expensive to test.
+The reason is the enormous effort required for migrating existing models in response to changes to the metamodel. 
+Besides, this migration is error-prone and expensive to test.
 </p><p>
 Edapt supports the developer to migrate models, by largely automating the migration. 
 Thereby it differs from languages for model transformation, which require manual specification of the migration. 
@@ -41,7 +41,7 @@ If a migration can not be expressed by reusable operations, then it can also be 
 </p><p>
 Edapt is very convenient for the developer because it is integrated directly into the Ecore editor. 
 The operations can be performed directly in the editor and their execution is recorded in an explicit history. 
-To e.g. rename an attribute, the attribute is selected, the Rename operation is selected and a new name be chosen, and even surgery can be performed. 
+To e.g. rename an attribute, the attribute must be selected, the Rename operation chosen and a new name entered, and the operation can already be performed. 
 The history that is recorded when executing change operations can be used to automatically migrate the existing models.
 </p><p>
 Edapt is a framework. 
@@ -50,7 +50,7 @@ The runtime can be integrated into an existing application to be able to migrate
 In addition, Edapt can be extended with new reusable operations. 
 The runtime is based only on EMF, which is used to specify the manually defined migration, and the editor integration is based on EMF Compare, which is used for advanced features.
 </p><p>
-In this article, we describe the main features of Edapt to adapt metamodels and to migrate their models. 
+In this article, we describe the main features of Edapt to adapt metamodels and to migrate their models using the well-known library example (see <a href="#figure1">Figure 1</a>). 
 Therefore, we show how a history can be created for a metamodel, how the different types of operations can be recorded, and how a history can be integrated into an existing application for migrating models. 
 Finally, we provide a brief overview of the advanced features of Edapt.
 </p>
