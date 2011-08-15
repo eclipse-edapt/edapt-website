@@ -111,9 +111,9 @@ Of course, Edapt also provides more complex operations.
 Currently, in the library metamodel, there are subclasses for different categories of books (see Figure 1). 
 This makes it impossible for the category of a book to change at runtime, because EMF does not allow type changes. 
 It is therefore better to model the category of the book as an enumeration. 
-To convert the subclasses to an enumeration, the operation <it>Enumeration to Subclasses</it> can be used. 
-For the first parameter, the superclass <it>Book</it> has to be selected in the Ecore editor. 
-As an additional parameter, we must specify the name of the enumeration (<it>enumName</it> = "book category") and the name of the attribute (<it>attributeName</it> = "category"), before the operation can be executed. 
+To convert the subclasses to an enumeration, the operation <i>Enumeration to Subclasses</i> can be used. 
+For the first parameter, the superclass <i>Book</i> has to be selected in the Ecore editor. 
+As an additional parameter, we must specify the name of the enumeration (<i>enumName</i> = "book category") and the name of the attribute (<i>attributeName</i> = "category"), before the operation can be executed. 
 In the metamodel, the subclasses of the book will be removed and the attribute will be added to Book, which has the added type as enumeration.
 
 </p>
