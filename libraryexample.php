@@ -95,14 +95,14 @@ After that, a new release in the history appears in which the operations carried
 
 <p>
 Reusable operations allow to reuse recurring migrations. 
-Using case studies, we found that most metamodel changes can be covered by reusable operations. 
+Using case studies, we found out that most metamodel changes can be covered by reusable operations. 
 Edapt already implements a large number of reusable operations, 
-so that according to our case studies, more than 90% of the migrations that occur in practice can be covered by reusable operations. 
-A reusable operation encapsulates both the adaptation of the metamodel and the specification of migration.
+so that according to our case studies, more than 90% of the migrations that occur in practice can be covered by existing reusable operations. 
+A reusable operation encapsulates both the adaptation of the metamodel and the specification of the model migration.
 </p><p>
 Reusable operations can be invoked via the OPERATION BROWSER. 
 The OPERATION BROWSER shows the possible operations depending on the metamodel element which is selected in the Ecore editor (see <a href="#figure2">Figure 2</a>, right). 
-Double clicking on an operation, the user receives a brief description of the operation. 
+By double clicking on an operation, the user receives a brief description of the operation. 
 Furthermore, the OPERATION BROWSER shows the parameters of the operation, which must be assigned values​​, so that the operation can be applied. 
 The first parameter is determined by the selection in the Ecore editor. 
 Also, the OPERATION BROWSER shows constraints that must be satisfied before the operation can be executed.
@@ -111,7 +111,7 @@ We first show the application of a simple operation.
 In the library metamodel, the class <i>Library</i> currently has the attribute <i>name</i>. 
 This attribute is no longer needed and should be removed. 
 To remove the attribute, we choose it in the Ecore editor and the operation <i>Delete Feature</i> in the OPERATION BROWSER. 
-In addition, no other parameters are set. 
+In addition, no other parameters need to be set. 
 The operation can be executed via the EXECUTE button in the OPERATION BROWSER. 
 Thus, the operation is applied to the metamodel and recorded in the history (see <a href="#figure2">Figure 2</a>, top right). 
 The attribute can be deleted directly in the editor, but then the migration has to be specified manually.
@@ -128,16 +128,16 @@ In the metamodel, the subclasses of <i>Book</i> will be removed and the attribut
 These were just two examples of operations. 
 Edapt currently offers the user over 60 reusable operations. 
 In addition, new operations can be added via an extension point. 
-<a href="#listing1">Listing 1</a> shows the implementation of Operation <i>Delete Feature</i> for which Edapt provides a language embedded in Java. 
+<a href="#listing1">Listing 1</a> shows the implementation of the operation <i>Delete Feature</i> for which Edapt provides a language embedded in Java by means of annotations. 
 Reusable operations are implemented as Java classes, parameters of the operation as attributes of the class and preconditions as methods. 
 In addition, the metamodel change and the model migration must be defined by implemeting the method <i>execute</i>. 
-In the case of <i>Delete Feature</i>, only the feature is deleted on the metamodel level, but on the model level, the values ​​of the feature are removed. 
-Therefor, a helper method is used, which ensures that in case of a containment reference, also all values ​​of all children will be deleted.
+In case of <i>Delete Feature</i>, only the feature is deleted on the metamodel level, but on the model level, the values ​​of the feature are removed. 
+Therefor, a helper method is used, which ensures that in case of a containment reference, also all values ​​of all children are deleted.
 </p>
 
 <p>
 <hr/>
-<a name="listing1">Listing 1</a> - Reusable Operation
+<a name="listing1">Listing 1</a> - Reusable Operation <i>Delete Feature</i>
 <pre class="codebox">
 @EdaptOperation(identifier = "deleteFeature2", label = "Delete Feature", 
 		description = "In the metamodel, a feature is deleted. "
