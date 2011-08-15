@@ -121,7 +121,7 @@ In the case of <i>Delete Feature</i>, only the feature is deleted on the metamod
 Therefor, a helper method is used, which ensures that in case of a containment reference, also all values ​​of all children will be deleted.
 </p>
 
-<a name="listing1">Listing 1</a>
+<a name="listing1">Listing 1</a> - Reusable Operation
 <pre class="codebox">
 @EdaptOperation(identifier = "deleteFeature2", label = "Delete Feature", 
 		description = "In the metamodel, a feature is deleted. "
@@ -181,7 +181,7 @@ The migration iterates over all the books, removes the author and associates a b
 The writer must either be created or has already been created.
 </p>
 
-<a name="listing2">Listing 2</a>
+<a name="listing2">Listing 2</a> - Custom Migration
 <pre class="codebox">
 public class WriterCustomMigration extends CustomMigration {
 
@@ -254,7 +254,7 @@ When a model is opened, which conforms to the old model, the user is asked wheth
 Then the migrated model is opened in the editor. 
 </p>
 
-<a name="listing3">Listing 3</a>
+<a name="listing3">Listing 3</a> - Editor Integration
 <pre class="codebox">
 	private void checkMigration(final URI resourceURI) {
 		String nsURI = ReleaseUtils.getNamespaceURI(resourceURI);
