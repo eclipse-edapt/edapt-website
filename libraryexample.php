@@ -79,7 +79,7 @@ After that, a new release in the history appears in which the operations carried
 
 <p>
 <a name="figure2"><a href="#figure2">Figure 2</a></a> - User Interface of Edapt
-<img src="images/userinterface.png" alt="User Interface of Edapt">
+<img src="images/userinterface.png" alt="User Interface of Edapt" width="100%">
 </p>
 
 <h3>Reusable Operations</h3>
