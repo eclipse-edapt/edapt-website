@@ -77,10 +77,8 @@ Completing the release can be performed by the RELEASE button in the OPERATION B
 After that, a new release in the history appears in which the operations carried out from now on will be recorded.
 </p>
 
-<p>
 <a name="figure2"><a href="#figure2">Figure 2</a></a> - User Interface of Edapt
 <img src="images/userinterface.png" alt="User Interface of Edapt" width="100%">
-</p>
 
 <h3>Reusable Operations</h3>
 
@@ -126,7 +124,6 @@ In the case of <i>Delete Feature</i>, only the feature is deleted on the metamod
 Therefor, a helper method is used, which ensures that in case of a containment reference, also all values ​​of all children will be deleted.
 </p>
 
-<p>
 <a name="listing1">Listing 1</a> - Reusable Operation
 <hr/>
 <pre class="codebox">
@@ -161,7 +158,6 @@ public class DeleteFeature2 extends OperationImplementation {
 }
 </pre>
 <hr/>
-</p>
 
 <h3>Manually Specifying a Migration</h3>
 
@@ -190,7 +186,6 @@ The migration iterates over all the books, removes the author and associates a b
 The writer must either be created or has already been created.
 </p>
 
-<p>
 <a name="listing2">Listing 2</a> - Custom Migration
 <hr/>
 <pre class="codebox">
@@ -233,7 +228,6 @@ public class WriterCustomMigration extends CustomMigration {
 }
 </pre>
 <hr/>
-</p>
 
 <h3>Migrator</h3>
 
@@ -267,7 +261,6 @@ When a model is opened, which conforms to the old model, the user is asked wheth
 Then the migrated model is opened in the editor. 
 </p>
 
-<p>
 <a name="listing3">Listing 3</a> - Editor Integration
 <hr/>
 <pre class="codebox">
@@ -326,7 +319,6 @@ Then the migrated model is opened in the editor.
 	}
 </pre>
 <hr/>
-</p>
 
 <h3>Advanced Functions</h3>
 
