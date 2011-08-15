@@ -344,6 +344,13 @@ Edapt adapts the difference automatically after each execution of an operation.
 
 <h3>Conclusion</h3>
 
+<p>
+Edapt supports the user to create an automated model migration for a metamodel change. 
+For this purpose, Edapt records the operations that are executed on the metamodel in a history, and enriches them with migrations. 
+Recurrent migrations are provided by means of operations. 
+The history can be interpreted to automatically migrate models, which can be embedded into the application.
+<p>
+
 </div>
 EOHTML;
 	# Generate the web page
