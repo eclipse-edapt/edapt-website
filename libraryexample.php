@@ -380,6 +380,13 @@ Recurrent migrations are provided by means of reusable operations.
 The history can be interpreted to automatically migrate models, which can be embedded into the application.
 <p>
 
+<h3>Material</h3>
+
+<ul>
+<li>Sources in the repository: <a href="http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.edapt/trunk/examples/">http://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.edapt/trunk/examples/</a></li>
+<li>Workspaces for the example: <a href="http://download.eclipse.org/edapt/examples/library/workspaces.zip">http://download.eclipse.org/edapt/examples/library/workspaces.zip</a></li>
+</ul>
+
 </div>
 EOHTML;
 	# Generate the web page
