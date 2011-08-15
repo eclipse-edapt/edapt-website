@@ -79,7 +79,7 @@ Completing the release can be performed by the RELEASE button in the OPERATION B
 After that, a new release in the history appears in which the operations carried out from now on will be recorded.
 </p>
 
-<h3>Reusable Coupled Operations</h3>
+<h3>Reusable Operations</h3>
 
 <p>
 Reusable operations allow to reuse recurring migrations. 
@@ -128,7 +128,9 @@ Therefor, a helper method is used, which ensures that in case of a containment r
 </p>
 
 <pre class="codebox">
-@EdaptOperation(identifier = "deleteFeature2", label = "Delete Feature", description = "In the metamodel, a feature is deleted. In the model, its values are deleted, too.")
+@EdaptOperation(identifier = "deleteFeature2", label = "Delete Feature", 
+		description = "In the metamodel, a feature is deleted. "
+		+ "In the model, its values are deleted, too.")
 public class DeleteFeature2 extends OperationImplementation {
 
 	/** {@description} */
@@ -157,8 +159,75 @@ public class DeleteFeature2 extends OperationImplementation {
 }
 </pre>
 
-<h3>Custom Coupled Operations</h3>
+<h3>Manually Specifying a Migration</h3>
 
+<p>
+Our case studies have also shown that the migrations are sometimes so specific that reuse makes no sense. 
+In these cases, the migration can be specified manually. 
+In order to do so, the metamodel change is first performed manually in the Ecore editor and the recorded changes are later enriched by the migration.
+</p>
+<p>
+In the library metamodel, the author of a book is currently modeled by the attribute <i>author</i> type <i>EString</i> (see Figure 1). 
+However, it would be better to define a separate class for authors so that recurring author names can be grouped together. 
+To specify the necessary migration manually, the corresponding metamodel changes have to be carried out first: 
+the class <i>Writer</i> for authors must be created and suitably connected.
+</p>
+<p>
+To create classes and references, reusable operations can be used. 
+Using <i>Create Class</i>, we create the class <i>Writer</i>, and using <i>Create Reference</i>, we create the containment reference <i>writers</i> from <i>Library</i> to <i>Writer</i>. 
+Then, we move the attribute <i>author</i> from <i>Book</i> to <i>Writer</i> in the Ecore editor and rename it to "name" using the operation <i>Rename</i>. 
+Finally, we create the cross reference <i>author</i> from <i>Book</i> to <i>Writer</i> using <i>Create Reference</i>. 
+The recorded operations should look like in Figure 2, top left. 
+In this case, the metamodel can also be changed directly in Ecore editor, since migration is specified manually anyway.
+</p>
+<p>
+By means of EDAPT -> CUSTOM MIGRATION TO ATTACH CHANGES in the context menu, a migration can be added to the changes.
+A Java class creation wizard opens that lets the user select the name of the class that implements the custom migration.
+After that, the Java editor opens for the newly created class that inherits from a special superclass (see Figure 2). 
+The user only needs to specify the model migration embedded using an API that is embedded in Java (see Listing 2). 
+The migration iterates over all the books, removes the author and associates a book with the appropriate writer. 
+The writer must either be created or has already been created.
+</p>
+
+<pre class="codebox">
+public class WriterCustomMigration extends CustomMigration {
+
+	private EAttribute authorAttribute;
+
+	@Override
+	public void migrateBefore(Model model, Metamodel metamodel)
+			throws MigrationException {
+		authorAttribute = metamodel.getEAttribute("library.Book.author");
+	}
+
+	@Override
+	public void migrateAfter(Model model, Metamodel metamodel)
+			throws MigrationException {
+		for (Instance book : model.getAllInstances("library.Book")) {
+			String author = book.unset(authorAttribute);
+			Instance library = book.getContainer();
+			Instance writer = findWriter(library, author);
+			// if writer with name of author cannot be found, create a new
+			// writer
+			if (writer == null) {
+				writer = model.newInstance("library.Writer");
+				writer.set("name", author);
+				library.add("writers", writer);
+			}
+			book.set("author", writer);
+		}
+	}
+
+	private Instance findWriter(Instance lib, String author) {
+		for (Instance writer : lib.getLinks("writers")) {
+			if (author.equals(writer.get("name"))) {
+				return writer;
+			}
+		}
+		return null;
+	}
+}
+</pre>
 <h3>Migrator</h3>
 
 <h3>Advanced Functions</h3>
