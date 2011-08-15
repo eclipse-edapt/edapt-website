@@ -310,6 +310,38 @@ Then the migrated model is opened in the editor.
 
 <h3>Advanced Functions</h3>
 
+<p>
+We now have shown the typical use case of Edapt. 
+But there are some advanced features that we can not explain in detail, but we want at least to raise it here.
+</p><p>
+It does not have a second Eclipse instance to be started by calling the Migrator. 
+It can also be accessed in the same Eclipse instance in which he is present in the workspace. 
+This requires the migrator migrator plug-in directory and a model can be selected and the context menu, the Migrator on EMF MIGRATE -> MIGRATE be called. 
+This makes debugging easier by manually specified migrations.
+</p><p>
+Edapt also offers some functionality for reconstructing the history. 
+By means of the RECONSTRUCTION VIEW, old metamodel versions can be displayed interactively. 
+Physically, you can restore the old versions from the context menu via EDAPT -> RECONSTRUCT on the respective release or the respective operation. 
+The consistency of the history can be examined by selecting EDAPT -> CHECK INTEGRITY in the context menu. 
+In addition, the difference between multiple operations or releases can be derived from the history by means of EDAPT -> COMPARE in the context menu. 
+Therefor, EMF Compare is used in Edapt-specific enhancements.
+</p><p>
+There are also some functions to refactor the history. 
+Recorded operations can be reversed with EDAPT -> UNDO CHANGES in the context menu; but only if no subsequent operations depend on it. 
+The dependencies are also checked, when operations are moved to and fro using drag and drop. 
+In addition, migration specifications can be adapted (EDAPT -> EDIT CUSTOM MIGRATION), removed (EDAPT -> FLATTEN CUSTOM MIGRATION) and added again (EDAPT -> ATTACH CUSTOM MIGRATION TO CHANGES). 
+Reusable operations can also be removed and added again. 
+In our example, the last change could be carried out by means of the reusable operation <i>Extract and Group Attribute</i>.
+</p><p>
+Finally, there is also support for creating a migration for two existing metamodel versions which were created without Edapt and for which no recorded history is available. 
+In order to do so, a history needs to be created for the source metamodel version. 
+The OPERATION BROWSER provides the button CONVERGE, which allows the user to select the target metamodel version. 
+Edapt then opens an additional view that shows the difference between the two versions as well as the target version. 
+The difference is generated with the help of EMF Compare. 
+The task of the user is to bring the source versions closer to the target version using operations. 
+Edapt adapts the difference automatically after each execution of an operation.
+</p>
+
 <h3>Conclusion</h3>
 
 </div>
