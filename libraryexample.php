@@ -114,13 +114,14 @@ In the metamodel, the subclasses of <i>Book</i> will be removed and the attribut
 These were just two examples of operations. 
 Edapt currently offers the user over 60 reusable operations. 
 In addition, new operations can be added via an extension point. 
-Listing 1 shows the implementation of Operation <i>Delete Feature</i> for which Edapt provides a language embedded in Java. 
+<a href="#listing1">Listing 1</a> shows the implementation of Operation <i>Delete Feature</i> for which Edapt provides a language embedded in Java. 
 Reusable operations are implemented as Java classes, parameters of the operation as attributes of the class and preconditions as methods. 
 In addition, the metamodel change and the model migration must be defined by implemeting the method <i>execute</i>. 
 In the case of <i>Delete Feature</i>, only the feature is deleted on the metamodel level, but on the model level, the values ​​of the feature are removed. 
 Therefor, a helper method is used, which ensures that in case of a containment reference, also all values ​​of all children will be deleted.
 </p>
 
+<a name="listing1">Listing 1</a>
 <pre class="codebox">
 @EdaptOperation(identifier = "deleteFeature2", label = "Delete Feature", 
 		description = "In the metamodel, a feature is deleted. "
@@ -175,11 +176,12 @@ In this case, the metamodel can also be changed directly in Ecore editor, since 
 By means of EDAPT -> CUSTOM MIGRATION TO ATTACH CHANGES in the context menu, a migration can be added to the changes.
 A Java class creation wizard opens that lets the user select the name of the class that implements the custom migration.
 After that, the Java editor opens for the newly created class that inherits from a special superclass (see Figure 2). 
-The user only needs to specify the model migration embedded using an API that is embedded in Java (see Listing 2). 
+The user only needs to specify the model migration embedded using an API that is embedded in Java (see <a href="#listing2">Listing 2</a>). 
 The migration iterates over all the books, removes the author and associates a book with the appropriate writer. 
 The writer must either be created or has already been created.
 </p>
 
+<a name="listing2">Listing 2</a>
 <pre class="codebox">
 public class WriterCustomMigration extends CustomMigration {
 
@@ -241,7 +243,7 @@ In the open genmodel, we then have to select GENERATE ALL in the context menu.
 This can lead to compile errors, because EMF does not delete the subclasses, which we converted into an enumeration, during the regeneration. 
 These classes can easily be removed manually.
 </p><p>
-The migration execution can be integrated directly into the editor code, as Listing 3 shows. 
+The migration execution can be integrated directly into the editor code, as <a href="#listing3">Listing 3</a> shows. 
 The method <i>checkMigration</i> must be called at the beginning of the method <i>createModel</i> in the library editor. 
 It first checks whether a migration is necessary, asks the user whether they want to do it, and then performs the migration. 
 The progress is displayed by means of a progress monitor dialog. 
@@ -252,6 +254,7 @@ When a model is opened, which conforms to the old model, the user is asked wheth
 Then the migrated model is opened in the editor. 
 </p>
 
+<a name="listing3">Listing 3</a>
 <pre class="codebox">
 	private void checkMigration(final URI resourceURI) {
 		String nsURI = ReleaseUtils.getNamespaceURI(resourceURI);
