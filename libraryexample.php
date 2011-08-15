@@ -78,8 +78,10 @@ After that, a new release in the history appears in which the operations carried
 </p>
 
 <p>
+<hr/>
 <a name="figure2"><a href="#figure2">Figure 2</a></a> - User Interface of Edapt
 <img src="images/userinterface.png" alt="User Interface of Edapt" width="100%">
+<hr/>
 </p>
 
 <h3>Reusable Operations</h3>
@@ -336,7 +338,7 @@ But there are some advanced features that we can not explain in detail, but we w
 </p><p>
 It does not have a second Eclipse instance to be started by calling the Migrator. 
 It can also be accessed in the same Eclipse instance in which he is present in the workspace. 
-This requires the migrator migrator plug-in directory and a model can be selected and the context menu, the Migrator on EMF MIGRATE -> MIGRATE be called. 
+This requires the migrator migrator plug-in directory and a model can be selected and the context menu, the Migrator on EDAPT -> MIGRATE be called. 
 This makes debugging easier by manually specified migrations.
 </p><p>
 Edapt also offers some functionality for reconstructing the history. 
