@@ -280,59 +280,59 @@ Then the migrated model is opened in the editor.
 <hr/>
 <a name="listing3">Listing 3</a> - Editor Integration
 <pre class="codebox">
-	private void checkMigration(final URI resourceURI) {
-		String nsURI = ReleaseUtils.getNamespaceURI(resourceURI);
-		final Migrator migrator = MigratorRegistry.getInstance().getMigrator(
-				nsURI);
-		if (migrator != null) {
-			final Release release = migrator.getRelease(resourceURI).iterator()
-					.next();
-			if (!release.isLatestRelease()) {
-				if (MessageDialog.openQuestion(Display.getDefault().getActiveShell(),
-						"Migration necessary",
-						"A migration of the model is necessary. " +
-						"Do you want to proceed?")) {
-					performMigration(migrator, resourceURI, release);
-				}
+private void checkMigration(final URI resourceURI) {
+	String nsURI = ReleaseUtils.getNamespaceURI(resourceURI);
+	final Migrator migrator = MigratorRegistry.getInstance().getMigrator(
+			nsURI);
+	if (migrator != null) {
+		final Release release = migrator.getRelease(resourceURI).iterator()
+				.next();
+		if (!release.isLatestRelease()) {
+			if (MessageDialog.openQuestion(Display.getDefault().getActiveShell(),
+					"Migration necessary",
+					"A migration of the model is necessary. " +
+					"Do you want to proceed?")) {
+				performMigration(migrator, resourceURI, release);
 			}
-		} else {
-			MessageDialog.openError(Display.getDefault().getActiveShell(),
-					"Error", "No migrator found");
 		}
+	} else {
+		MessageDialog.openError(Display.getDefault().getActiveShell(),
+				"Error", "No migrator found");
 	}
+}
 
-	private void performMigration(final Migrator migrator,
-			final URI resourceURI, final Release release) {
-		IRunnableWithProgress runnable = new IRunnableWithProgress() {
+private void performMigration(final Migrator migrator,
+		final URI resourceURI, final Release release) {
+	IRunnableWithProgress runnable = new IRunnableWithProgress() {
 
-			public void run(IProgressMonitor monitor)
-					throws InvocationTargetException {
-				try {
-					ResourceSet resourceSet = migrator.migrateAndLoad(
-							Collections.singletonList(resourceURI), release,
-							null, monitor);
-					editingDomain.getResourceSet().getResources()
-							.addAll(resourceSet.getResources());
-				} catch (MigrationException e) {
-					throw new InvocationTargetException(e);
-				}
+		public void run(IProgressMonitor monitor)
+				throws InvocationTargetException {
+			try {
+				ResourceSet resourceSet = migrator.migrateAndLoad(
+						Collections.singletonList(resourceURI), release,
+						null, monitor);
+				editingDomain.getResourceSet().getResources()
+						.addAll(resourceSet.getResources());
+			} catch (MigrationException e) {
+				throw new InvocationTargetException(e);
 			}
-
-		};
-		try {
-			new ProgressMonitorDialog(Display.getCurrent().getActiveShell())
-					.run(false, false, runnable);
-		} catch (InvocationTargetException e) {
-			MessageDialog.openError(
-					Display.getDefault().getActiveShell(),
-					"Migration error",
-					"An error occured during migration of the model. " + 
-					"More information on the error can be found in the error log.");
-			LibraryEditorPlugin.getPlugin().log(e.getCause());
-		} catch (InterruptedException e) {
-			LibraryEditorPlugin.getPlugin().log(e);
 		}
+
+	};
+	try {
+		new ProgressMonitorDialog(Display.getCurrent().getActiveShell())
+				.run(false, false, runnable);
+	} catch (InvocationTargetException e) {
+		MessageDialog.openError(
+				Display.getDefault().getActiveShell(),
+				"Migration error",
+				"An error occured during migration of the model. " + 
+				"More information on the error can be found in the error log.");
+		LibraryEditorPlugin.getPlugin().log(e.getCause());
+	} catch (InterruptedException e) {
+		LibraryEditorPlugin.getPlugin().log(e);
 	}
+}
 </pre>
 <hr/>
 </p>
