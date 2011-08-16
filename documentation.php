@@ -15,8 +15,16 @@
 	$html  = <<<EOHTML
 <div id="midcolumn">
 <h2>$pageTitle</h2>
-<p>We are currently setting up the documentation for Edapt. 
-In the meantime, there is some documentation available for the predecessor project COPE:</p>
+<p>We are currently setting up the documentation for Edapt.
+The following first article is already available:</p> 
+
+<ul>
+	<li><b><a href="libraryexample.php"
+		title="libraryexample.php"
+		rel="nofollow">Overview</a></b> - of Edapt using the library example</li>
+</ul>
+
+There is also some documentation available for the predecessor project COPE:</p>
 
 <ul>
 	<li><b><a href="http://cope.in.tum.de/pmwiki.php?n=Demo.Main"
