@@ -1,5 +1,5 @@
 <div id="midcolumn">
-<h2>$pageTitle</h2>
+<h1 id="introduction">Edapt - An Overview using the Library Example</h1>
 
 <p>
 The Eclipse Modeling Framework (EMF) supports the developers to build modeling tools using Ecore metamodels. 
@@ -47,7 +47,7 @@ Finally, we provide a brief overview of the advanced features of Edapt.
 <hr/>
 </p>
 
-<h3>Metamodel History</h3>
+<h2 id="history">Metamodel History</h2>
 
 <p>
 To record operations, we first need to create a history for the metamodel. 
@@ -76,7 +76,7 @@ After that, a new release in the history appears in which the operations carried
 <hr/>
 </p>
 
-<h3>Reusable Operations</h3>
+<h2 id="reusable">Reusable Operations</h2>
 
 <p>
 Reusable operations allow to reuse recurring migrations. 
@@ -157,7 +157,7 @@ public class DeleteFeature2 extends OperationImplementation {
 <hr/>
 </p>
 
-<h3>Manually Specifying a Migration</h3>
+<h2 id="custom">Manually Specifying a Migration</h2>
 
 <p>
 Our case studies have also shown that the migrations are sometimes so specific that reuse makes no sense. 
@@ -229,7 +229,7 @@ public class WriterCustomMigration extends CustomMigration {
 <hr/>
 </p>
 
-<h3>Migrator</h3>
+<h2 id="migrator">Migrator</h2>
 
 <p>
 If we have performed all the desired changes, the release must be completed again with RELEASE in the OPERATION BROWSER. 
@@ -322,7 +322,7 @@ private void performMigration(final Migrator migrator,
 <hr/>
 </p>
 
-<h3>Advanced Functions</h3>
+<h2 id="advanced">Advanced Functions</h2>
 
 <p>
 We now have shown the typical use case of Edapt. 
@@ -356,7 +356,7 @@ The task of the user is to bring the source versions closer to the target versio
 Edapt adapts the difference automatically after each execution of an operation.
 </p>
 
-<h3>Conclusion</h3>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>
 Edapt supports the user to create an automated model migration for a metamodel change. 
@@ -365,7 +365,7 @@ Recurrent migrations are provided by means of reusable operations.
 The history can be interpreted to automatically migrate models, which can be embedded into the application.
 <p>
 
-<h3>Material</h3>
+<h2 id="material">Material</h2>
 
 <ul>
 <li>Preconfigured workspaces for the example: <a href="http://download.eclipse.org/edapt/examples/library/workspaces.zip">http://download.eclipse.org/edapt/examples/library/workspaces.zip</a></li>
@@ -373,3 +373,22 @@ The history can be interpreted to automatically migrate models, which can be emb
 </ul>
 
 </div>
+
+	<div id="rightcolumn">
+		<div class="sideitem">
+		<h6>Contents</h6>
+		<div class='modal'>
+			<ul>
+				  <li><a href="#introduction">Introduction</a></li>
+				  <li><a href="#history">Metamodel History</a></li>
+				  <li><a href="#reusable">Reusable Operations</a></li>
+				  <li><a href="#custom">Manually Specifying a Migration</a></li>
+				  <li><a href="#migrator">Migrator</a></li>
+				  <li><a href="#advanced">Advanced Functions</a></li>
+				  <li><a href="#conclusion">Conclusion</a></li>
+				  <li><a href="#material">Material</a></li>				  
+			</ul>
+		</div>
+		</div>
+
+	</div>
