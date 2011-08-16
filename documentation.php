@@ -21,7 +21,7 @@ The following first article is already available:</p>
 <ul>
 	<li><b><a href="libraryexample.php"
 		title="libraryexample.php"
-		rel="nofollow">Overview</a></b> - of Edapt using the library example</li>
+		rel="nofollow">Tutorial</a></b> - overview of Edapt using the library example</li>
 </ul>
 
 There is also some documentation available for the predecessor project COPE:</p>
