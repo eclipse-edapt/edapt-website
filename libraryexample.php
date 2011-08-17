@@ -12,6 +12,15 @@
 
 	$pageTitle 		= "Edapt - An Overview using the Library Example";
 
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	
+	$App 	= new App();	
+	$Nav	= new Nav();	
+	$Menu 	= new Menu();		
+	include($App->getProjectCommon());
+	
+	$localVersion = false;
 	$html  = file_get_contents('pages/libraryexample.html');
 	# Generate the web page
 	$App->generatePage($theme, $Menu, null, $pageAuthor, $pageKeywords, $pageTitle, $html);
