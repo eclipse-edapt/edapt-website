@@ -3,12 +3,12 @@
 	background: url("images/backgroundMain.png") no-repeat white;
 }
 
-#midcolumnx {
+#midcolumn {
 	width: 640px;
 	padding: 0 10px 10px 10px;
 }
 
-#rightcolumnx {
+#rightcolumn {
 	width: 260px;
 }
 

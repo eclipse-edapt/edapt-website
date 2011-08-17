@@ -33,9 +33,6 @@
 	# $Menu->addMenuItem("Getting started", "/edapt/gettingstarted.php", "_self");
 	# $Menu->addMenuItem("Support", "/edapt/support.php", "_self");
 	# $Menu->addMenuItem("Developers", "/edapt/developers", "_self");
-
-	# To define additional CSS or other pre-body headers
-	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>');
 	
 	# To enable occasional Eclipse Foundation Promotion banners on your pages (EclipseCon, etc)
 	$App->Promotion = TRUE;
