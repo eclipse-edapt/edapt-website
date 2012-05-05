@@ -16,12 +16,16 @@
 <div id="midcolumn">
 <h2>$pageTitle</h2>
 <p>We are currently setting up the documentation for Edapt.
-The following first article is already available:</p> 
+The following first items are already available:</p> 
 
 <ul>
 	<li><b><a href="libraryexample.php"
 		title="libraryexample.php"
 		rel="nofollow">Tutorial</a></b> - overview of Edapt using the library example</li>
+	<li><b><a
+		href="publications.php"
+		title="publications.phpn"
+		rel="nofollow">Publications</a></b> - learn about scientific results</li>
 </ul>
 
 There is also some documentation available for the predecessor project COPE:</p>
@@ -34,10 +38,6 @@ There is also some documentation available for the predecessor project COPE:</p>
 		href="http://cope.in.tum.de/pmwiki.php?n=Documentation.Main"
 		title=http://cope.in.tum.de/pmwiki.php?n=Documentation.Main"
 		rel="nofollow">Documentation</a></b> - read about the details</li>
-	<li><b><a
-		href="publications.php"
-		title="publications.phpn"
-		rel="nofollow">Publications</a></b> - learn about scientific results</li>
 </ul>
 
 
