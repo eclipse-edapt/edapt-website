@@ -10,39 +10,9 @@
  *    
  *******************************************************************************/
 
-	$pageTitle 		= "Edapt - Documentation";
+	$pageTitle 		= "Edapt - Publications";
 
-	$html  = <<<EOHTML
-<div id="midcolumn">
-<h2>$pageTitle</h2>
-<p>We are currently setting up the documentation for Edapt.
-The following first article is already available:</p> 
-
-<ul>
-	<li><b><a href="libraryexample.php"
-		title="libraryexample.php"
-		rel="nofollow">Tutorial</a></b> - overview of Edapt using the library example</li>
-</ul>
-
-There is also some documentation available for the predecessor project COPE:</p>
-
-<ul>
-	<li><b><a href="http://cope.in.tum.de/pmwiki.php?n=Demo.Main"
-		title="http://cope.in.tum.de/pmwiki.php?n=Demo.Main"
-		rel="nofollow">Demo</a></b> - getting started with COPE</li>
-	<li><b><a
-		href="http://cope.in.tum.de/pmwiki.php?n=Documentation.Main"
-		title=http://cope.in.tum.de/pmwiki.php?n=Documentation.Main"
-		rel="nofollow">Documentation</a></b> - read about the details</li>
-	<li><b><a
-		href="publications.php"
-		title="publications.phpn"
-		rel="nofollow">Publications</a></b> - learn about scientific results</li>
-</ul>
-
-
-</div>
-EOHTML;
+	$html  = file_get_contents('pages/publications.html');
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
