@@ -12,18 +12,21 @@ Inheritance operations move features along the inheritance hierarchy.
 In the metamodel, a feature is extracted into a new subclass and the feature is made mandatory. In the model, all instances of the superclass that have the feature set are migrated to the new subclass.
 </p>
 
-<h3>Parameters:</h3>
+<p><strong>Parameters:</strong>
 <ul>
 	<li><tt>superClass</tt>: The superclass from which the feature is extracted</li>
 	<li><tt>feature</tt>: The feature to be extracted</li>
 	<li><tt>className</tt>: The name of the new subclass</li>
 </ul>
+</p>
 
-<h3>Constraints:</h3>
+<p>
+<strong>Constraints:</strong>
 <ul>
 	<li>The super class may not have a sub class</li>
 	<li>The feature has to belong to the super class</li>
 </ul>
+</p>
 
 
 
@@ -32,7 +35,7 @@ In the metamodel, a feature is extracted into a new subclass and the feature is 
 In the metamodel, a super class is extracted from a number of sub classes. In the model, nothing is changed.
 </p>
 
-<h3>Parameters:</h3>
+<p><strong>Parameters:</strong>
 <ul>
 	<li><tt>subClasses</tt>: The classes from which the super class is extracted</li>
 	<li><tt>toExtract</tt>: The features to be extracted</li>
@@ -41,8 +44,10 @@ In the metamodel, a super class is extracted from a number of sub classes. In th
 	<li><tt>abstr</tt>: Whether the super class is abstract</li>
 	<li><tt>superSuperClasses</tt>: The super classes of the sub class which become super classes of the super class</li>
 </ul>
+</p>
 
-<h3>Constraints:</h3>
+<p>
+<strong>Constraints:</strong>
 <ul>
 	<li>The sub classes must have the super classes as common super classes</li>
 	<li>The features must not have opposite references</li>
@@ -51,6 +56,7 @@ In the metamodel, a super class is extracted from a number of sub classes. In th
 	<li>The features' multiplicities have to be the same</li>
 	<li>The features' types have to be the same</li>
 </ul>
+</p>
 
 
 <h2 id="imitateSuperType">Unfold Superclass</h2>
@@ -58,17 +64,20 @@ In the metamodel, a super class is extracted from a number of sub classes. In th
 In the metamodel, a superclass is removed from a subclass, while all its features are copied into the subclass. In the model, values are changed accordingly.
 </p>
 
-<h3>Parameters:</h3>
+<p><strong>Parameters:</strong>
 <ul>
 	<li><tt>subClass</tt>: The subclass</li>
 	<li><tt>superClass</tt>: The superclass</li>
 </ul>
+</p>
 
-<h3>Constraints:</h3>
+<p>
+<strong>Constraints:</strong>
 <ul>
 	<li>The super class has to be a super type of the sub class</li>
 	<li>The super class must not be target of a reference</li>
 </ul>
+</p>
 
 
 <h2 id="inlineSubClass">Inline Sub Class</h2>
@@ -76,18 +85,21 @@ In the metamodel, a superclass is removed from a subclass, while all its feature
 In the metamodel, the sub class is deleted. In the model, all instances of this sub class are migrated to its super class.
 </p>
 
-<h3>Parameters:</h3>
+<p><strong>Parameters:</strong>
 <ul>
 	<li><tt>subClass</tt>: The class to be inlined</li>
 </ul>
+</p>
 
-<h3>Constraints:</h3>
+<p>
+<strong>Constraints:</strong>
 <ul>
 	<li>The sub class must have exactly one super type</li>
 	<li>The sub class must not have features</li>
 	<li>The sub class must not have sub types</li>
 	<li>The super class must not be abstract</li>
 </ul>
+</p>
 
 
 <h2 id="inlineSuperClass">Inline Super Class</h2>
@@ -95,15 +107,18 @@ In the metamodel, the sub class is deleted. In the model, all instances of this 
 In the metamodel, a super class is inlined into its sub classes. More specifically, its features are propagated to the sub classes. In the model, the values of these features have to be adapted accordingly.
 </p>
 
-<h3>Parameters:</h3>
+<p><strong>Parameters:</strong>
 <ul>
 	<li><tt>superClass</tt>: The super class to be inlined</li>
 </ul>
+</p>
 
-<h3>Constraints:</h3>
+<p>
+<strong>Constraints:</strong>
 <ul>
 	<li>The super class must be abstract</li>
 </ul>
+</p>
 
 
 <h2 id="pullFeature">Pull up Feature</h2>
@@ -111,13 +126,15 @@ In the metamodel, a super class is inlined into its sub classes. More specifical
 In the metamodel, a number of features are pulled up into a common super class. In the model, values are changed accordingly.
 </p>
 
-<h3>Parameters:</h3>
+<p><strong>Parameters:</strong>
 <ul>
 	<li><tt>features</tt>: The features to be pulled up</li>
 	<li><tt>targetClass</tt>: The super class to which the features are pulled</li>
 </ul>
+</p>
 
-<h3>Constraints:</h3>
+<p>
+<strong>Constraints:</strong>
 <ul>
 	<li>The features must not have opposite references</li>
 	<li>The features have to be all containment references or not</li>
@@ -125,6 +142,7 @@ In the metamodel, a number of features are pulled up into a common super class. 
 	<li>The features' classes must have a common super type</li>
 	<li>The features' multiplicities have to be the same</li>
 </ul>
+</p>
 
 
 <h2 id="pullOperation">Pull up Operation</h2>
@@ -132,18 +150,21 @@ In the metamodel, a number of features are pulled up into a common super class. 
 In the metamodel, a number of operations are pulled up into a common super class. In the model, nothing needs to be done.
 </p>
 
-<h3>Parameters:</h3>
+<p><strong>Parameters:</strong>
 <ul>
 	<li><tt>operations</tt>: The operations to be pulled up</li>
 	<li><tt>targetClass</tt>: The super class to which the operations are pulled</li>
 </ul>
+</p>
 
-<h3>Constraints:</h3>
+<p>
+<strong>Constraints:</strong>
 <ul>
 	<li>The operations' classes must have a common super type</li>
 	<li>The operations' types have to be the same</li>
 	<li>The operations' multiplicities have to be the same</li>
 </ul>
+</p>
 
 
 <h2 id="pushFeature">Push down Feature</h2>
@@ -151,15 +172,18 @@ In the metamodel, a number of operations are pulled up into a common super class
 In the metamodel, a feature is pushed down to its sub classes. In the model, values are changed accordingly.
 </p>
 
-<h3>Parameters:</h3>
+<p><strong>Parameters:</strong>
 <ul>
 	<li><tt>feature</tt>: The feature to be pushed down</li>
 </ul>
+</p>
 
-<h3>Constraints:</h3>
+<p>
+<strong>Constraints:</strong>
 <ul>
 	<li>If the feature has an opposite, then the super class may only have one sub type.</li>
 </ul>
+</p>
 
 
 <h2 id="pushOperation">Push down Operation</h2>
@@ -167,10 +191,11 @@ In the metamodel, a feature is pushed down to its sub classes. In the model, val
 In the metamodel, an operation is pushed down to its sub classes. In the model, nothing needs to be done.
 </p>
 
-<h3>Parameters:</h3>
+<p><strong>Parameters:</strong>
 <ul>
 	<li><tt>operation</tt>: The operation to be pushed down</li>
 </ul>
+</p>
 
 
 
@@ -180,15 +205,17 @@ In the metamodel, an operation is pushed down to its sub classes. In the model, 
 In the metamodel, a number of features are replaced by features of a new super class. In the model, the values are moved to these features based on a mapping.
 </p>
 
-<h3>Parameters:</h3>
+<p><strong>Parameters:</strong>
 <ul>
 	<li><tt>subClass</tt>: The class to which the super class is added</li>
 	<li><tt>superClass</tt>: The new super class</li>
 	<li><tt>toReplace</tt>: The features to be replaced</li>
 	<li><tt>replaceBy</tt>: The features by which they are replaced (in the same order)</li>
 </ul>
+</p>
 
-<h3>Constraints:</h3>
+<p>
+<strong>Constraints:</strong>
 <ul>
 	<li>The features must be of the same type</li>
 	<li>The features to be replaced must belong to the sub class</li>
@@ -196,6 +223,7 @@ In the metamodel, a number of features are replaced by features of a new super c
 	<li>The number of features to be replaced and to replace them must be the same</li>
 	<li>The features must be of the same multiplicity</li>
 </ul>
+</p>
 
 
 
