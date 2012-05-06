@@ -12,7 +12,7 @@ Replacement operations replace one metamodeling construct by another, equivalent
 In the metamodel, an enumeration attribute of a class is replaced by subclasses. The class is made abstract, and a subclass is created for each literal of the enumeration. The enumeration attribute is deleted and also the enumeration, if not used otherwise. In the model, instances the class are migrated to the appropriate subclass according to the value of the enumeration attribute.
 </p>
 
-<p><strong>Parameters:</strong>
+<p><h5>Parameters</h5>:
 <ul>
 	<li><tt>enumAttribute</tt>: The enumeration attribute</li>
 	<li><tt>ePackage</tt>: The package in which the subclasses are created</li>
@@ -20,7 +20,7 @@ In the metamodel, an enumeration attribute of a class is replaced by subclasses.
 </p>
 
 <p>
-<strong>Constraints:</strong>
+<h5>Constraints</h5>:
 <ul>
 	<li>The context class must be concrete</li>
 	<li>The context class must not have sub types</li>
@@ -34,7 +34,7 @@ In the metamodel, an enumeration attribute of a class is replaced by subclasses.
 In the metamodel, a reference is replaced by a reference class. More specifically, the reference class is now contained by the source class. In the model, links conforming to the reference are replaced by instances of the reference class.
 </p>
 
-<p><strong>Parameters:</strong>
+<p><h5>Parameters</h5>:
 <ul>
 	<li><tt>reference</tt>: The reference to be replaced by a reference class</li>
 	<li><tt>className</tt>: The name of the reference class</li>
@@ -44,7 +44,7 @@ In the metamodel, a reference is replaced by a reference class. More specificall
 </p>
 
 <p>
-<strong>Constraints:</strong>
+<h5>Constraints</h5>:
 <ul>
 	<li>Opposite reference is not allowed to be containment</li>
 	<li>Reference has to have an opposite</li>
@@ -58,7 +58,7 @@ In the metamodel, a reference is replaced by a reference class. More specificall
 In the metamodel, a reference is made changeable, and at the same time its setter is suppressed. Nothing is changed in the model.
 </p>
 
-<p><strong>Parameters:</strong>
+<p><h5>Parameters</h5>:
 <ul>
 	<li><tt>reference</tt>: The reference to be made changeable</li>
 </ul>
@@ -71,14 +71,14 @@ In the metamodel, a reference is made changeable, and at the same time its sette
 In the metamodel, an operation is transformed into a volatile feature. In the model, nothing needs to be done.
 </p>
 
-<p><strong>Parameters:</strong>
+<p><h5>Parameters</h5>:
 <ul>
 	<li><tt>operation</tt>: The operation to be transformed</li>
 </ul>
 </p>
 
 <p>
-<strong>Constraints:</strong>
+<h5>Constraints</h5>:
 <ul>
 	<li>The operation must not have parameters</li>
 </ul>
@@ -90,7 +90,7 @@ In the metamodel, an operation is transformed into a volatile feature. In the mo
 In the metamodel, an attribute that references elements by identifier is replaced by a reference. In the model, its values are replaced by references to that element.
 </p>
 
-<p><strong>Parameters:</strong>
+<p><h5>Parameters</h5>:
 <ul>
 	<li><tt>referencingAttribute</tt>: The referencing attribute</li>
 	<li><tt>referencedAttribute</tt>: The referenced attribute</li>
@@ -98,7 +98,7 @@ In the metamodel, an attribute that references elements by identifier is replace
 </p>
 
 <p>
-<strong>Constraints:</strong>
+<h5>Constraints</h5>:
 <ul>
 	<li>Referencing and referenced attribute must be of the same type</li>
 </ul>
@@ -110,7 +110,7 @@ In the metamodel, an attribute that references elements by identifier is replace
 In the metamodel, inheritance from a super class is replaced by delegation to this class. More specifically, the super class is removed and a containment reference to this class is created. In the model, the contents associated to the super class are extracted to a separate instance of the super class.
 </p>
 
-<p><strong>Parameters:</strong>
+<p><h5>Parameters</h5>:
 <ul>
 	<li><tt>subClass</tt>: The class from which the super class is removed</li>
 	<li><tt>superClass</tt>: The super class to be removed</li>
@@ -119,7 +119,7 @@ In the metamodel, inheritance from a super class is replaced by delegation to th
 </p>
 
 <p>
-<strong>Constraints:</strong>
+<h5>Constraints</h5>:
 <ul>
 	<li>The super class must be a super type of the sub class</li>
 </ul>
@@ -131,7 +131,7 @@ In the metamodel, inheritance from a super class is replaced by delegation to th
 In the metamodel, the subclasses of a class are replaced by an enumeration. An enumeration with literals for all subclasses is created and an enumeration attribute is created in the class. Finally, all subclasses are deleted, and the class is made concrete. In the model, instances of a subclass are migrated to the class, setting the enumeration attribute to the appropriate literal.
 </p>
 
-<p><strong>Parameters:</strong>
+<p><h5>Parameters</h5>:
 <ul>
 	<li><tt>contextClass</tt>: The context class</li>
 	<li><tt>attributeName</tt>: The name of the enumeration attribute</li>
@@ -141,7 +141,7 @@ In the metamodel, the subclasses of a class are replaced by an enumeration. An e
 </p>
 
 <p>
-<strong>Constraints:</strong>
+<h5>Constraints</h5>:
 <ul>
 	<li>The context class must have sub types</li>
 	<li>The context class must be abstract</li>
@@ -155,14 +155,14 @@ In the metamodel, the subclasses of a class are replaced by an enumeration. An e
 In the metamodel, the setter of a reference is made visible again, and at the same time it is made non-changeable. Nothing is changed in the model.
 </p>
 
-<p><strong>Parameters:</strong>
+<p><h5>Parameters</h5>:
 <ul>
 	<li><tt>reference</tt>: The reference whose setter is made visible again</li>
 </ul>
 </p>
 
 <p>
-<strong>Constraints:</strong>
+<h5>Constraints</h5>:
 <ul>
 	<li>Suppressed Set Visibility must be present</li>
 </ul>
@@ -174,7 +174,7 @@ In the metamodel, the setter of a reference is made visible again, and at the sa
 In the metamodel, a reference is changed from being volatile to an opposite. In the model, the opposite direction needs to be set.
 </p>
 
-<p><strong>Parameters:</strong>
+<p><h5>Parameters</h5>:
 <ul>
 	<li><tt>reference</tt>: The reference which is changed from volatile to opposite</li>
 	<li><tt>opposite</tt>: The reference which is going to be the opposite</li>
@@ -183,7 +183,7 @@ In the metamodel, a reference is changed from being volatile to an opposite. In 
 </p>
 
 <p>
-<strong>Constraints:</strong>
+<h5>Constraints</h5>:
 <ul>
 	<li>Reference and opposite must be compatible with each other</li>
 	<li>Reference must be volatile</li>
@@ -197,7 +197,7 @@ In the metamodel, a reference is changed from being volatile to an opposite. In 
 
 </p>
 
-<p><strong>Parameters:</strong>
+<p><h5>Parameters</h5>:
 <ul>
 	<li><tt>eClass</tt>: Class to be replaced by an association</li>
 	<li><tt>sourceReference</tt>: Reference to the source class of the association</li>
@@ -207,7 +207,7 @@ In the metamodel, a reference is changed from being volatile to an opposite. In 
 </p>
 
 <p>
-<strong>Constraints:</strong>
+<h5>Constraints</h5>:
 <ul>
 	<li>The class must not have any sub types.</li>
 	<li>The source reference must be single-valued and not containment.</li>
