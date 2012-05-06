@@ -24,8 +24,12 @@ The following first items are already available:</p>
 		rel="nofollow">Tutorial</a></b> - overview of Edapt using the library example</li>
 	<li><b><a
 		href="publications.php"
-		title="publications.phpn"
+		title="publications.php"
 		rel="nofollow">Publications</a></b> - learn about scientific results</li>
+	<li><b><a
+		href="operations.php"
+		title="operations.php"
+		rel="nofollow">Operations</a></b> - get an overview of the reusable operations and their semantics</li>
 </ul>
 
 There is also some documentation available for the predecessor project COPE:</p>
