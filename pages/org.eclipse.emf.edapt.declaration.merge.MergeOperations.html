@@ -1,0 +1,71 @@
+<div id="maincontent">
+<div id="midcolumn">
+<h1>Merge Operations</h1>
+
+<p>
+Merge operations merge several metamodel elements of the same type into a single element, whereas split operations split a metamodel element into several elements of the same type.
+</p>
+
+<h2 id="merge">Merge Reference into Another</h2>
+<p>
+In the metamodel, a reference is deleted. In the model, the values of this reference are merged to a compatible reference.
+</p>
+<h2 id="partitionReference">Partition Reference</h2>
+<p>
+In the metamodel, a reference is partitioned into a number of references according to its type. A sub reference is created for each subclass of the reference's type. Finally, the original reference is deleted. In the model, the value of the reference is partitioned accordingly.
+</p>
+<h2 id="replaceClass">Replace Class</h2>
+<p>
+In the metamodel, a class is deleted. In the model, instances of this class are migrated to another class based on a mapping of features.
+</p>
+<h2 id="replaceClassBySibling">Replace Class by Sibling</h2>
+<p>
+In the metamodel, a class is deleted. In the model, its instances are migrated to a class sharing the same super class.
+</p>
+<h2 id="replaceEnum">Replace Enumeration</h2>
+<p>
+In the metamodel, an enumeration is replaced by another one. More specifically, the enumeration is deleted and the other enumeration used instead. In the model, the values of this enumeration are replaced based on a mapping of literals.
+</p>
+<h2 id="replaceLiteral">Replace Literal</h2>
+<p>
+In the metamodel, an enum literal is removed and replaced by another one. In the model, the enum's values are replaced accordingly.
+</p>
+<h2 id="splitStringAttribute">Split String Attribute</h2>
+<p>
+In the metamodel, a new String-typed attribute is created. In the model, the value of another String-typed attribute is split among the two attributes by means of a regular expression.
+</p>
+<h2 id="uniteReferences">Unite References</h2>
+<p>
+In the metamodel, a number of references are united into a single reference which obtains their common super type as type. In the model, their values have to be moved accordingly.
+</p>
+
+</div>
+
+<div id="rightcolumn">
+<div class="sideitem">
+<div class="modal">
+<h6>Contents</h6>
+	<ul>
+		  <li><a href="org.eclipse.emf.edapt.declaration.creation.StructuralPrimitives.php">Structural Primitives</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.simple.NonStructuralPrimitives.php">Non-structural Primitives</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.generalization.GeneralizationOperations.php">Generalization / Specialization Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.inheritance.InheritanceOperations.php">Inheritance Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.delegation.DelegationOperations.php">Delegation Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.replacement.ReplacementOperations.php">Replacement Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.merge.MergeOperations.php">Merge Operations</a></li>
+				<ul>
+	<li><a href="#merge">Merge Reference into Another</a></li>
+	<li><a href="#partitionReference">Partition Reference</a></li>
+	<li><a href="#replaceClass">Replace Class</a></li>
+	<li><a href="#replaceClassBySibling">Replace Class by Sibling</a></li>
+	<li><a href="#replaceEnum">Replace Enumeration</a></li>
+	<li><a href="#replaceLiteral">Replace Literal</a></li>
+	<li><a href="#splitStringAttribute">Split String Attribute</a></li>
+	<li><a href="#uniteReferences">Unite References</a></li>
+				</ul>
+	</ul>
+</div>
+</div>
+</div>
+
+</div>

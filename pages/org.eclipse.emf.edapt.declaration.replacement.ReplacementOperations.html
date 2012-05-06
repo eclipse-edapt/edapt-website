@@ -1,0 +1,81 @@
+<div id="maincontent">
+<div id="midcolumn">
+<h1>Replacement Operations</h1>
+
+<p>
+Replacement operations replace one metamodeling construct by another, equivalent construct.
+</p>
+
+<h2 id="enumerationToSubClasses">Enumeration to Sub Classes</h2>
+<p>
+In the metamodel, an enumeration attribute of a class is replaced by subclasses. The class is made abstract, and a subclass is created for each literal of the enumeration. The enumeration attribute is deleted and also the enumeration, if not used otherwise. In the model, instances the class are migrated to the appropriate subclass according to the value of the enumeration attribute.
+</p>
+<h2 id="introduceReferenceClass">Association to Class</h2>
+<p>
+In the metamodel, a reference is replaced by a reference class. More specifically, the reference class is now contained by the source class. In the model, links conforming to the reference are replaced by instances of the reference class.
+</p>
+<h2 id="notChangeableToSuppressedSetVisibility">Not Changeable to Suppressed Set Visibility</h2>
+<p>
+In the metamodel, a reference is made changeable, and at the same time its setter is suppressed. Nothing is changed in the model.
+</p>
+<h2 id="operationToVolatile">Operation to Volatile Feature</h2>
+<p>
+In the metamodel, an operation is transformed into a volatile feature. In the model, nothing needs to be done.
+</p>
+<h2 id="replaceIdentifierByReference">Identifier to Reference</h2>
+<p>
+In the metamodel, an attribute that references elements by identifier is replaced by a reference. In the model, its values are replaced by references to that element.
+</p>
+<h2 id="replaceInheritanceByDelegation">Inheritance to Delegation</h2>
+<p>
+In the metamodel, inheritance from a super class is replaced by delegation to this class. More specifically, the super class is removed and a containment reference to this class is created. In the model, the contents associated to the super class are extracted to a separate instance of the super class.
+</p>
+<h2 id="subClassesToEnumeration">Sub Classes to Enumeration</h2>
+<p>
+In the metamodel, the subclasses of a class are replaced by an enumeration. An enumeration with literals for all subclasses is created and an enumeration attribute is created in the class. Finally, all subclasses are deleted, and the class is made concrete. In the model, instances of a subclass are migrated to the class, setting the enumeration attribute to the appropriate literal.
+</p>
+<h2 id="suppressedSetVisibilityToNotChangeable">Suppressed Set Visibility to Not Changeable</h2>
+<p>
+In the metamodel, the setter of a reference is made visible again, and at the same time it is made non-changeable. Nothing is changed in the model.
+</p>
+<h2 id="volatileToOpposite">Volatile to Opposite Reference</h2>
+<p>
+In the metamodel, a reference is changed from being volatile to an opposite. In the model, the opposite direction needs to be set.
+</p>
+<h2 id="org.eclipse.emf.edapt.declaration.replacement.ClassToAssociation">Class to Association</h2>
+<p>
+
+</p>
+
+</div>
+
+<div id="rightcolumn">
+<div class="sideitem">
+<div class="modal">
+<h6>Contents</h6>
+	<ul>
+		  <li><a href="org.eclipse.emf.edapt.declaration.creation.StructuralPrimitives.php">Structural Primitives</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.simple.NonStructuralPrimitives.php">Non-structural Primitives</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.generalization.GeneralizationOperations.php">Generalization / Specialization Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.inheritance.InheritanceOperations.php">Inheritance Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.delegation.DelegationOperations.php">Delegation Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.replacement.ReplacementOperations.php">Replacement Operations</a></li>
+				<ul>
+	<li><a href="#enumerationToSubClasses">Enumeration to Sub Classes</a></li>
+	<li><a href="#introduceReferenceClass">Association to Class</a></li>
+	<li><a href="#notChangeableToSuppressedSetVisibility">Not Changeable to Suppressed Set Visibility</a></li>
+	<li><a href="#operationToVolatile">Operation to Volatile Feature</a></li>
+	<li><a href="#replaceIdentifierByReference">Identifier to Reference</a></li>
+	<li><a href="#replaceInheritanceByDelegation">Inheritance to Delegation</a></li>
+	<li><a href="#subClassesToEnumeration">Sub Classes to Enumeration</a></li>
+	<li><a href="#suppressedSetVisibilityToNotChangeable">Suppressed Set Visibility to Not Changeable</a></li>
+	<li><a href="#volatileToOpposite">Volatile to Opposite Reference</a></li>
+	<li><a href="#org.eclipse.emf.edapt.declaration.replacement.ClassToAssociation">Class to Association</a></li>
+				</ul>
+		  <li><a href="org.eclipse.emf.edapt.declaration.merge.MergeOperations.php">Merge Operations</a></li>
+	</ul>
+</div>
+</div>
+</div>
+
+</div>

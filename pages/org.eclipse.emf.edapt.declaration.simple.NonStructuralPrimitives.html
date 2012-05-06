@@ -1,0 +1,76 @@
+<div id="maincontent">
+<div id="midcolumn">
+<h1>Non-structural Primitives</h1>
+
+<p>
+Non-structural primitive operations modify a single, existing metamodel element, i.e. change properties of a metamodel element.
+</p>
+
+<h2 id="changeAttributeType">Change Attribute Type</h2>
+<p>
+In the metamodel, the type of an attribute is changed. In the model, the values are migrated based on EMF's default serialization.
+</p>
+<h2 id="document">Document Metamodel Element</h2>
+<p>
+In the metamodel, a metamodel element is documented. Nothing is changed in the model.
+</p>
+<h2 id="dropContainment">Drop Containment</h2>
+<p>
+In the metamodel, the containment of a reference is dropped. At the same time, a new container reference is created in a container class. In the model, elements previously contained by the first reference have to be contained by the new container reference. It is assumed that these elements are indirectly contained in an instance of the container class.
+</p>
+<h2 id="dropOpposite">Drop Opposite Relationship</h2>
+<p>
+In the metamodel, the opposite relationship between to references is dropped. In the model, nothing needs to be done.
+</p>
+<h2 id="makeAbstract">Make Class Abstract</h2>
+<p>
+In the metamodel, a class is made abstract. In a model, instances of this class are migrated to a chosen subclass.
+</p>
+<h2 id="makeContainment">Make Reference Containment</h2>
+<p>
+In the metamodel, a reference is made containment. In the model, its values are replaced by copies.
+</p>
+<h2 id="makeFeatureVolatile">Make Feature Volatile</h2>
+<p>
+In the metamodel, a feature is made volatile. In the model, its values have to be deleted.
+</p>
+<h2 id="moveClassifier">Move Classifier</h2>
+<p>
+In the metamodel, a classifier is moved to a different package. In the model, nothing is changed.
+</p>
+<h2 id="rename">Rename</h2>
+<p>
+In the metamodel, an element is renamed. In the model, nothing is changed.
+</p>
+
+</div>
+
+<div id="rightcolumn">
+<div class="sideitem">
+<div class="modal">
+<h6>Contents</h6>
+	<ul>
+		  <li><a href="org.eclipse.emf.edapt.declaration.creation.StructuralPrimitives.php">Structural Primitives</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.simple.NonStructuralPrimitives.php">Non-structural Primitives</a></li>
+				<ul>
+	<li><a href="#changeAttributeType">Change Attribute Type</a></li>
+	<li><a href="#document">Document Metamodel Element</a></li>
+	<li><a href="#dropContainment">Drop Containment</a></li>
+	<li><a href="#dropOpposite">Drop Opposite Relationship</a></li>
+	<li><a href="#makeAbstract">Make Class Abstract</a></li>
+	<li><a href="#makeContainment">Make Reference Containment</a></li>
+	<li><a href="#makeFeatureVolatile">Make Feature Volatile</a></li>
+	<li><a href="#moveClassifier">Move Classifier</a></li>
+	<li><a href="#rename">Rename</a></li>
+				</ul>
+		  <li><a href="org.eclipse.emf.edapt.declaration.generalization.GeneralizationOperations.php">Generalization / Specialization Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.inheritance.InheritanceOperations.php">Inheritance Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.delegation.DelegationOperations.php">Delegation Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.replacement.ReplacementOperations.php">Replacement Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.merge.MergeOperations.php">Merge Operations</a></li>
+	</ul>
+</div>
+</div>
+</div>
+
+</div>

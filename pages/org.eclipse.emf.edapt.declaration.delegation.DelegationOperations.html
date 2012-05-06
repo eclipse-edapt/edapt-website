@@ -1,0 +1,86 @@
+<div id="maincontent">
+<div id="midcolumn">
+<h1>Delegation Operations</h1>
+
+<p>
+Delegation operations move features along the delegation structure.
+</p>
+
+<h2 id="collectFeature">Collect Feature over Reference</h2>
+<p>
+In the metamodel, a feature is moved opposite to a multi-valued reference. In the model, the values of the feature are aggregated accordingly.
+</p>
+<h2 id="combineFeature">Combine Features over References</h2>
+<p>
+In the metamodel, a number of features are combined in to a single feature by moving it over references to the same class. In the model, the values of the features are moved accordingly.
+</p>
+<h2 id="extractAndGroupAttribute">Extract and Group Attribute</h2>
+<p>
+In the metamodel, an attribute is extracted into a new class. This extracted class is contained by an existing container class and referenced from the context class. In the model, an instance of the extracted class is created for each different value of the extracted attribute.
+</p>
+<h2 id="extractClass">Extract Class</h2>
+<p>
+In the metamodel, a number of features are extracted to a new class. This new class is accessible from the context class through a new containment reference. In the model, the values of the features are extracted to a new instance accordingly.
+</p>
+<h2 id="extractExistingClass">Fold Class</h2>
+<p>
+In the metamodel, a number of features are extracted into an existing class. More specifically, a containment reference to the extracted class is created and the features are replaced by features of the extracted class. In the model, the values of the features are moved accordingly to a new instance of the extracted class.
+</p>
+<h2 id="flattenHierarchy">Flatten Containment Hierarchy</h2>
+<p>
+In the metamodel, a containment hierarchy is flattened. More specifically, the reference to denote the root as well as the reference to denote the children are replaced by a containment reference. In the model, the corresponding hierarchies are flattened accordingly.
+</p>
+<h2 id="inlineClass">Inline Class</h2>
+<p>
+In the metamodel, a class reachable through a single-valued containment reference is inlined. More specifically, its features are moved to the source class of the reference. In the model, the values of these features are moved accordingly.
+</p>
+<h2 id="moveFeature">Move Feature along Reference</h2>
+<p>
+In the metamodel, a feature is moved along a single-valued reference. In the model, values are moved accordingly.
+</p>
+<h2 id="partitionComposite">Introduce Composite Pattern</h2>
+<p>
+In the metamodel, the composite design pattern is introduced. More specifically, a class is refined by two sub classes - one for composite and one for leaf elements, and a reference is moved to the composite class. In addition, the class is made abstract. In the model, instances of that class are migrated based on whether the reference is populated or not.
+</p>
+<h2 id="propagateFeature">Propagate Feature over References</h2>
+<p>
+In the metamodel, a feature is propagated opposite to a number of references. More specifically, the feature is created in each of the classes which are sources of the references. In the model, the values of that feature are moved accordingly.
+</p>
+<h2 id="unfoldClass">Unfold Class</h2>
+<p>
+In the metamodel, a class reachable through a single-valued containment reference is unfolded. More specifically, its features are copied to the source class of the reference which is deleted. In the model, the values of these features are moved accordingly.
+</p>
+
+</div>
+
+<div id="rightcolumn">
+<div class="sideitem">
+<div class="modal">
+<h6>Contents</h6>
+	<ul>
+		  <li><a href="org.eclipse.emf.edapt.declaration.creation.StructuralPrimitives.php">Structural Primitives</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.simple.NonStructuralPrimitives.php">Non-structural Primitives</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.generalization.GeneralizationOperations.php">Generalization / Specialization Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.inheritance.InheritanceOperations.php">Inheritance Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.delegation.DelegationOperations.php">Delegation Operations</a></li>
+				<ul>
+	<li><a href="#collectFeature">Collect Feature over Reference</a></li>
+	<li><a href="#combineFeature">Combine Features over References</a></li>
+	<li><a href="#extractAndGroupAttribute">Extract and Group Attribute</a></li>
+	<li><a href="#extractClass">Extract Class</a></li>
+	<li><a href="#extractExistingClass">Fold Class</a></li>
+	<li><a href="#flattenHierarchy">Flatten Containment Hierarchy</a></li>
+	<li><a href="#inlineClass">Inline Class</a></li>
+	<li><a href="#moveFeature">Move Feature along Reference</a></li>
+	<li><a href="#partitionComposite">Introduce Composite Pattern</a></li>
+	<li><a href="#propagateFeature">Propagate Feature over References</a></li>
+	<li><a href="#unfoldClass">Unfold Class</a></li>
+				</ul>
+		  <li><a href="org.eclipse.emf.edapt.declaration.replacement.ReplacementOperations.php">Replacement Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.merge.MergeOperations.php">Merge Operations</a></li>
+	</ul>
+</div>
+</div>
+</div>
+
+</div>

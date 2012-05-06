@@ -1,0 +1,91 @@
+<div id="maincontent">
+<div id="midcolumn">
+<h1>Inheritance Operations</h1>
+
+<p>
+Inheritance operations move features along the inheritance hierarchy.
+</p>
+
+<h2 id="extractSubClass">Extract Subclass</h2>
+<p>
+In the metamodel, a feature is extracted into a new subclass and the feature is made mandatory. In the model, all instances of the superclass that have the feature set are migrated to the new subclass.
+</p>
+<h2 id="extractSuperClass">Extract Super Class</h2>
+<p>
+In the metamodel, a number of features of a class are extracted to a new super class. In the model, nothing is changed.
+</p>
+<h2 id="extractSuperClass2">Extract Super Class</h2>
+<p>
+In the metamodel, a super class is extracted from a number of sub classes. In the model, nothing is changed.
+</p>
+<h2 id="imitateSuperType">Unfold Superclass</h2>
+<p>
+In the metamodel, a superclass is removed from a subclass, while all its features are copied into the subclass. In the model, values are changed accordingly.
+</p>
+<h2 id="inlineSubClass">Inline Sub Class</h2>
+<p>
+In the metamodel, the sub class is deleted. In the model, all instances of this sub class are migrated to its super class.
+</p>
+<h2 id="inlineSuperClass">Inline Super Class</h2>
+<p>
+In the metamodel, a super class is inlined into its sub classes. More specifically, its features are propagated to the sub classes. In the model, the values of these features have to be adapted accordingly.
+</p>
+<h2 id="pullFeature">Pull up Feature</h2>
+<p>
+In the metamodel, a number of features are pulled up into a common super class. In the model, values are changed accordingly.
+</p>
+<h2 id="pullOperation">Pull up Operation</h2>
+<p>
+In the metamodel, a number of operations are pulled up into a common super class. In the model, nothing needs to be done.
+</p>
+<h2 id="pushFeature">Push down Feature</h2>
+<p>
+In the metamodel, a feature is pushed down to its sub classes. In the model, values are changed accordingly.
+</p>
+<h2 id="pushOperation">Push down Operation</h2>
+<p>
+In the metamodel, an operation is pushed down to its sub classes. In the model, nothing needs to be done.
+</p>
+<h2 id="replaceFeature">Replace Feature</h2>
+<p>
+In the metamodel, a feature is replace by another one. In the model, the values are moved accordingly.
+</p>
+<h2 id="useSuperClass">Fold Super Class</h2>
+<p>
+In the metamodel, a number of features are replaced by features of a new super class. In the model, the values are moved to these features based on a mapping.
+</p>
+
+</div>
+
+<div id="rightcolumn">
+<div class="sideitem">
+<div class="modal">
+<h6>Contents</h6>
+	<ul>
+		  <li><a href="org.eclipse.emf.edapt.declaration.creation.StructuralPrimitives.php">Structural Primitives</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.simple.NonStructuralPrimitives.php">Non-structural Primitives</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.generalization.GeneralizationOperations.php">Generalization / Specialization Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.inheritance.InheritanceOperations.php">Inheritance Operations</a></li>
+				<ul>
+	<li><a href="#extractSubClass">Extract Subclass</a></li>
+	<li><a href="#extractSuperClass">Extract Super Class</a></li>
+	<li><a href="#extractSuperClass2">Extract Super Class</a></li>
+	<li><a href="#imitateSuperType">Unfold Superclass</a></li>
+	<li><a href="#inlineSubClass">Inline Sub Class</a></li>
+	<li><a href="#inlineSuperClass">Inline Super Class</a></li>
+	<li><a href="#pullFeature">Pull up Feature</a></li>
+	<li><a href="#pullOperation">Pull up Operation</a></li>
+	<li><a href="#pushFeature">Push down Feature</a></li>
+	<li><a href="#pushOperation">Push down Operation</a></li>
+	<li><a href="#replaceFeature">Replace Feature</a></li>
+	<li><a href="#useSuperClass">Fold Super Class</a></li>
+				</ul>
+		  <li><a href="org.eclipse.emf.edapt.declaration.delegation.DelegationOperations.php">Delegation Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.replacement.ReplacementOperations.php">Replacement Operations</a></li>
+		  <li><a href="org.eclipse.emf.edapt.declaration.merge.MergeOperations.php">Merge Operations</a></li>
+	</ul>
+</div>
+</div>
+</div>
+
+</div>
