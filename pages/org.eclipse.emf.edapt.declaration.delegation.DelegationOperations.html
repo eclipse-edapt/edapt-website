@@ -22,8 +22,8 @@ In the metamodel, a feature is moved opposite to a multi-valued reference. In th
 <p>
 <h5>Constraints:</h5>
 <ul>
-	<li>Both feature and reference must be multi-valued or the reference must be single-valued</li>
 	<li>The feature must belong to the reference's type</li>
+	<li>Both feature and reference must be multi-valued or the reference must be single-valued</li>
 </ul>
 </p>
 
@@ -46,30 +46,6 @@ In the metamodel, a number of features are combined in to a single feature by mo
 	<li>There must be an equal number of features and references</li>
 	<li>All references must have the same class as type</li>
 	<li>Each feature has to belong to its reference's class</li>
-</ul>
-</p>
-
-
-<h2 id="extractAndGroupAttribute">Extract and Group Attribute</h2>
-<p>
-In the metamodel, an attribute is extracted into a new class. This extracted class is contained by an existing container class and referenced from the context class. In the model, an instance of the extracted class is created for each different value of the extracted attribute.
-</p>
-
-<p><h5>Parameters:</h5>
-<ul>
-	<li><tt>extractedAttribute</tt>: The attribute to be extracted</li>
-	<li><tt>contextPackage</tt>: The package in which the extracted class is created</li>
-	<li><tt>extractedClassName</tt>: The name of the extracted class</li>
-	<li><tt>referenceName</tt>: The reference from the context class to the extracted class</li>
-	<li><tt>containerClass</tt>: The container class for the extracted class</li>
-	<li><tt>containerReferenceName</tt>: The name of the containment reference from the container class to the extracted class</li>
-</ul>
-</p>
-
-<p>
-<h5>Constraints:</h5>
-<ul>
-	<li>The extracted attribute must be single-valued</li>
 </ul>
 </p>
 
@@ -99,27 +75,26 @@ In the metamodel, a number of features are extracted to a new class. This new cl
 </p>
 
 
-<h2 id="extractExistingClass">Fold Class</h2>
+<h2 id="extractAndGroupAttribute">Extract and Group Attribute</h2>
 <p>
-In the metamodel, a number of features are extracted into an existing class. More specifically, a containment reference to the extracted class is created and the features are replaced by features of the extracted class. In the model, the values of the features are moved accordingly to a new instance of the extracted class.
+In the metamodel, an attribute is extracted into a new class. This extracted class is contained by an existing container class and referenced from the context class. In the model, an instance of the extracted class is created for each different value of the extracted attribute.
 </p>
 
 <p><h5>Parameters:</h5>
 <ul>
-	<li><tt>toReplace</tt>: The features to be extracted</li>
-	<li><tt>extractedClass</tt>: The extracted class</li>
-	<li><tt>replaceBy</tt>: The features of the extracted class by which they are replaced (in the same order)</li>
-	<li><tt>referenceName</tt>: The name of the containment reference</li>
+	<li><tt>extractedAttribute</tt>: The attribute to be extracted</li>
+	<li><tt>contextPackage</tt>: The package in which the extracted class is created</li>
+	<li><tt>extractedClassName</tt>: The name of the extracted class</li>
+	<li><tt>referenceName</tt>: The reference from the context class to the extracted class</li>
+	<li><tt>containerClass</tt>: The container class for the extracted class</li>
+	<li><tt>containerReferenceName</tt>: The name of the containment reference from the container class to the extracted class</li>
 </ul>
 </p>
 
 <p>
 <h5>Constraints:</h5>
 <ul>
-	<li>The features must be of the same type</li>
-	<li>The features to replace must be defined in the extracted class</li>
-	<li>The replaced and replacing features must be of the same size</li>
-	<li>The features must be of the same multiplicity</li>
+	<li>The extracted attribute must be single-valued</li>
 </ul>
 </p>
 
@@ -140,10 +115,35 @@ In the metamodel, a containment hierarchy is flattened. More specifically, the r
 <p>
 <h5>Constraints:</h5>
 <ul>
-	<li>The type of the children reference must be the node class.</li>
 	<li>The root reference must be a single-valued containment reference.</li>
 	<li>The children reference must be defined by the node class.</li>
 	<li>The children reference must be a multi-valued containment reference.</li>
+	<li>The type of the children reference must be the node class.</li>
+</ul>
+</p>
+
+
+<h2 id="extractExistingClass">Fold Class</h2>
+<p>
+In the metamodel, a number of features are extracted into an existing class. More specifically, a containment reference to the extracted class is created and the features are replaced by features of the extracted class. In the model, the values of the features are moved accordingly to a new instance of the extracted class.
+</p>
+
+<p><h5>Parameters:</h5>
+<ul>
+	<li><tt>toReplace</tt>: The features to be extracted</li>
+	<li><tt>extractedClass</tt>: The extracted class</li>
+	<li><tt>replaceBy</tt>: The features of the extracted class by which they are replaced (in the same order)</li>
+	<li><tt>referenceName</tt>: The name of the containment reference</li>
+</ul>
+</p>
+
+<p>
+<h5>Constraints:</h5>
+<ul>
+	<li>The features must be of the same multiplicity</li>
+	<li>The features must be of the same type</li>
+	<li>The features to replace must be defined in the extracted class</li>
+	<li>The replaced and replacing features must be of the same size</li>
 </ul>
 </p>
 
@@ -162,34 +162,11 @@ In the metamodel, a class reachable through a single-valued containment referenc
 <p>
 <h5>Constraints:</h5>
 <ul>
-	<li>The multiplicity of the reference must be single-valued</li>
-	<li>The class to be inlined must not have sub classes</li>
+	<li>The class to be inlined must not be a type of another reference</li>
 	<li>The reference must not have an opposite</li>
 	<li>The reference must be containment</li>
-	<li>The class to be inlined must not be a type of another reference</li>
-</ul>
-</p>
-
-
-<h2 id="moveFeature">Move Feature along Reference</h2>
-<p>
-In the metamodel, a feature is moved along a single-valued reference. In the model, values are moved accordingly.
-</p>
-
-<p><h5>Parameters:</h5>
-<ul>
-	<li><tt>feature</tt>: The feature to be moved</li>
-	<li><tt>reference</tt>: The reference along which the feature is moved</li>
-</ul>
-</p>
-
-<p>
-<h5>Constraints:</h5>
-<ul>
-	<li>The multiplicity of the reference must be single-valued and obligatory</li>
-	<li>The reference must be available in the same class as the feature</li>
-	<li>The multiplicity of its opposite reference must be single-valued</li>
-	<li>A feature with that name already exists in the target class</li>
+	<li>The multiplicity of the reference must be single-valued</li>
+	<li>The class to be inlined must not have sub classes</li>
 </ul>
 </p>
 
@@ -211,9 +188,32 @@ In the metamodel, the composite design pattern is introduced. More specifically,
 <p>
 <h5>Constraints:</h5>
 <ul>
-	<li>The class must not have sub classes</li>
 	<li>The child reference must be a containment reference</li>
 	<li>The child reference must be defined by the class</li>
+	<li>The class must not have sub classes</li>
+</ul>
+</p>
+
+
+<h2 id="moveFeature">Move Feature along Reference</h2>
+<p>
+In the metamodel, a feature is moved along a single-valued reference. In the model, values are moved accordingly.
+</p>
+
+<p><h5>Parameters:</h5>
+<ul>
+	<li><tt>feature</tt>: The feature to be moved</li>
+	<li><tt>reference</tt>: The reference along which the feature is moved</li>
+</ul>
+</p>
+
+<p>
+<h5>Constraints:</h5>
+<ul>
+	<li>The multiplicity of its opposite reference must be single-valued</li>
+	<li>A feature with that name already exists in the target class</li>
+	<li>The multiplicity of the reference must be single-valued and obligatory</li>
+	<li>The reference must be available in the same class as the feature</li>
 </ul>
 </p>
 
@@ -252,10 +252,10 @@ In the metamodel, a class reachable through a single-valued containment referenc
 <p>
 <h5>Constraints:</h5>
 <ul>
-	<li>The multiplicity of the reference must be single-valued</li>
-	<li>The class to be unfolded must not have sub classes</li>
 	<li>The reference must not have an opposite</li>
 	<li>The reference must be containment</li>
+	<li>The multiplicity of the reference must be single-valued</li>
+	<li>The class to be unfolded must not have sub classes</li>
 </ul>
 </p>
 
@@ -277,13 +277,13 @@ In the metamodel, a class reachable through a single-valued containment referenc
 				<ul>
 	<li><a href="#collectFeature">Collect Feature over Reference</a></li>
 	<li><a href="#combineFeature">Combine Features over References</a></li>
-	<li><a href="#extractAndGroupAttribute">Extract and Group Attribute</a></li>
 	<li><a href="#extractClass">Extract Class</a></li>
-	<li><a href="#extractExistingClass">Fold Class</a></li>
+	<li><a href="#extractAndGroupAttribute">Extract and Group Attribute</a></li>
 	<li><a href="#flattenHierarchy">Flatten Containment Hierarchy</a></li>
+	<li><a href="#extractExistingClass">Fold Class</a></li>
 	<li><a href="#inlineClass">Inline Class</a></li>
-	<li><a href="#moveFeature">Move Feature along Reference</a></li>
 	<li><a href="#partitionComposite">Introduce Composite Pattern</a></li>
+	<li><a href="#moveFeature">Move Feature along Reference</a></li>
 	<li><a href="#propagateFeature">Propagate Feature over References</a></li>
 	<li><a href="#unfoldClass">Unfold Class</a></li>
 				</ul>

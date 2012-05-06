@@ -102,25 +102,6 @@ In the metamodel, a class is made abstract. In a model, instances of this class 
 </p>
 
 
-<h2 id="makeContainment">Make Reference Containment</h2>
-<p>
-In the metamodel, a reference is made containment. In the model, its values are replaced by copies.
-</p>
-
-<p><h5>Parameters:</h5>
-<ul>
-	<li><tt>reference</tt>: The reference</li>
-</ul>
-</p>
-
-<p>
-<h5>Constraints:</h5>
-<ul>
-	<li>The reference must not already be containment.</li>
-</ul>
-</p>
-
-
 <h2 id="makeFeatureVolatile">Make Feature Volatile</h2>
 <p>
 In the metamodel, a feature is made volatile. In the model, its values have to be deleted.
@@ -139,6 +120,25 @@ In the metamodel, a feature is made volatile. In the model, its values have to b
 <h5>Constraints:</h5>
 <ul>
 	<li>Feature must not be volatile</li>
+</ul>
+</p>
+
+
+<h2 id="makeContainment">Make Reference Containment</h2>
+<p>
+In the metamodel, a reference is made containment. In the model, its values are replaced by copies.
+</p>
+
+<p><h5>Parameters:</h5>
+<ul>
+	<li><tt>reference</tt>: The reference</li>
+</ul>
+</p>
+
+<p>
+<h5>Constraints:</h5>
+<ul>
+	<li>The reference must not already be containment.</li>
 </ul>
 </p>
 
@@ -201,8 +201,8 @@ In the metamodel, an element is renamed. In the model, nothing is changed.
 	<li><a href="#dropContainment">Drop Containment</a></li>
 	<li><a href="#dropOpposite">Drop Opposite Relationship</a></li>
 	<li><a href="#makeAbstract">Make Class Abstract</a></li>
-	<li><a href="#makeContainment">Make Reference Containment</a></li>
 	<li><a href="#makeFeatureVolatile">Make Feature Volatile</a></li>
+	<li><a href="#makeContainment">Make Reference Containment</a></li>
 	<li><a href="#moveClassifier">Move Classifier</a></li>
 	<li><a href="#rename">Rename</a></li>
 				</ul>

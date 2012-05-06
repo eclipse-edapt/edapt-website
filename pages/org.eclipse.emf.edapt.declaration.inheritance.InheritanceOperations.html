@@ -23,8 +23,8 @@ In the metamodel, a feature is extracted into a new subclass and the feature is 
 <p>
 <h5>Constraints:</h5>
 <ul>
-	<li>The super class may not have a sub class</li>
 	<li>The feature has to belong to the super class</li>
+	<li>The super class may not have a sub class</li>
 </ul>
 </p>
 
@@ -59,23 +59,28 @@ In the metamodel, a super class is extracted from a number of sub classes. In th
 </p>
 
 
-<h2 id="imitateSuperType">Unfold Superclass</h2>
+<h2 id="useSuperClass">Fold Super Class</h2>
 <p>
-In the metamodel, a superclass is removed from a subclass, while all its features are copied into the subclass. In the model, values are changed accordingly.
+In the metamodel, a number of features are replaced by features of a new super class. In the model, the values are moved to these features based on a mapping.
 </p>
 
 <p><h5>Parameters:</h5>
 <ul>
-	<li><tt>subClass</tt>: The subclass</li>
-	<li><tt>superClass</tt>: The superclass</li>
+	<li><tt>subClass</tt>: The class to which the super class is added</li>
+	<li><tt>superClass</tt>: The new super class</li>
+	<li><tt>toReplace</tt>: The features to be replaced</li>
+	<li><tt>replaceBy</tt>: The features by which they are replaced (in the same order)</li>
 </ul>
 </p>
 
 <p>
 <h5>Constraints:</h5>
 <ul>
-	<li>The super class has to be a super type of the sub class</li>
-	<li>The super class must not be target of a reference</li>
+	<li>The features must be of the same multiplicity</li>
+	<li>The features must be of the same type</li>
+	<li>The features to be replaced must belong to the sub class</li>
+	<li>The features to replace must be available in the super class</li>
+	<li>The number of features to be replaced and to replace them must be the same</li>
 </ul>
 </p>
 
@@ -94,10 +99,10 @@ In the metamodel, the sub class is deleted. In the model, all instances of this 
 <p>
 <h5>Constraints:</h5>
 <ul>
+	<li>The super class must not be abstract</li>
 	<li>The sub class must have exactly one super type</li>
 	<li>The sub class must not have features</li>
 	<li>The sub class must not have sub types</li>
-	<li>The super class must not be abstract</li>
 </ul>
 </p>
 
@@ -136,11 +141,11 @@ In the metamodel, a number of features are pulled up into a common super class. 
 <p>
 <h5>Constraints:</h5>
 <ul>
+	<li>The features' classes must have a common super type</li>
+	<li>The features' multiplicities have to be the same</li>
 	<li>The features must not have opposite references</li>
 	<li>The features have to be all containment references or not</li>
 	<li>The features' types have to be the same</li>
-	<li>The features' classes must have a common super type</li>
-	<li>The features' multiplicities have to be the same</li>
 </ul>
 </p>
 
@@ -160,9 +165,9 @@ In the metamodel, a number of operations are pulled up into a common super class
 <p>
 <h5>Constraints:</h5>
 <ul>
+	<li>The operations' multiplicities have to be the same</li>
 	<li>The operations' classes must have a common super type</li>
 	<li>The operations' types have to be the same</li>
-	<li>The operations' multiplicities have to be the same</li>
 </ul>
 </p>
 
@@ -200,28 +205,23 @@ In the metamodel, an operation is pushed down to its sub classes. In the model, 
 
 
 
-<h2 id="useSuperClass">Fold Super Class</h2>
+<h2 id="imitateSuperType">Unfold Superclass</h2>
 <p>
-In the metamodel, a number of features are replaced by features of a new super class. In the model, the values are moved to these features based on a mapping.
+In the metamodel, a superclass is removed from a subclass, while all its features are copied into the subclass. In the model, values are changed accordingly.
 </p>
 
 <p><h5>Parameters:</h5>
 <ul>
-	<li><tt>subClass</tt>: The class to which the super class is added</li>
-	<li><tt>superClass</tt>: The new super class</li>
-	<li><tt>toReplace</tt>: The features to be replaced</li>
-	<li><tt>replaceBy</tt>: The features by which they are replaced (in the same order)</li>
+	<li><tt>subClass</tt>: The subclass</li>
+	<li><tt>superClass</tt>: The superclass</li>
 </ul>
 </p>
 
 <p>
 <h5>Constraints:</h5>
 <ul>
-	<li>The features must be of the same type</li>
-	<li>The features to be replaced must belong to the sub class</li>
-	<li>The features to replace must be available in the super class</li>
-	<li>The number of features to be replaced and to replace them must be the same</li>
-	<li>The features must be of the same multiplicity</li>
+	<li>The super class has to be a super type of the sub class</li>
+	<li>The super class must not be target of a reference</li>
 </ul>
 </p>
 
@@ -242,14 +242,14 @@ In the metamodel, a number of features are replaced by features of a new super c
 				<ul>
 	<li><a href="#extractSubClass">Extract Subclass</a></li>
 	<li><a href="#extractSuperClass2">Extract Super Class</a></li>
-	<li><a href="#imitateSuperType">Unfold Superclass</a></li>
+	<li><a href="#useSuperClass">Fold Super Class</a></li>
 	<li><a href="#inlineSubClass">Inline Sub Class</a></li>
 	<li><a href="#inlineSuperClass">Inline Super Class</a></li>
 	<li><a href="#pullFeature">Pull up Feature</a></li>
 	<li><a href="#pullOperation">Pull up Operation</a></li>
 	<li><a href="#pushFeature">Push down Feature</a></li>
 	<li><a href="#pushOperation">Push down Operation</a></li>
-	<li><a href="#useSuperClass">Fold Super Class</a></li>
+	<li><a href="#imitateSuperType">Unfold Superclass</a></li>
 				</ul>
 		  <li><a href="org.eclipse.emf.edapt.declaration.delegation.DelegationOperations.php">Delegation Operations</a></li>
 		  <li><a href="org.eclipse.emf.edapt.declaration.replacement.ReplacementOperations.php">Replacement Operations</a></li>

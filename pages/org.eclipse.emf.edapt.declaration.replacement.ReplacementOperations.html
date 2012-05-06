@@ -7,6 +7,57 @@ Replacement operations replace one metamodeling construct by another, equivalent
 </p>
 
 
+<h2 id="introduceReferenceClass">Association to Class</h2>
+<p>
+In the metamodel, a reference is replaced by a reference class. More specifically, the reference class is now contained by the source class. In the model, links conforming to the reference are replaced by instances of the reference class.
+</p>
+
+<p><h5>Parameters:</h5>
+<ul>
+	<li><tt>reference</tt>: The reference to be replaced by a reference class</li>
+	<li><tt>className</tt>: The name of the reference class</li>
+	<li><tt>sourceReferenceName</tt>: The name of the opposite reference to the source class</li>
+	<li><tt>targetReferenceName</tt>: The name of the opposite reference to the target class</li>
+</ul>
+</p>
+
+<p>
+<h5>Constraints:</h5>
+<ul>
+	<li>Reference has to have an opposite</li>
+	<li>Reference is not allowed to be containment</li>
+	<li>Opposite reference is not allowed to be containment</li>
+</ul>
+</p>
+
+
+<h2 id="org.eclipse.emf.edapt.declaration.replacement.ClassToAssociation">Class to Association</h2>
+<p>
+
+</p>
+
+<p><h5>Parameters:</h5>
+<ul>
+	<li><tt>eClass</tt>: Class to be replaced by an association</li>
+	<li><tt>sourceReference</tt>: Reference to the source class of the association</li>
+	<li><tt>targetReference</tt>: Reference to the target class of the association</li>
+	<li><tt>associationName</tt>: Name of the new association</li>
+</ul>
+</p>
+
+<p>
+<h5>Constraints:</h5>
+<ul>
+	<li>The class must not have any sub types.</li>
+	<li>The source reference must be single-valued and not containment.</li>
+	<li>The source reference must be defined in the class</li>
+	<li>The target reference must be single-valued and not containment.</li>
+	<li>The source reference must be defined in the class</li>
+	<li>The class may only be targeted by one containment reference and the opposite of source and target reference.</li>
+</ul>
+</p>
+
+
 <h2 id="enumerationToSubClasses">Enumeration to Sub Classes</h2>
 <p>
 In the metamodel, an enumeration attribute of a class is replaced by subclasses. The class is made abstract, and a subclass is created for each literal of the enumeration. The enumeration attribute is deleted and also the enumeration, if not used otherwise. In the model, instances the class are migrated to the appropriate subclass according to the value of the enumeration attribute.
@@ -25,62 +76,6 @@ In the metamodel, an enumeration attribute of a class is replaced by subclasses.
 	<li>The context class must be concrete</li>
 	<li>The context class must not have sub types</li>
 	<li>The type of the attribute must be an enumeration</li>
-</ul>
-</p>
-
-
-<h2 id="introduceReferenceClass">Association to Class</h2>
-<p>
-In the metamodel, a reference is replaced by a reference class. More specifically, the reference class is now contained by the source class. In the model, links conforming to the reference are replaced by instances of the reference class.
-</p>
-
-<p><h5>Parameters:</h5>
-<ul>
-	<li><tt>reference</tt>: The reference to be replaced by a reference class</li>
-	<li><tt>className</tt>: The name of the reference class</li>
-	<li><tt>sourceReferenceName</tt>: The name of the opposite reference to the source class</li>
-	<li><tt>targetReferenceName</tt>: The name of the opposite reference to the target class</li>
-</ul>
-</p>
-
-<p>
-<h5>Constraints:</h5>
-<ul>
-	<li>Opposite reference is not allowed to be containment</li>
-	<li>Reference has to have an opposite</li>
-	<li>Reference is not allowed to be containment</li>
-</ul>
-</p>
-
-
-<h2 id="notChangeableToSuppressedSetVisibility">Not Changeable to Suppressed Set Visibility</h2>
-<p>
-In the metamodel, a reference is made changeable, and at the same time its setter is suppressed. Nothing is changed in the model.
-</p>
-
-<p><h5>Parameters:</h5>
-<ul>
-	<li><tt>reference</tt>: The reference to be made changeable</li>
-</ul>
-</p>
-
-
-
-<h2 id="operationToVolatile">Operation to Volatile Feature</h2>
-<p>
-In the metamodel, an operation is transformed into a volatile feature. In the model, nothing needs to be done.
-</p>
-
-<p><h5>Parameters:</h5>
-<ul>
-	<li><tt>operation</tt>: The operation to be transformed</li>
-</ul>
-</p>
-
-<p>
-<h5>Constraints:</h5>
-<ul>
-	<li>The operation must not have parameters</li>
 </ul>
 </p>
 
@@ -122,6 +117,38 @@ In the metamodel, inheritance from a super class is replaced by delegation to th
 <h5>Constraints:</h5>
 <ul>
 	<li>The super class must be a super type of the sub class</li>
+</ul>
+</p>
+
+
+<h2 id="notChangeableToSuppressedSetVisibility">Not Changeable to Suppressed Set Visibility</h2>
+<p>
+In the metamodel, a reference is made changeable, and at the same time its setter is suppressed. Nothing is changed in the model.
+</p>
+
+<p><h5>Parameters:</h5>
+<ul>
+	<li><tt>reference</tt>: The reference to be made changeable</li>
+</ul>
+</p>
+
+
+
+<h2 id="operationToVolatile">Operation to Volatile Feature</h2>
+<p>
+In the metamodel, an operation is transformed into a volatile feature. In the model, nothing needs to be done.
+</p>
+
+<p><h5>Parameters:</h5>
+<ul>
+	<li><tt>operation</tt>: The operation to be transformed</li>
+</ul>
+</p>
+
+<p>
+<h5>Constraints:</h5>
+<ul>
+	<li>The operation must not have parameters</li>
 </ul>
 </p>
 
@@ -192,33 +219,6 @@ In the metamodel, a reference is changed from being volatile to an opposite. In 
 </p>
 
 
-<h2 id="org.eclipse.emf.edapt.declaration.replacement.ClassToAssociation">Class to Association</h2>
-<p>
-
-</p>
-
-<p><h5>Parameters:</h5>
-<ul>
-	<li><tt>eClass</tt>: Class to be replaced by an association</li>
-	<li><tt>sourceReference</tt>: Reference to the source class of the association</li>
-	<li><tt>targetReference</tt>: Reference to the target class of the association</li>
-	<li><tt>associationName</tt>: Name of the new association</li>
-</ul>
-</p>
-
-<p>
-<h5>Constraints:</h5>
-<ul>
-	<li>The class must not have any sub types.</li>
-	<li>The source reference must be single-valued and not containment.</li>
-	<li>The source reference must be defined in the class</li>
-	<li>The target reference must be single-valued and not containment.</li>
-	<li>The source reference must be defined in the class</li>
-	<li>The class may only be targeted by one containment reference and the opposite of source and target reference.</li>
-</ul>
-</p>
-
-
 
 
 </div>
@@ -235,16 +235,16 @@ In the metamodel, a reference is changed from being volatile to an opposite. In 
 		  <li><a href="org.eclipse.emf.edapt.declaration.delegation.DelegationOperations.php">Delegation Operations</a></li>
 		  <li><a href="org.eclipse.emf.edapt.declaration.replacement.ReplacementOperations.php">Replacement Operations</a></li>
 				<ul>
-	<li><a href="#enumerationToSubClasses">Enumeration to Sub Classes</a></li>
 	<li><a href="#introduceReferenceClass">Association to Class</a></li>
-	<li><a href="#notChangeableToSuppressedSetVisibility">Not Changeable to Suppressed Set Visibility</a></li>
-	<li><a href="#operationToVolatile">Operation to Volatile Feature</a></li>
+	<li><a href="#org.eclipse.emf.edapt.declaration.replacement.ClassToAssociation">Class to Association</a></li>
+	<li><a href="#enumerationToSubClasses">Enumeration to Sub Classes</a></li>
 	<li><a href="#replaceIdentifierByReference">Identifier to Reference</a></li>
 	<li><a href="#replaceInheritanceByDelegation">Inheritance to Delegation</a></li>
+	<li><a href="#notChangeableToSuppressedSetVisibility">Not Changeable to Suppressed Set Visibility</a></li>
+	<li><a href="#operationToVolatile">Operation to Volatile Feature</a></li>
 	<li><a href="#subClassesToEnumeration">Sub Classes to Enumeration</a></li>
 	<li><a href="#suppressedSetVisibilityToNotChangeable">Suppressed Set Visibility to Not Changeable</a></li>
 	<li><a href="#volatileToOpposite">Volatile to Opposite Reference</a></li>
-	<li><a href="#org.eclipse.emf.edapt.declaration.replacement.ClassToAssociation">Class to Association</a></li>
 				</ul>
 		  <li><a href="org.eclipse.emf.edapt.declaration.merge.MergeOperations.php">Merge Operations</a></li>
 	</ul>

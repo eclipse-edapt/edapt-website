@@ -71,6 +71,26 @@ In the metamodel, the super type of a class is replaced by its super types. In t
 </p>
 
 
+<h2 id="removeSuperType">Remove Super Type</h2>
+<p>
+In the metamodel, a super type is removed from a class. In the model, the values of the features inherited from that super type (including its super types) are deleted.
+</p>
+
+<p><h5>Parameters:</h5>
+<ul>
+	<li><tt>eClass</tt>: The class from which the super type is removed</li>
+	<li><tt>superType</tt>: The super type to be removed</li>
+</ul>
+</p>
+
+<p>
+<h5>Constraints:</h5>
+<ul>
+	<li>The super type to be removed actually has to be a super type of the class</li>
+</ul>
+</p>
+
+
 <h2 id="removeSuperfluousSuperType">Remove Superfluous Super Type</h2>
 <p>
 In the metamodel, a super type is removed from a class that is already inherited from another super class. In the model, nothing is changed, as this super type is superfluous.
@@ -88,26 +108,6 @@ In the metamodel, a super type is removed from a class that is already inherited
 <ul>
 	<li>The super type to be removed actually has to be a super type</li>
 	<li>The super type to be removed must be subsumed by one of the other super types</li>
-</ul>
-</p>
-
-
-<h2 id="removeSuperType">Remove Super Type</h2>
-<p>
-In the metamodel, a super type is removed from a class. In the model, the values of the features inherited from that super type (including its super types) are deleted.
-</p>
-
-<p><h5>Parameters:</h5>
-<ul>
-	<li><tt>eClass</tt>: The class from which the super type is removed</li>
-	<li><tt>superType</tt>: The super type to be removed</li>
-</ul>
-</p>
-
-<p>
-<h5>Constraints:</h5>
-<ul>
-	<li>The super type to be removed actually has to be a super type of the class</li>
 </ul>
 </p>
 
@@ -171,9 +171,9 @@ In the metamodel, the type of a reference can be specialized to its subclass, in
 <p>
 <h5>Constraints:</h5>
 <ul>
-	<li>The old type must not have any other subclass</li>
-	<li>The old type of the reference must be abstract</li>
 	<li>The new type of the reference must be a subclass of its old type</li>
+	<li>The old type of the reference must be abstract</li>
+	<li>The old type must not have any other subclass</li>
 </ul>
 </p>
 
@@ -216,8 +216,8 @@ In the metamodel, the super type of a class is replaced by one of its sub classe
 	<li><a href="#generalizeAttribute">Generalize Attribute</a></li>
 	<li><a href="#generalizeReference">Generalize Reference</a></li>
 	<li><a href="#generalizeSuperType">Generalize Super Type</a></li>
-	<li><a href="#removeSuperfluousSuperType">Remove Superfluous Super Type</a></li>
 	<li><a href="#removeSuperType">Remove Super Type</a></li>
+	<li><a href="#removeSuperfluousSuperType">Remove Superfluous Super Type</a></li>
 	<li><a href="#specializeComposition">Specialize Composition</a></li>
 	<li><a href="#specializeReference">Specialize Reference</a></li>
 	<li><a href="#specializeReferenceType">Specialize Reference Type</a></li>
