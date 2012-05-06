@@ -6,42 +6,160 @@
 Non-structural primitive operations modify a single, existing metamodel element, i.e. change properties of a metamodel element.
 </p>
 
+
 <h2 id="changeAttributeType">Change Attribute Type</h2>
 <p>
 In the metamodel, the type of an attribute is changed. In the model, the values are migrated based on EMF's default serialization.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>attribute</tt>: The attribute whose type is changed</li>
+	<li><tt>type</tt>: The new type of the attribute</li>
+</ul>
+
+
+
 <h2 id="document">Document Metamodel Element</h2>
 <p>
 In the metamodel, a metamodel element is documented. Nothing is changed in the model.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>element</tt>: The metamodel element to be annotated</li>
+	<li><tt>documentation</tt>: The comment for documentation</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>The element must not be an annotation.</li>
+</ul>
+
+
 <h2 id="dropContainment">Drop Containment</h2>
 <p>
 In the metamodel, the containment of a reference is dropped. At the same time, a new container reference is created in a container class. In the model, elements previously contained by the first reference have to be contained by the new container reference. It is assumed that these elements are indirectly contained in an instance of the container class.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>reference</tt>: The reference whose containment is dropped</li>
+	<li><tt>containerClass</tt>: The container class in which the containment reference is created</li>
+	<li><tt>containerReferenceName</tt>: The name of the new containment reference</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>The reference must be containment</li>
+</ul>
+
+
 <h2 id="dropOpposite">Drop Opposite Relationship</h2>
 <p>
 In the metamodel, the opposite relationship between to references is dropped. In the model, nothing needs to be done.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>reference</tt>: The reference whose opposite relationship should be dropped</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>Reference must have an opposite</li>
+</ul>
+
+
 <h2 id="makeAbstract">Make Class Abstract</h2>
 <p>
 In the metamodel, a class is made abstract. In a model, instances of this class are migrated to a chosen subclass.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>eClass</tt>: The class to be made abstract</li>
+	<li><tt>subClass</tt>: The subclass to which instances are migrated</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>The class is already abstract</li>
+	<li>The class has to be a super type of the sub class</li>
+</ul>
+
+
 <h2 id="makeContainment">Make Reference Containment</h2>
 <p>
 In the metamodel, a reference is made containment. In the model, its values are replaced by copies.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>reference</tt>: The reference</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>The reference must not already be containment.</li>
+</ul>
+
+
 <h2 id="makeFeatureVolatile">Make Feature Volatile</h2>
 <p>
 In the metamodel, a feature is made volatile. In the model, its values have to be deleted.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>feature</tt>: The feature to be made volatile</li>
+	<li><tt>trans</tt>: Whether the feature is transient</li>
+	<li><tt>derived</tt>: Whether the feature is derived</li>
+	<li><tt>changeable</tt>: Whether the feature is changeable</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>Feature must not be volatile</li>
+</ul>
+
+
 <h2 id="moveClassifier">Move Classifier</h2>
 <p>
 In the metamodel, a classifier is moved to a different package. In the model, nothing is changed.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>classifier</tt>: The classifier to be moved</li>
+	<li><tt>targetPackage</tt>: The package to which the classifier is moved</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>A classifier with the same name exists in the target package</li>
+	<li>The classifier must not be already part of the target package</li>
+</ul>
+
+
 <h2 id="rename">Rename</h2>
 <p>
 In the metamodel, an element is renamed. In the model, nothing is changed.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>element</tt>: The metamodel element to be renamed</li>
+	<li><tt>name</tt>: The new name</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>The name must not be already defined by the children of the element's parent.</li>
+</ul>
+
+
+
 
 </div>
 

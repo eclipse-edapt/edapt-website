@@ -6,54 +6,189 @@
 Structural primitives create or delete metamodel elements.
 </p>
 
+
 <h2 id="copyFeature">Copy Feature</h2>
 <p>
 In the metamodel, a feature is copied, giving it a new name. In the model, the values are copied, accordingly.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>feature</tt>: The feature to be copied</li>
+	<li><tt>name</tt>: The name of the copy</li>
+</ul>
+
+
+
 <h2 id="createEnumeration">Create Enumeration</h2>
 <p>
 In the metamodel, an enumeration is created. In the model, nothing needs to be changed.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>ePackage</tt>: The package in which the enumeration is created</li>
+	<li><tt>name</tt>: The name of the new enumeration</li>
+	<li><tt>literals</tt>: The names of the literals of the new enumeration</li>
+</ul>
+
+
+
 <h2 id="deleteClass">Delete Class</h2>
 <p>
 In the metamodel, a class that is no longer used is deleted. In the model, nothing is changed.
 </p>
-<h2 id="deleteFeature">Delete Feature</h2>
-<p>
-In the metamodel, a feature is deleted. In the model, its values are deleted, too.
-</p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>eClass</tt>: The class to be deleted</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>The class must not have sub classes</li>
+	<li>The class must not have super classes</li>
+	<li>The class must not be the target of a reference</li>
+</ul>
+
+
+
 <h2 id="deleteFeature2">Delete Feature</h2>
 <p>
 In the metamodel, a feature is deleted. In the model, its values are deleted, too.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>feature</tt>: The feature to be deleted</li>
+</ul>
+
+
+
 <h2 id="deleteOppositeReference">Delete Opposite Reference</h2>
 <p>
 In the metamodel, the opposite of a reference is deleted. In the model, its values are deleted, too.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>reference</tt>: The reference whose opposite should be deleted</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>The reference needs to define an opposite</li>
+</ul>
+
+
 <h2 id="deletePackage">Delete Package</h2>
 <p>
 In the metamodel, an empty package is deleted.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>ePackage</tt>: The package to be deleted</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>The package must not contain classifiers</li>
+	<li>The package must not contain subpackages</li>
+</ul>
+
+
 <h2 id="newAttribute">Create Attribute</h2>
 <p>
 In the metamodel, a new attribute is created. Nothing is changed in the model.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>eClass</tt>: The class in which the attribute is created</li>
+	<li><tt>name</tt>: The name of the new attribute</li>
+	<li><tt>type</tt>: The type of the new attribute</li>
+	<li><tt>lowerBound</tt>: The lower bound of the new attribute</li>
+	<li><tt>upperBound</tt>: The upper bound of the new reference</li>
+	<li><tt>defaultValue</tt>: The default value literal</li>
+</ul>
+
+
+
 <h2 id="newClass">Create Class</h2>
 <p>
 In the metamodel, a new class is created. Nothing is changed in the model.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>ePackage</tt>: The package in which the class is created</li>
+	<li><tt>name</tt>: The name of the new class</li>
+	<li><tt>superClasses</tt>: The super classes of the new class</li>
+	<li><tt>abstr</tt>: Whether the class is abstract</li>
+</ul>
+
+
+
 <h2 id="newGMFConstraint">Create GMF Constraint</h2>
 <p>
 In the metamodel, a new constraint is introduced. Nothing is changed in the model.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>element</tt>: The metamodel element to be annotated</li>
+	<li><tt>ocl</tt>: The OCL expression of the constraint</li>
+	<li><tt>description</tt>: The description of the constraint</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>The element must not be an annotation.</li>
+</ul>
+
+
 <h2 id="newOppositeReference">Create Opposite Reference</h2>
 <p>
 In the metamodel, an opposite is created for a reference. In the model, the opposite direction needs to be set.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>reference</tt>: The reference for which the opposite is created</li>
+	<li><tt>name</tt>: The name of the opposite reference</li>
+	<li><tt>lowerBound</tt>: The lower bound of the opposite reference</li>
+	<li><tt>upperBound</tt>: The upper bound of the opposite reference</li>
+	<li><tt>changeable</tt>: Whether the opposite reference is changeable</li>
+</ul>
+
+<h3>Constraints:</h3>
+<ul>
+	<li>The reference must not already have an opposite</li>
+	<li>In case of a containment reference, the upper bound of the opposite reference must be 1.</li>
+	<li>In case of a cross reference, the upper bound of the opposite reference must be -1.</li>
+</ul>
+
+
 <h2 id="newReference">Create Reference</h2>
 <p>
 In the metamodel, a new reference is created. Nothing is changed in the model.
 </p>
+
+<h3>Parameters:</h3>
+<ul>
+	<li><tt>eClass</tt>: The class in which the reference is created</li>
+	<li><tt>name</tt>: The name of the new reference</li>
+	<li><tt>type</tt>: The type of the new reference</li>
+	<li><tt>lowerBound</tt>: The lower bound of the new reference</li>
+	<li><tt>upperBound</tt>: The upper bound of the new reference</li>
+	<li><tt>containment</tt>: Whether the new reference is a containment reference</li>
+	<li><tt>opposite</tt>: The opposite reference of the new reference</li>
+</ul>
+
+
+
+
 
 </div>
 
@@ -67,7 +202,6 @@ In the metamodel, a new reference is created. Nothing is changed in the model.
 	<li><a href="#copyFeature">Copy Feature</a></li>
 	<li><a href="#createEnumeration">Create Enumeration</a></li>
 	<li><a href="#deleteClass">Delete Class</a></li>
-	<li><a href="#deleteFeature">Delete Feature</a></li>
 	<li><a href="#deleteFeature2">Delete Feature</a></li>
 	<li><a href="#deleteOppositeReference">Delete Opposite Reference</a></li>
 	<li><a href="#deletePackage">Delete Package</a></li>
