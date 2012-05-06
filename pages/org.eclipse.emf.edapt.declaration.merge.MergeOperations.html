@@ -12,7 +12,7 @@ Merge operations merge several metamodel elements of the same type into a single
 In the metamodel, a reference is deleted. In the model, the values of this reference are merged to a compatible reference.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>toMerge</tt>: The reference that is deleted</li>
 	<li><tt>mergeTo</tt>: The reference to which the values are merged</li>
@@ -20,7 +20,7 @@ In the metamodel, a reference is deleted. In the model, the values of this refer
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The references must be different from each other</li>
 	<li>The reference to merge to must be multi-valued</li>
@@ -35,14 +35,14 @@ In the metamodel, a reference is deleted. In the model, the values of this refer
 In the metamodel, a reference is partitioned into a number of references according to its type. A sub reference is created for each subclass of the reference's type. Finally, the original reference is deleted. In the model, the value of the reference is partitioned accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>reference</tt>: The reference to be partitioned</li>
 </ul>
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The reference must be multi-valued</li>
 	<li>The type of the reference must be abstract</li>
@@ -55,7 +55,7 @@ In the metamodel, a reference is partitioned into a number of references accordi
 In the metamodel, a class is deleted. In the model, instances of this class are migrated to another class based on a mapping of features.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>toReplace</tt>: The class to be replaced</li>
 	<li><tt>replaceBy</tt>: The class by which it is replaced</li>
@@ -65,7 +65,7 @@ In the metamodel, a class is deleted. In the model, instances of this class are 
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The replaced and replacing features have to be of the same size</li>
 	<li>The replace features must be defined in the replaced class</li>
@@ -82,7 +82,7 @@ In the metamodel, a class is deleted. In the model, instances of this class are 
 In the metamodel, an enumeration is replaced by another one. More specifically, the enumeration is deleted and the other enumeration used instead. In the model, the values of this enumeration are replaced based on a mapping of literals.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>toReplace</tt>: The enumeration to be replaced</li>
 	<li><tt>replaceBy</tt>: The enumeration by which it is replaced</li>
@@ -92,7 +92,7 @@ In the metamodel, an enumeration is replaced by another one. More specifically, 
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The replacing literals must belong to the replacing enumeration</li>
 	<li>The replacing and replaced literals must be of the same size</li>
@@ -106,7 +106,7 @@ In the metamodel, an enumeration is replaced by another one. More specifically, 
 In the metamodel, an enum literal is removed and replaced by another one. In the model, the enum's values are replaced accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>toReplace</tt>: The enum literal to replace</li>
 	<li><tt>replaceBy</tt>: The enum literal by which it is replaced</li>
@@ -114,7 +114,7 @@ In the metamodel, an enum literal is removed and replaced by another one. In the
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The enum literal by which it is replace must belong to the same enum.</li>
 </ul>
@@ -126,7 +126,7 @@ In the metamodel, an enum literal is removed and replaced by another one. In the
 In the metamodel, a new String-typed attribute is created. In the model, the value of another String-typed attribute is split among the two attributes by means of a regular expression.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>toSplit</tt>: The feature whose values are split</li>
 	<li><tt>context</tt>: The class in which the new feature is created</li>
@@ -136,7 +136,7 @@ In the metamodel, a new String-typed attribute is created. In the model, the val
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The type of the attribute to split has to be String</li>
 	<li>The class with the new attribute must be a subclass of the class with the attribute to be split</li>
@@ -149,7 +149,7 @@ In the metamodel, a new String-typed attribute is created. In the model, the val
 In the metamodel, a number of references are united into a single reference which obtains their common super type as type. In the model, their values have to be moved accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>references</tt>: The references which are united</li>
 	<li><tt>unitedReferenceName</tt>: The name of the single reference which unites all the references</li>
@@ -157,7 +157,7 @@ In the metamodel, a number of references are united into a single reference whic
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The references have to belong to the same class</li>
 	<li>The references must be all either cross or containment references</li>

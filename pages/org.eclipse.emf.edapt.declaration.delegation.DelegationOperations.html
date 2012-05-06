@@ -12,7 +12,7 @@ Delegation operations move features along the delegation structure.
 In the metamodel, a feature is moved opposite to a multi-valued reference. In the model, the values of the feature are aggregated accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>feature</tt>: The feature to be moved</li>
 	<li><tt>reference</tt>: The reference opposite to which the feature is moved</li>
@@ -20,7 +20,7 @@ In the metamodel, a feature is moved opposite to a multi-valued reference. In th
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>Both feature and reference must be multi-valued or the reference must be single-valued</li>
 	<li>The feature must belong to the reference's type</li>
@@ -33,7 +33,7 @@ In the metamodel, a feature is moved opposite to a multi-valued reference. In th
 In the metamodel, a number of features are combined in to a single feature by moving it over references to the same class. In the model, the values of the features are moved accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>features</tt>: The features to be combined</li>
 	<li><tt>references</tt>: The references over which the features are moved (in the same order)</li>
@@ -41,7 +41,7 @@ In the metamodel, a number of features are combined in to a single feature by mo
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>There must be an equal number of features and references</li>
 	<li>All references must have the same class as type</li>
@@ -55,7 +55,7 @@ In the metamodel, a number of features are combined in to a single feature by mo
 In the metamodel, an attribute is extracted into a new class. This extracted class is contained by an existing container class and referenced from the context class. In the model, an instance of the extracted class is created for each different value of the extracted attribute.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>extractedAttribute</tt>: The attribute to be extracted</li>
 	<li><tt>contextPackage</tt>: The package in which the extracted class is created</li>
@@ -67,7 +67,7 @@ In the metamodel, an attribute is extracted into a new class. This extracted cla
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The extracted attribute must be single-valued</li>
 </ul>
@@ -79,7 +79,7 @@ In the metamodel, an attribute is extracted into a new class. This extracted cla
 In the metamodel, a number of features are extracted to a new class. This new class is accessible from the context class through a new containment reference. In the model, the values of the features are extracted to a new instance accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>contextClass</tt>: The context class from which the features are extracted</li>
 	<li><tt>features</tt>: The features to be extracted</li>
@@ -90,7 +90,7 @@ In the metamodel, a number of features are extracted to a new class. This new cl
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The features have to belong to the same class</li>
 	<li>A classifier with the same name already exists</li>
@@ -104,7 +104,7 @@ In the metamodel, a number of features are extracted to a new class. This new cl
 In the metamodel, a number of features are extracted into an existing class. More specifically, a containment reference to the extracted class is created and the features are replaced by features of the extracted class. In the model, the values of the features are moved accordingly to a new instance of the extracted class.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>toReplace</tt>: The features to be extracted</li>
 	<li><tt>extractedClass</tt>: The extracted class</li>
@@ -114,7 +114,7 @@ In the metamodel, a number of features are extracted into an existing class. Mor
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The features must be of the same type</li>
 	<li>The features to replace must be defined in the extracted class</li>
@@ -129,7 +129,7 @@ In the metamodel, a number of features are extracted into an existing class. Mor
 In the metamodel, a containment hierarchy is flattened. More specifically, the reference to denote the root as well as the reference to denote the children are replaced by a containment reference. In the model, the corresponding hierarchies are flattened accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>rootReference</tt>: The reference to denote the root node</li>
 	<li><tt>childrenReference</tt>: The reference to denote the children nodes</li>
@@ -138,7 +138,7 @@ In the metamodel, a containment hierarchy is flattened. More specifically, the r
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The type of the children reference must be the node class.</li>
 	<li>The root reference must be a single-valued containment reference.</li>
@@ -153,14 +153,14 @@ In the metamodel, a containment hierarchy is flattened. More specifically, the r
 In the metamodel, a class reachable through a single-valued containment reference is inlined. More specifically, its features are moved to the source class of the reference. In the model, the values of these features are moved accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>reference</tt>: The reference to the class to be inlined</li>
 </ul>
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The multiplicity of the reference must be single-valued</li>
 	<li>The class to be inlined must not have sub classes</li>
@@ -176,7 +176,7 @@ In the metamodel, a class reachable through a single-valued containment referenc
 In the metamodel, a feature is moved along a single-valued reference. In the model, values are moved accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>feature</tt>: The feature to be moved</li>
 	<li><tt>reference</tt>: The reference along which the feature is moved</li>
@@ -184,7 +184,7 @@ In the metamodel, a feature is moved along a single-valued reference. In the mod
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The multiplicity of the reference must be single-valued and obligatory</li>
 	<li>The reference must be available in the same class as the feature</li>
@@ -199,7 +199,7 @@ In the metamodel, a feature is moved along a single-valued reference. In the mod
 In the metamodel, the composite design pattern is introduced. More specifically, a class is refined by two sub classes - one for composite and one for leaf elements, and a reference is moved to the composite class. In addition, the class is made abstract. In the model, instances of that class are migrated based on whether the reference is populated or not.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>eClass</tt>: The class which is refined</li>
 	<li><tt>compositeName</tt>: The name of the composite class</li>
@@ -209,7 +209,7 @@ In the metamodel, the composite design pattern is introduced. More specifically,
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The class must not have sub classes</li>
 	<li>The child reference must be a containment reference</li>
@@ -223,7 +223,7 @@ In the metamodel, the composite design pattern is introduced. More specifically,
 In the metamodel, a feature is propagated opposite to a number of references. More specifically, the feature is created in each of the classes which are sources of the references. In the model, the values of that feature are moved accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>mainFeature</tt>: The feature to be propagated</li>
 	<li><tt>references</tt>: The references opposite to which the feature is propagated</li>
@@ -231,7 +231,7 @@ In the metamodel, a feature is propagated opposite to a number of references. Mo
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>Every reference has to target the class with the feature</li>
 </ul>
@@ -243,14 +243,14 @@ In the metamodel, a feature is propagated opposite to a number of references. Mo
 In the metamodel, a class reachable through a single-valued containment reference is unfolded. More specifically, its features are copied to the source class of the reference which is deleted. In the model, the values of these features are moved accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>reference</tt>: The reference to the class to be unfolded</li>
 </ul>
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The multiplicity of the reference must be single-valued</li>
 	<li>The class to be unfolded must not have sub classes</li>

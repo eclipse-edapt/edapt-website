@@ -12,7 +12,7 @@ Structural primitives create or delete metamodel elements.
 In the metamodel, a feature is copied, giving it a new name. In the model, the values are copied, accordingly.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>feature</tt>: The feature to be copied</li>
 	<li><tt>name</tt>: The name of the copy</li>
@@ -26,7 +26,7 @@ In the metamodel, a feature is copied, giving it a new name. In the model, the v
 In the metamodel, an enumeration is created. In the model, nothing needs to be changed.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>ePackage</tt>: The package in which the enumeration is created</li>
 	<li><tt>name</tt>: The name of the new enumeration</li>
@@ -41,14 +41,14 @@ In the metamodel, an enumeration is created. In the model, nothing needs to be c
 In the metamodel, a class that is no longer used is deleted. In the model, nothing is changed.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>eClass</tt>: The class to be deleted</li>
 </ul>
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The class must not have sub classes</li>
 	<li>The class must not have super classes</li>
@@ -63,7 +63,7 @@ In the metamodel, a class that is no longer used is deleted. In the model, nothi
 In the metamodel, a feature is deleted. In the model, its values are deleted, too.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>feature</tt>: The feature to be deleted</li>
 </ul>
@@ -76,14 +76,14 @@ In the metamodel, a feature is deleted. In the model, its values are deleted, to
 In the metamodel, the opposite of a reference is deleted. In the model, its values are deleted, too.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>reference</tt>: The reference whose opposite should be deleted</li>
 </ul>
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The reference needs to define an opposite</li>
 </ul>
@@ -95,14 +95,14 @@ In the metamodel, the opposite of a reference is deleted. In the model, its valu
 In the metamodel, an empty package is deleted.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>ePackage</tt>: The package to be deleted</li>
 </ul>
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The package must not contain classifiers</li>
 	<li>The package must not contain subpackages</li>
@@ -115,7 +115,7 @@ In the metamodel, an empty package is deleted.
 In the metamodel, a new attribute is created. Nothing is changed in the model.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>eClass</tt>: The class in which the attribute is created</li>
 	<li><tt>name</tt>: The name of the new attribute</li>
@@ -133,7 +133,7 @@ In the metamodel, a new attribute is created. Nothing is changed in the model.
 In the metamodel, a new class is created. Nothing is changed in the model.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>ePackage</tt>: The package in which the class is created</li>
 	<li><tt>name</tt>: The name of the new class</li>
@@ -149,7 +149,7 @@ In the metamodel, a new class is created. Nothing is changed in the model.
 In the metamodel, a new constraint is introduced. Nothing is changed in the model.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>element</tt>: The metamodel element to be annotated</li>
 	<li><tt>ocl</tt>: The OCL expression of the constraint</li>
@@ -158,7 +158,7 @@ In the metamodel, a new constraint is introduced. Nothing is changed in the mode
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The element must not be an annotation.</li>
 </ul>
@@ -170,7 +170,7 @@ In the metamodel, a new constraint is introduced. Nothing is changed in the mode
 In the metamodel, an opposite is created for a reference. In the model, the opposite direction needs to be set.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>reference</tt>: The reference for which the opposite is created</li>
 	<li><tt>name</tt>: The name of the opposite reference</li>
@@ -181,7 +181,7 @@ In the metamodel, an opposite is created for a reference. In the model, the oppo
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The reference must not already have an opposite</li>
 	<li>In case of a containment reference, the upper bound of the opposite reference must be 1.</li>
@@ -195,7 +195,7 @@ In the metamodel, an opposite is created for a reference. In the model, the oppo
 In the metamodel, a new reference is created. Nothing is changed in the model.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>eClass</tt>: The class in which the reference is created</li>
 	<li><tt>name</tt>: The name of the new reference</li>

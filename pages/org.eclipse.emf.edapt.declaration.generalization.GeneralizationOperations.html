@@ -12,7 +12,7 @@ Generalization operations generalize feature or super type declarations, whereas
 In the metamodel, the multiplicity of an attribute is generalized. In the model, nothing is changed.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>attribute</tt>: The attribute to be generalized</li>
 	<li><tt>lowerBound</tt>: The new lower bound</li>
@@ -21,7 +21,7 @@ In the metamodel, the multiplicity of an attribute is generalized. In the model,
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The multiplicity must be the same or more general</li>
 </ul>
@@ -33,7 +33,7 @@ In the metamodel, the multiplicity of an attribute is generalized. In the model,
 In the metamodel, either the type or the multiplicity of a reference is generalized. In the model, nothing is changed.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>reference</tt>: The reference to be generalized</li>
 	<li><tt>type</tt>: The new type of the reference</li>
@@ -43,7 +43,7 @@ In the metamodel, either the type or the multiplicity of a reference is generali
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The type must be the same or more general</li>
 	<li>The multiplicity must be the same or more general</li>
@@ -56,7 +56,7 @@ In the metamodel, either the type or the multiplicity of a reference is generali
 In the metamodel, the super type of a class is replaced by its super types. In the model, the values of the features that the class inherits from that super type (excluding its super types) are deleted.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>eClass</tt>: The class of which the super type is replaced</li>
 	<li><tt>superType</tt>: The super type to be replaced by its super types</li>
@@ -64,7 +64,7 @@ In the metamodel, the super type of a class is replaced by its super types. In t
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The super type to remove actually has to be a super type</li>
 </ul>
@@ -76,7 +76,7 @@ In the metamodel, the super type of a class is replaced by its super types. In t
 In the metamodel, a super type is removed from a class that is already inherited from another super class. In the model, nothing is changed, as this super type is superfluous.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>eClass</tt>: The class from which the super type is removed</li>
 	<li><tt>superType</tt>: The super type to be removed</li>
@@ -84,7 +84,7 @@ In the metamodel, a super type is removed from a class that is already inherited
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The super type to be removed actually has to be a super type</li>
 	<li>The super type to be removed must be subsumed by one of the other super types</li>
@@ -97,7 +97,7 @@ In the metamodel, a super type is removed from a class that is already inherited
 In the metamodel, a super type is removed from a class. In the model, the values of the features inherited from that super type (including its super types) are deleted.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>eClass</tt>: The class from which the super type is removed</li>
 	<li><tt>superType</tt>: The super type to be removed</li>
@@ -105,7 +105,7 @@ In the metamodel, a super type is removed from a class. In the model, the values
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The super type to be removed actually has to be a super type of the class</li>
 </ul>
@@ -117,7 +117,7 @@ In the metamodel, a super type is removed from a class. In the model, the values
 In the metamodel, the type of a containment reference is specialized by a new sub class. In the model, the values of this reference are migrated to the new type.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>reference</tt>: The containment reference to be specialized</li>
 	<li><tt>ePackage</tt>: The package in which the sub class is created</li>
@@ -126,7 +126,7 @@ In the metamodel, the type of a containment reference is specialized by a new su
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The reference has to be a containment reference</li>
 </ul>
@@ -138,7 +138,7 @@ In the metamodel, the type of a containment reference is specialized by a new su
 In the metamodel, either the type or the multiplicity of a reference is specialized. In the model, values no longer conforming to the new type or multiplicity are removed.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>reference</tt>: The reference to be generalized</li>
 	<li><tt>type</tt>: The new type of the reference</li>
@@ -148,7 +148,7 @@ In the metamodel, either the type or the multiplicity of a reference is speciali
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The multiplicity must be the same or more special</li>
 	<li>The type must be the same or more special</li>
@@ -161,7 +161,7 @@ In the metamodel, either the type or the multiplicity of a reference is speciali
 In the metamodel, the type of a reference can be specialized to its subclass, in case it is abstract and has only one subclass. In the model, nothing is changed.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>reference</tt>: The reference whose type is specialized</li>
 	<li><tt>type</tt>: The new type of the reference</li>
@@ -169,7 +169,7 @@ In the metamodel, the type of a reference can be specialized to its subclass, in
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The old type must not have any other subclass</li>
 	<li>The old type of the reference must be abstract</li>
@@ -183,7 +183,7 @@ In the metamodel, the type of a reference can be specialized to its subclass, in
 In the metamodel, the super type of a class is replaced by one of its sub classes. In the model, nothing is modified.
 </p>
 
-<p><h5>Parameters</h5>:
+<p><h5>Parameters:</h5>
 <ul>
 	<li><tt>eClass</tt>: The class whose super type is specialized</li>
 	<li><tt>toReplace</tt>: The super type which is replaced</li>
@@ -192,7 +192,7 @@ In the metamodel, the super type of a class is replaced by one of its sub classe
 </p>
 
 <p>
-<h5>Constraints</h5>:
+<h5>Constraints:</h5>
 <ul>
 	<li>The super type to be replaced must be a super type of the class</li>
 	<li>The replacing super type must be a sub type of the replaced super type</li>
