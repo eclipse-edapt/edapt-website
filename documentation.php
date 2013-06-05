@@ -32,18 +32,6 @@ The following first items are already available:</p>
 		rel="nofollow">Operations</a></b> - get an overview of the reusable operations and their semantics</li>
 </ul>
 
-There is also some documentation available for the predecessor project COPE:</p>
-
-<ul>
-	<li><b><a href="http://cope.in.tum.de/pmwiki.php?n=Demo.Main"
-		title="http://cope.in.tum.de/pmwiki.php?n=Demo.Main"
-		rel="nofollow">Demo</a></b> - getting started with COPE</li>
-	<li><b><a
-		href="http://cope.in.tum.de/pmwiki.php?n=Documentation.Main"
-		title=http://cope.in.tum.de/pmwiki.php?n=Documentation.Main"
-		rel="nofollow">Documentation</a></b> - read about the details</li>
-</ul>
-
 
 </div>
 EOHTML;
