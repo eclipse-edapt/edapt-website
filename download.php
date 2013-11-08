@@ -18,7 +18,8 @@
 <p>All downloads are provided under the terms and conditions of the <a href="/legal/epl/notice.php">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 
 <ul>
-<li><a href="http://download.eclipse.org/edapt/update-site/">Update Site</a> - install Edapt in your Eclipse workbench</li>
+<li><a href="http://download.eclipse.org/edapt/p2/">Update Site</a> - Experimental: install Edapt (Build with Git) in your Eclipse workbench</li>
+<li><a href="http://download.eclipse.org/edapt/update-site/">Update Site</a> - install Edapt in your Eclipse workbench (NOT Maintained)</li>
 </ul>
 
 
