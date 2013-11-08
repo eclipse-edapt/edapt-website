@@ -19,16 +19,16 @@
 
 <ul>
 	<li><b><a
-		href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=EMFT&component=Edapt"
-		title="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=EMFT&component=Edapt"
+		href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
+		title="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
 		rel="nofollow">File a bug</a></b> - file bugs and feature requests</li>
-	<li><b><a href="svn+ssh://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.edapt"
-		title=svn+ssh://dev.eclipse.org/svnroot/modeling/org.eclipse.emft.edapt"
-		>SVN Repository</a></b> - download the source code and contribute patches</li>
+	<li><b><a href="http://git.eclipse.org/c/edapt/org.eclipse.emf.edapt.git/"
+		title=http://git.eclipse.org/c/edapt/org.eclipse.emf.edapt.git/"
+		>GIT Repository</a></b> - clone us and contribute patches</li>
 	<li><b><a
-		href="mailto:herrmama@in.tum.de"
-		title="mailto:herrmama@in.tum.de"
-		rel="nofollow">Plain Email</a></b> - contact us directly</li>
+		href="news://news.eclipse.org/eclipse.tools.emf"
+		title="news://news.eclipse.org/eclipse.tools.emf"
+		rel="nofollow">Plain Email</a></b> - post on the Eclipse forum</li>
 </ul>
 
 </div>
