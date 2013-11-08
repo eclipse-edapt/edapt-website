@@ -28,7 +28,12 @@
 	<li><b><a
 		href="news://news.eclipse.org/eclipse.tools.emf"
 		title="news://news.eclipse.org/eclipse.tools.emf"
-		rel="nofollow">Plain Email</a></b> - post on the Eclipse forum</li>
+		rel="nofollow">Forum (news URL)</a></b> - post on the Eclipse forum</li>
+			<li><b><a
+		href="http://www.eclipse.org/forums/"
+		title="http://www.eclipse.org/forums/"
+		rel="nofollow">Forum (website URL)</a></b> - post on the Eclipse forum</li>
+		
 </ul>
 
 </div>
