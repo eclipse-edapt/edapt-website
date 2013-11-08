@@ -21,17 +21,23 @@
 	<li><b><a href="documentation.php"
 		title="Documentation">Documentation</a></b> - read to learn about Edapt</li>
 	<li><b><a
-		href="http://www.eclipse.org/forums/index.php/f/19/"
-		title="http://www.eclipse.org/forums/index.php/f/19/"
-		rel="nofollow">EMFT Newsgroup</a></b> - get an answer to your questions</li>
+		href="news://news.eclipse.org/eclipse.tools.emf"
+		title="news://news.eclipse.org/eclipse.tools.emf"
+		rel="nofollow">Forum (news URL)</a></b> - post on the Eclipse forum</li>
+			<li><b><a
+		href="http://www.eclipse.org/forums/"
+		title="http://www.eclipse.org/forums/"
+		rel="nofollow">Forum (website URL)</a></b> - post on the Eclipse forum</li>
 	<li><b><a
-		href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=EMFT&component=Edapt"
-		title="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=EMFT&component=Edapt"
+		href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
+		title="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
 		rel="nofollow">File a bug</a></b> - file bugs and feature requests</li>
+<!--	
 	<li><b><a
 		href="mailto:herrmama@in.tum.de"
 		title="mailto:herrmama@in.tum.de"
 		rel="nofollow">Professional Support</a></b> - contact us if you need professional support</li>
+-->
 </ul>
 
 </div>
