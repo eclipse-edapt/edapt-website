@@ -17,10 +17,21 @@
 <h2>$pageTitle</h2>
 <p>All downloads are provided under the terms and conditions of the <a href="/legal/epl/notice.php">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 
-<ul>
-<li><a href="http://download.eclipse.org/edapt/p2/repository">P2 Site</a> - Experimental: install Edapt (Build with Git) in your Eclipse workbench</li>
-<li><a href="http://download.eclipse.org/edapt/update-site/">Update Site</a> - install Edapt in your Eclipse workbench (NOT Maintained)</li>
-</ul>
+Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclipse IDE software installation section. 
+
+
+<table>
+<tr>
+	<tc>0.0.3 (Latest)</tc>
+	<tc>Latest:  - Experimental: install Edapt (Build with Git) in your Eclipse workbench</tc>
+	<tc><a href="http://download.eclipse.org/edapt/p2/repository">P2 Site</a></tc>
+</tr>
+<tr>
+	<tc>0.0.3 (SVN)</tc>
+	<tc> install Edapt in your Eclipse workbench (NOT Maintained)</tc>
+	<tc><a href="http://download.eclipse.org/edapt/update-site/">Update Site</a></tc>
+</tr>
+</table>
 
 
 </div>
