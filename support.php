@@ -21,12 +21,12 @@
 	<li><b><a href="documentation.php"
 		title="Documentation">Documentation</a></b> - read to learn about Edapt</li>
 	<li><b><a
-		href="news://news.eclipse.org/eclipse.tools.emf"
-		title="news://news.eclipse.org/eclipse.tools.emf"
+		href="news://news.eclipse.org/eclipse.technology.emft"
+		title="news://news.eclipse.org/eclipse.technology.emft"
 		rel="nofollow">Forum (news URL)</a></b> - post on the Eclipse forum</li>
 			<li><b><a
-		href="http://www.eclipse.org/forums/"
-		title="http://www.eclipse.org/forums/"
+		href="http://www.eclipse.org/forums/index.php/f/19/"
+		title="http://www.eclipse.org/forums/index.php/f/19/"
 		rel="nofollow">Forum (website URL)</a></b> - post on the Eclipse forum</li>
 	<li><b><a
 		href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
