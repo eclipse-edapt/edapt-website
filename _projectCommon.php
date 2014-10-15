@@ -24,12 +24,12 @@
 
 	# top navigation bar
 	# To override and replace the navigation with your own, uncomment the line below.
-	$Menu->setMenuItemList(array());
-	$Menu->addMenuItem("Home", "/edapt", "_self");
-	$Menu->addMenuItem("Download", "/edapt/download.php", "_self");
-	$Menu->addMenuItem("Documentation", "/edapt/documentation.php", "_self");
-	$Menu->addMenuItem("Support", "/edapt/support.php", "_self");
-	$Menu->addMenuItem("Getting Involved", "/edapt/communication.php", "_self");
+	# $Menu->setMenuItemList(array());
+	# $Menu->addMenuItem("Home", "/edapt", "_self");
+	# $Menu->addMenuItem("Download", "/edapt/download.php", "_self");
+	# $Menu->addMenuItem("Documentation", "/edapt/documentation.php", "_self");
+	# $Menu->addMenuItem("Support", "/edapt/support.php", "_self");
+	# $Menu->addMenuItem("Getting Involved", "/edapt/communication.php", "_self");
 	# $Menu->addMenuItem("Getting started", "/edapt/gettingstarted.php", "_self");
 	# $Menu->addMenuItem("Support", "/edapt/support.php", "_self");
 	# $Menu->addMenuItem("Developers", "/edapt/developers", "_self");
