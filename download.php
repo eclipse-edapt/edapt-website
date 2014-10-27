@@ -20,7 +20,7 @@
 Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclipse IDE software installation section. 
 
 
-<table>
+<table cellspacing="10">
 <tr>
 	<td>Latest Milestone</td>
 	<td>1.0.0 RC</td>
