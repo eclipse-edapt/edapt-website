@@ -22,9 +22,9 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 
 <table cellspacing="10">
 <tr>
-	<td>Latest Milestone</td>
-	<td>1.0.0 RC</td>
-	<td><a href="http://download.eclipse.org/edapt/releases/10x">P2 Composite Site</a></td>
+	<td width="150">Latest Milestone</td>
+	<td width="100">1.0.0 RC</td>
+	<td width="200"><a href="http://download.eclipse.org/edapt/releases/10x">P2 Composite Site</a></td>
 </tr>
 <tr>
 	<td>Releases</td>
