@@ -22,19 +22,19 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 
 <table>
 <tr>
-	<td>Nightly</td>
-	<td>Bleeding: this is the nightly build</td>
-	<td><a href="http://download.eclipse.org/edapt/p2/nightly">P2 Site (Nightly)</a></td>
+	<td>Latest Milestone</td>
+	<td>1.0.0 RC</td>
+	<td><a href="http://download.eclipse.org/edapt/releases/10x">P2 Composite Site</a></td>
 </tr>
 <tr>
-	<td>0.0.3 (Latest)</td>
-	<td>Latest:  install Edapt (Build with Tycho and Git) in your Eclipse workbench</td>
+	<td>Releases</td>
+	<td>0.3.0</td>
 	<td><a href="http://download.eclipse.org/edapt/p2/repository">P2 Site</a></td>
 </tr>
 <tr>
-	<td>0.0.3 (SVN)</td>
-	<td>Old: install Edapt in your Eclipse workbench (NOT Maintained)</td>
-	<td><a href="http://download.eclipse.org/edapt/update-site/">Update Site</a></td>
+	<td>Nightly</td>
+	<td>0.3.0</td>
+	<td><a href="http://download.eclipse.org/edapt/p2/nightly">P2 Site (Nightly)</a></td>
 </tr>
 </table>
 
