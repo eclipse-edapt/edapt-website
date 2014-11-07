@@ -22,26 +22,31 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 
 <table cellspacing="10">
 <tr>
-	<td width="150">Latest Milestone</td>
-	<td width="100">1.0.0 RC</td>
+	<td width="150">Releases</td>
+	<td width="100">1.0.x</td>
 	<td width="200"><a href="http://download.eclipse.org/edapt/releases/10x">P2 Composite Site</a></td>
 </tr>
 <tr>
-	<td>Releases</td>
-	<td>0.3.0</td>
-	<td><a href="http://download.eclipse.org/edapt/p2/repository">P2 Site</a></td>
+	<td></td>
+	<td>1.0.0</td>
+	<td><a href="http://download.eclipse.org/edapt/releases/10x/100">P2 Site</a></td>
+</tr>
+<tr>
+	<td>Milestones</td>
+	<td>1.0.0 RC</td>
+	<td><a href="http://download.eclipse.org/edapt/releases/10x/100RC">P2 Site</a></td>
 </tr>
 <tr>
 	<td>Nightly</td>
-	<td>0.3.0</td>
-	<td><a href="http://download.eclipse.org/edapt/p2/nightly">P2 Site (Nightly)</a></td>
+	<td>1.1.0</td>
+	<td><a href="http://download.eclipse.org/edapt/p2/nightly">P2 Site</a></td>
 </tr>
 </table>
 
 
 </div>
 
-<div id="rightcolumn">
+<!--div id="rightcolumn">
 	<div class="sideitem">
 		<h6>Incubation</h6>
 		<div align="center">
@@ -50,7 +55,7 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 			</a>
 		</div>
 	</div>
-</div>
+</div-->
 
 EOHTML;
 	# Generate the web page
