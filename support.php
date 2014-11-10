@@ -14,7 +14,7 @@
 
 	$html  = <<<EOHTML
 <div id="midcolumn">
-<h2><a href="http://eclipsesource.com/en/services/consulting-support/">Professional Support</a></h2>
+<h2>Support</h2>
 
 		<p>
 				Open-source software is free of licensing fees. Furthermore, it is
@@ -70,7 +70,7 @@
 </div>
 
 <div id="rightcolumn">
-	<img style="border: 1px solid #1d1d1d; border-radius: 0.4em;" src="images/helppoint.jpg"/>
+	<img style="border: 1px solid #1d1d1d; border-radius: 0.4em;" width="255" height="340" src="images/helppoint.jpg"/>
 	<div style="font-size: 0.8em">
 		Photo from <a href="http://www.flickr.com/photos/richardland/">richardland on Flickr</a>
 	</div>

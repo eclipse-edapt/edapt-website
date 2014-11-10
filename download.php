@@ -43,12 +43,13 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 </tr>
 </table>
 </p>
+</div>
 
-<img style="border: 1px solid #1d1d1d; border-radius: 0.4em;" src="images/shoppingcart.jpg"/>
+<div id="rightcolumn">
+<img style="border: 1px solid #1d1d1d; border-radius: 0.4em;" width="255" height="170" src="images/shoppingcart.jpg"/>
 <div style="font-size: 0.8em">
 	Photo from <a href="http://www.flickr.com/photos/polycart/">Polycart on Flickr</a>
 </div>
-
 </div>
 
 EOHTML;
