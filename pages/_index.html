@@ -9,36 +9,48 @@
 </div-->
 
 <div id="midcolumn">
-<h3>Edapt - Framework for Ecore model adaptation and instance migration</h3>
+<h3>Edapt - Migrating EMF Models</h3>
 <div id="introText">
 
 <p>
-<a href="http://cope.in.tum.de" target="_blank">COPE</a> has now been successfully transferred to Eclipse EMF Edapt.
-Edapt no longer requires Groovy, but specifies migrations directly in Java.
-Try out Edapt by using the update site or inspecting the source code.
+Edapt is an EMF framework to migrate instances of Ecore models after changing an Ecore. 
+This is typically used to migrate existing EMF-based data with a new release of a software with an updated Ecore model.
 </p>
 <p>
-Here is the original <a href="http://www.eclipse.org/proposals/edapt/">proposal</a>.
+Edapt provides the following features:
+	<ul>
+		<li>Edapt IDE Tooling:
+			<ul>
+				<li>Ecore Editor enhancement to create and maintain the history of an Ecore</li>
+				<li>Operation-browser to execute refactorings on an Ecore</li>
+				<li>Release Tooling to prepare a migration plugin from the Ecore history</li>
+				<li>Custom Migration Support</li>
+			</ul>
+		</li>
+		
+		<li>Edapt Runtime:
+			<ul>
+				<li>API to detect version of given model instances</li>
+				<li>API to migrate model instances with registered migration plugins</li>
+			</ul>
+		</li>
+	</ul>
 </p>
 
 </div>
 
 <div id="screencast">
-
-
-<object height="344" width="425"><param name="movie" value="http://www.youtube.com/v/i5o0eW0nZSc?hl=de&fs=1">
-</param>
-<param name="allowFullScreen" value="true">
-</param>
-<param name="allowscriptaccess" value="always">
-</param>
-<embed src="http://www.youtube.com/v/dwQMT9N4kFk?hl=de&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
-</div>
-
+<p><img src="edapt.png" alt="Ecore Editor Integration"></p>
 </div>
  
 <div id="rightcolumn">
 	<div class="sideitem">
+		<a class="twitter-timeline" href="https://twitter.com/hashtag/edapt" data-widget-id="531835569395863553">#edapt Tweets</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+	
+	
+	<!--<div class="sideitem">
 		<h6>2014/11/07</h6>
 		<p>It's graduation day! Get release 1.0.0 from the download page.</p>
 		<h6>2014/10/27</h6>
@@ -52,5 +64,5 @@ Here is the original <a href="http://www.eclipse.org/proposals/edapt/">proposal<
 	<div class="sideitem">
 		<h6>Acknowledgements</h6>
 		<p>Thanks to <a href="http://www.sintef.no/Home/MARINTEK/">MARINTEK</a> for supporting the transition of COPE to Edapt.</p>
-	</div>
+	</div>-->
 </div>

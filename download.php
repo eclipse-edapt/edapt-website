@@ -19,7 +19,7 @@
 
 Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclipse IDE software installation section. 
 
-
+<p>
 <table cellspacing="10">
 <tr>
 	<td width="150">Releases</td>
@@ -42,7 +42,12 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 	<td><a href="http://download.eclipse.org/edapt/p2/nightly">P2 Site</a></td>
 </tr>
 </table>
+</p>
 
+<img style="border: 1px solid #1d1d1d; border-radius: 0.4em;" src="public/images/shoppingcart.jpg"/>
+<div style="font-size: 0.8em">
+	Photo from <a href="http://www.flickr.com/photos/polycart/">Polycart on Flickr</a>
+</div>
 
 </div>
 

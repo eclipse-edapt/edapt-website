@@ -23,14 +23,13 @@ The following first items are already available:</p>
 		title="libraryexample.php"
 		rel="nofollow">Tutorial</a></b> - overview of Edapt using the library example</li>
 	<li><b><a
-		href="publications.php"
-		title="publications.php"
-		rel="nofollow">Publications</a></b> - learn about scientific results</li>
-	<li><b><a
 		href="operations.php"
 		title="operations.php"
 		rel="nofollow">Operations</a></b> - get an overview of the reusable operations and their semantics</li>
 </ul>
+
+<img style="border: 1px solid #1d1d1d; border-radius: 0.4em;" src="public/images/book.jpg"/>
+<div style="font-size: 0.8em"> Photo from <a href="http://www.flickr.com/photos/horiavarlan/">horiavarlan Flickr</a></div>
 
 
 </div>
