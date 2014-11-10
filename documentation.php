@@ -28,7 +28,7 @@ The following first items are already available:</p>
 		rel="nofollow">Operations</a></b> - get an overview of the reusable operations and their semantics</li>
 </ul>
 
-<img style="border: 1px solid #1d1d1d; border-radius: 0.4em;" src="public/images/book.jpg"/>
+<img style="border: 1px solid #1d1d1d; border-radius: 0.4em;" src="images/book.jpg"/>
 <div style="font-size: 0.8em"> Photo from <a href="http://www.flickr.com/photos/horiavarlan/">horiavarlan Flickr</a></div>
 
 

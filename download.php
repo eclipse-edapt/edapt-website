@@ -44,23 +44,12 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 </table>
 </p>
 
-<img style="border: 1px solid #1d1d1d; border-radius: 0.4em;" src="public/images/shoppingcart.jpg"/>
+<img style="border: 1px solid #1d1d1d; border-radius: 0.4em;" src="images/shoppingcart.jpg"/>
 <div style="font-size: 0.8em">
 	Photo from <a href="http://www.flickr.com/photos/polycart/">Polycart on Flickr</a>
 </div>
 
 </div>
-
-<!--div id="rightcolumn">
-	<div class="sideitem">
-		<h6>Incubation</h6>
-		<div align="center">
-			<a href="/projects/what-is-incubation.php">
-				<img align="center" src="/images/egg-incubation.png" border="0" alt="Incubation" />
-			</a>
-		</div>
-	</div>
-</div-->
 
 EOHTML;
 	# Generate the web page
