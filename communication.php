@@ -24,7 +24,7 @@
 		rel="nofollow">File a bug</a></b> - file bugs and feature requests</li>
 	<li><b><a href="http://git.eclipse.org/c/edapt/org.eclipse.emf.edapt.git/"
 		title=http://git.eclipse.org/c/edapt/org.eclipse.emf.edapt.git/"
-		>GIT Repository</a></b> - clone us and contribute patches</li>
+		>GIT Repository</a></b> - clone our code and contribute patches</li>
 </ul>
 
 </div>
