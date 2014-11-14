@@ -21,6 +21,7 @@
 	$Nav->addCustomNav("Documentation", "/edapt/documentation.php", "_self", 3);
 	$Nav->addCustomNav("Support", "/edapt/support.php", "_self", 3);
 	$Nav->addCustomNav("Getting Involved", "/edapt/communication.php", "_self", 3);
+	$Nav->addCustomNav("About", "http://projects.eclipse.org/projects/modeling.edapt", "_self", 3);
 
 	# top navigation bar
 	# To override and replace the navigation with your own, uncomment the line below.
