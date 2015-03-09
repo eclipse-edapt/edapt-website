@@ -22,9 +22,9 @@
 		href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
 		title="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
 		rel="nofollow">File a bug</a></b> - file bugs and feature requests</li>
-	<li><b><a href="http://git.eclipse.org/c/edapt/org.eclipse.emf.edapt.git/"
-		title=http://git.eclipse.org/c/edapt/org.eclipse.emf.edapt.git/"
-		>GIT Repository</a></b> - clone our code and contribute patches</li>
+	<li><b><a href="https://wiki.eclipse.org/Gerrit"
+		title="https://wiki.eclipse.org/Gerrit">Gerrit</a></b> 
+		- use Gerrit Code Review to create and submit your patches</li>
 </ul>
 
 <h3>How to setup your IDE</h3>
