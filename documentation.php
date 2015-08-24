@@ -27,6 +27,9 @@ The following first items are already available:</p>
 		title="operations.php"
 		rel="nofollow">Operations</a></b> - get an overview of the reusable operations and their semantics</li>
 </ul>
+
+<h3>Presentations</h3>
+<a href="http://www.infoq.com/presentations/edapt" title="Model Migration with Edapt" rel="nofollow">Model Migration with Edapt</a> by Maximilian Koegel @ EclipseCon NA 2015
 </div>
 
 <div id="rightcolumn">
