@@ -52,6 +52,35 @@
 	</li>
 </ul>
 
+<h3>Commit Message Guidelines</h3>
+        <p>
+        	We have the following commit message template:
+			<pre>
+(Bug &lt;Bug ID&gt; - &lt;Bug Title&gt;) | (TCI - &lt;Fix&gt;)
+
+&lt;Commit Description&gt;?
+Change-Id: &lt;Generated Gerrit Change ID&gt;
+Signed-off-by: &lt;sign off name and email&gt;
+			</pre>
+			<strong>Instructions (Please continue READING):</strong>
+			<ul>
+			<li><em>TCI commits</em>: For trivial code changes please use a TCI commit message. See list below for examples. If in doubt please discuss with reviewer.</li>
+			<li><em>Normal Commits</em>: For all other commits use a commit message starting with 'Bug'. Bug reports with Proper Titles: Before using a Bug title for a commit, committer must update the Bug title to a reasonable and descriptive title for the task they have worked on</li>
+			<li><em>Commit Description</em>: Additionally to the title, the commit message can describe briefly (2-3 sentences) how this commit fixes the bug from a technical perspective</li>
+			<li><em>Multiple Commits for same bug</em>: Of course you may use the same bug and therefore bug title for multiple commits and their message, in this case please provide a unique description</li>
+			<li><em>Reviewers responsibility</em>: The reviewer is responsible also for checking that the bug title is descriptive and reflects the committed change and that the description if any reflects the technical change</li>
+			</ul>
+			<strong>TCI message examples: </strong>
+			<ul>
+			<li>JavaDoc</li>
+			<li>NPE</li>
+			<li>Version Update of manifest and pom</li>
+			<li>anonymous to inner class Conversion</li>
+			<li>Renaming local vars, e.g. because of typos</li>
+			<li>Externalizing strings</li>
+			</ul>
+        </p>
+
 </div>
 EOHTML;
 	# Generate the web page
