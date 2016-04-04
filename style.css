@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 #novaContent {
-	background: url("images/backgroundMain.png") no-repeat white;
+	background: white;
 }
 
 #midcolumn {
@@ -28,7 +28,7 @@ a strong {
 
 
 #novaContent {
-	background: url("images/backgroundMain.png") no-repeat white;
+	background: white;
 	padding-top: 170px;
 }
 
