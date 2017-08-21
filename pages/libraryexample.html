@@ -244,11 +244,23 @@ By changing the namespace URI for new releases, Edapt can automatically detect t
 Of course, there are also cases where one does not want to adapt the namespace URI. 
 Then, the user must, however, care for the recognition of the metamodel version themselves.
 </p><p>
-To be able to migrate models, the history can be registered using the extension point <i>org.eclipse.emf.edapt.migrators</i>.
-This extension point is defined in the plugin <i>org.eclipse.emf.edapt.history</i> which we have to add to the dependencies of the plugin.
-Edapt interprets the history to reconstruct the metamodel versions for loading models and for performing the appropriate migration. 
-By delivering the history together with the Edapt runtime, an application can automatically migrate models.
-</p><p>
+To be able to migrate models, the history can be registered using the extension point <i>org.eclipse.emf.edapt.migrators</i> 
+(see <a href="#figure3">Figure 3</a>). This extension point is defined in the plugin <i>org.eclipse.emf.edapt.history</i> which 
+we have to add to the dependencies of the plugin. Edapt interprets the history to reconstruct the metamodel versions for loading 
+models and for performing the appropriate migration. By delivering the history together with the Edapt runtime, an application can 
+automatically migrate models.
+</p>
+
+<p>
+<hr/>
+<a name="figure3">Figure 3</a> - Registered History
+<a href="images/extensionPoint.png" target="_blank">
+<img src="images/extensionPoint.png" alt="Registered History" width="100%">
+</a>
+<hr/>
+</p>
+
+<p>
 In addition to that, we also have to regenerate the code for the library editor. 
 In order to do so, we first have to reload the genmodel my means of RELOAD ... in the context menu, after which it is opened.
 In the open genmodel, we then have to select GENERATE ALL in the context menu. 
