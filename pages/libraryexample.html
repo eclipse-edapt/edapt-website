@@ -234,6 +234,14 @@ public class WriterCustomMigration extends CustomMigration {
 <hr/>
 </p>
 
+<p>
+A common pitfall when using custom migrations is the deletion of features. When a custom migration is attached to a change or
+operation which results in the deletion of an EStructuralFeature, the values for deleted feature are only available in the 
+#migrateBefore method of the custom migration. In #migrateAfter the metamodel change has already been performed, so trying to
+read old values from the model won't work. In this case implementors need to store the state in #migrateBefore (e.g. in a Map)
+and then retrieve them again in #migrateAfter. 
+</p>
+
 <h2 id="migrator">Migrator</h2>
 
 <p>
