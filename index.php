@@ -42,6 +42,8 @@
 
 	# To define additional CSS or other pre-body headers
 	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>');
+	$App->AddExtraHtmlHeader('<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>');
+	
 
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
