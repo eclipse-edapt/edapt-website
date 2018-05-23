@@ -35,7 +35,46 @@ Edapt provides the following features:
  
 <div id="rightcolumn">
 	<p><img src="images/edaptLogo.png" width="255" height="109" alt="Edapt Logo"></p>
-	<p><a class="twitter-timeline" width="255" height="570" href="https://twitter.com/hashtag/edapt" data-widget-id="531835569395863553">#edapt Tweets</a>
+	<p><a class="twitter-timeline" width="255" height="570" href="https://twitter.com/hashtag/edapt">#edapt Tweets</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	</p>
 </div>
+
+<script>
+// via https://stackoverflow.com/questions/5968196/check-cookie-if-cookie-exists
+function getCookie(name) {
+ var dc = document.cookie;
+ var prefix = name + "=";
+ var begin = dc.indexOf("; " + prefix);
+ if (begin === -1) {
+   begin = dc.indexOf(prefix);
+   if (begin !== 0) return null;
+ } else {
+   begin += 2;
+   var end = document.cookie.indexOf(";", begin);
+   if (end === -1) {
+     end = dc.length;
+   }
+ }
+
+ return decodeURI(dc.substring(begin + prefix.length, end));
+}
+
+function createTimeline() {
+ var twitterContainer = document.getElementById("twitter-timeline");
+ twttr.widgets.createTimeline(
+   "531835569395863553",
+   twitterContainer,
+   {
+     height: 400
+   }
+ );
+ twitterContainer.innerText = '';
+}
+
+(function() {
+if (getCookie("eclipse_cookieconsent_status") === "allow") {
+       createTimeline();
+   }
+})()
+</script>
