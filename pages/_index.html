@@ -74,7 +74,7 @@ function createTimeline() {
 
 (function() {
 if (getCookie("eclipse_cookieconsent_status") === "allow") {
-       createTimeline();
+	$.getScript("https://platform.twitter.com/widgets.js", function() { createTimeline(); });
    }
 })()
 </script>
