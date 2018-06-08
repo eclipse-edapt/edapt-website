@@ -34,6 +34,37 @@ In order to overcome this issue, Edapt offers the org.eclipse.emf.edapt.factorie
 The easiest way to create such a custom factory for usage with Edapt is to subclass EFactoryImpl and to override createFromString(EDataType, String) and convertToString(EDataType, Object) respectively. 
 Please note that eDataType.getClassifierID() does not necessarily give the same ids in a dynamic instance. 
 The ids are generated and might vary. So it is not possible to simply copy the existing EFactory-code, but you have to adjust the switch() statements accordingly, e.g by identifying datatypes via the name attribute.
+</p><p>
+<hr/>
+<a>Listing 2</a> - Example Custom Factory
+<pre class="codebox">
+public class LibraryFactoryImpl extends EFactoryImpl {
+
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getName()) {
+		case "MyCustomDataType":
+			return createMyCustomDataTypeFromString(eDataType, initialValue);
+		default:
+			return super.createFromString(eDataType, initialValue);
+		}
+	}
+
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getName()) {
+		case "MyCustomDataType":
+			return convertMyCustomDataTypeToString(eDataType, instanceValue);
+		default:
+			return super.convertToString(eDataType, instanceValue);
+		}
+	}
+
+	private String convertMyCustomDataTypeToString(EDataType eDataType, Object instanceValue) {/* TODO */return null;}
+	private Object createMyCustomDataTypeFromString(EDataType eDataType, String initialValue) {/* TODO */return null;}
+}
+</pre>
+<hr/>
 </p>
 </div>
 </div>
