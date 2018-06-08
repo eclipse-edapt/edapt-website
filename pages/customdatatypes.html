@@ -1,0 +1,39 @@
+<div id="maincontent">
+<div id="midcolumn">
+<h1>Handling Custom EDataTypes</h1>
+<p>
+Edapt is a tool to migrate previously saved XMI-Files created using EMF (Eclipse Modeling Framework). 
+A migration is required if the metamodel (Ecore) of the persisted entities (EObjects) in the file has changed due to model evolution. 
+Edapt keeps a history of changes of an Ecore. This history is used to migrate models in XMI files. 
+Edapt uses Dynamic EMF to load models from those files and migrates them to conform to the current metamodel version.
+</p><p>
+EMF offers EDataTypes for the most common Java types (String, Integer, ...) which can be used to type EAttributes. 
+Moreover it is possible to specify custom EDataTypes which use a custom instance-class. 
+When such a data type is specified and used in an EClass, EMF generates additional (de-)serialization code in the EFactory for the EPackage. 
+To load and save XMI files with a model using those data type, custom code is required for (de-)serialization.
+</p><p>
+The alerted reader might have noticed that the usage of Dynamic EMF and custom datatypes don’t get along very well. 
+Dynamic EMF always falls back to existing, generic EMF-classes, since no actual compiled classes are available for the model. 
+So during (de)serialization Edapt uses EFactoryImpl which lacks all generated (and maybe even overridden and marked with @generated NOT) code. 
+</p><p>
+In order to overcome this issue, Edapt offers the org.eclipse.emf.edapt.factories extension point, which allows to register a custom EFactory implementation for a nsURI, which is then used to (de-)serialize files which conform to the nsURI.
+</p><p>
+<hr/>
+<a>Listing 1</a> - Extension Point Registration
+<pre class="codebox">
+   <extension
+         point="org.eclipse.emf.edapt.factories">
+      <factory
+            class="library.edapt.LibraryFactoryImpl"
+            nsURI="http://library/v3">
+      </factory>
+   </extension>
+</pre>
+<hr/>
+</p><p>
+The easiest way to create such a custom factory for usage with Edapt is to subclass EFactoryImpl and to override createFromString(EDataType, String) and convertToString(EDataType, Object) respectively. 
+Please note that eDataType.getClassifierID() does not necessarily give the same ids in a dynamic instance. 
+The ids are generated and might vary. So it is not possible to simply copy the existing EFactory-code, but you have to adjust the switch() statements accordingly, e.g by identifying datatypes via the name attribute.
+</p>
+</div>
+</div>

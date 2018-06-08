@@ -22,10 +22,12 @@ The following first items are already available:</p>
 	<li><b><a href="libraryexample.php"
 		title="libraryexample.php"
 		rel="nofollow">Tutorial</a></b> - overview of Edapt using the library example</li>
-	<li><b><a
-		href="operations.php"
+	<li><b><a href="operations.php"
 		title="operations.php"
 		rel="nofollow">Operations</a></b> - get an overview of the reusable operations and their semantics</li>
+	<li><b><a href="customdatatypes.php"
+		title="customdatatypes.php"
+		rel="nofollow">Custom EDataTypes</a></b> - learn how to deal with custom EDataTypes when using Edapt</li>
 </ul>
 
 <h3>Presentations</h3>
