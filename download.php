@@ -28,6 +28,11 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 </tr>
 <tr>
 	<td></td>
+	<td>1.3.1</td>
+	<td><a href="http://download.eclipse.org/edapt/releases/13x/131">P2 Site</a> / <a href="http://download.eclipse.org/edapt/releases/13x/131/131.zip">Zip</a> / <a href="http://download.eclipse.org/edapt/releases/13x/131/apidocs">JavaDocs</a></td>
+</tr>
+<tr>
+	<td></td>
 	<td>1.3.0</td>
 	<td><a href="http://download.eclipse.org/edapt/releases/13x/130">P2 Site</a> / <a href="http://download.eclipse.org/edapt/releases/13x/130/130.zip">Zip</a> / <a href="http://download.eclipse.org/edapt/releases/13x/130/apidocs">JavaDocs</a></td>
 </tr>
