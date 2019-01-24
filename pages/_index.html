@@ -60,21 +60,9 @@ function getCookie(name) {
  return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
-function createTimeline() {
- var twitterContainer = document.getElementById("twitter-timeline");
- twttr.widgets.createTimeline(
-   "531835569395863553",
-   twitterContainer,
-   {
-     height: 400
-   }
- );
- twitterContainer.innerText = '';
-}
-
 (function() {
 if (getCookie("eclipse_cookieconsent_status") === "allow") {
-	$.getScript("https://platform.twitter.com/widgets.js", function() { createTimeline(); });
+	$.getScript("https://platform.twitter.com/widgets.js");
    }
 })()
 </script>
