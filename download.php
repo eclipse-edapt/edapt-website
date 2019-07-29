@@ -23,6 +23,17 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 <table cellspacing="10">
 <tr>
 	<td width="150">Releases</td>
+	<td width="100"><b>1.4.x</b></td>
+	<td width="200"><a href="http://download.eclipse.org/edapt/releases/14x">P2 Composite Site</a></td>
+</tr>
+<tr>
+	<td></td>
+	<td>1.4.0</td>
+	<td><a href="http://download.eclipse.org/edapt/releases/14x/140">P2 Site</a> / <a href="http://download.eclipse.org/edapt/releases/14x/140/140.zip">Zip</a> / <a href="http://download.eclipse.org/edapt/releases/14x/140/apidocs">JavaDocs</a></td>
+</tr>
+
+<tr>
+	<td width="150"></td>
 	<td width="100"><b>1.3.x</b></td>
 	<td width="200"><a href="http://download.eclipse.org/edapt/releases/13x">P2 Composite Site</a></td>
 </tr>
@@ -62,21 +73,11 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 	<td width="200"><a href="http://download.eclipse.org/edapt/releases/11x">P2 Composite Site</a></td>
 </tr>
 <tr>
-	<td></td>
-	<td>1.1.1</td>
-	<td><a href="http://download.eclipse.org/edapt/releases/11x/111">P2 Site</a> / <a href="http://download.eclipse.org/edapt/releases/11x/111/111.zip">Zip</a> / <a href="http://download.eclipse.org/edapt/releases/11x/111/apidocs">JavaDocs</a></td>
-</tr>
-<tr>
-	<td></td>
-	<td>1.1.0</td>
-	<td><a href="http://download.eclipse.org/edapt/releases/11x/110">P2 Site</a> / <a href="http://download.eclipse.org/edapt/releases/11x/110/110.zip">Zip</a></td>
-</tr>
-<tr>
 	<td width="150"></td>
 	<td width="100"><b>1.0.x</b></td>
 	<td width="200"><a href="http://download.eclipse.org/edapt/releases/10x">P2 Composite Site</a></td>
 </tr>
-<tr>
+<!--tr>
 	<td>Milestones</td>
 	<td><b>1.4.x</b></td>
 	<td><a href="http://download.eclipse.org/edapt/releases/14x">P2 Composite Site</a></td>
@@ -85,10 +86,10 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 	<td></td>
 	<td>1.4.0 MS1</td>
 	<td><a href="http://download.eclipse.org/edapt/releases/14x/140MS1">P2 Site</a></td>
-</tr>
+</tr-->
 <tr>
 	<td>Nightly</td>
-	<td>1.4.0</td>
+	<td>1.5.0</td>
 	<td><a href="http://download.eclipse.org/edapt/p2/nightly">P2 Site</a></td>
 </tr>
 </table>
