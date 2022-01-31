@@ -82,16 +82,16 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 	<td width="100"><b>1.0.x</b></td>
 	<td width="200"><a href="http://download.eclipse.org/edapt/releases/10x">P2 Composite Site</a></td>
 </tr>
-<!--tr>
+<tr>
 	<td>Milestones</td>
-	<td><b>1.4.x</b></td>
-	<td><a href="http://download.eclipse.org/edapt/releases/14x">P2 Composite Site</a></td>
+	<td><b>1.5.x</b></td>
+	<td><a href="http://download.eclipse.org/edapt/releases/15x">P2 Composite Site</a></td>
 </tr>
 <tr>
 	<td></td>
-	<td>1.4.0 MS1</td>
-	<td><a href="http://download.eclipse.org/edapt/releases/14x/140MS1">P2 Site</a></td>
-</tr-->
+	<td>1.5.0 MS1</td>
+	<td><a href="http://download.eclipse.org/edapt/releases/15x/150MS1">P2 Site</a></td>
+</tr>
 <tr>
 	<td>Nightly</td>
 	<td>1.5.0</td>
