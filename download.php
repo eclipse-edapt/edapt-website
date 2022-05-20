@@ -23,6 +23,17 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 <table cellspacing="10">
 <tr>
 	<td width="150">Releases</td>
+	<td width="100"><b>1.5.x</b></td>
+	<td width="200"><a href="http://download.eclipse.org/edapt/releases/15x">P2 Composite Site</a></td>
+</tr>
+<tr>
+	<td></td>
+	<td>1.5.0</td>
+	<td><a href="http://download.eclipse.org/edapt/releases/15x/150">P2 Site</a> / <a href="http://download.eclipse.org/edapt/releases/15x/150/150.zip">Zip</a> / <a href="http://download.eclipse.org/edapt/releases/15x/150/apidocs">JavaDocs</a></td>
+</tr>
+
+<tr>
+	<td width="150">Releases</td>
 	<td width="100"><b>1.4.x</b></td>
 	<td width="200"><a href="http://download.eclipse.org/edapt/releases/14x">P2 Composite Site</a></td>
 </tr>
@@ -82,7 +93,7 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 	<td width="100"><b>1.0.x</b></td>
 	<td width="200"><a href="http://download.eclipse.org/edapt/releases/10x">P2 Composite Site</a></td>
 </tr>
-<tr>
+<!--<tr>
 	<td>Release Candidates</td>
 	<td><b>1.5.x</b></td>
 	<td><a href="http://download.eclipse.org/edapt/releases/15x">P2 Composite Site</a></td>
@@ -91,10 +102,10 @@ Edapt is provided as a P2 repository URL. This URL can be pasted into the Eclips
 	<td></td>
 	<td>1.5.0 RC1</td>
 	<td><a href="http://download.eclipse.org/edapt/releases/15x/150RC1">P2 Site</a></td>
-</tr>
+</tr>-->
 <tr>
 	<td>Nightly</td>
-	<td>1.5.0</td>
+	<td>1.6.0</td>
 	<td><a href="http://download.eclipse.org/edapt/p2/nightly">P2 Site</a></td>
 </tr>
 </table>
