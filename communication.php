@@ -19,12 +19,12 @@
 
 <ul>
 	<li><b><a
-		href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
-		title="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
+		href="https://github.com/eclipse-edapt/edapt/issues/new"
+		title="https://github.com/eclipse-edapt/edapt/issues/new"
 		rel="nofollow">File a bug</a></b> - file bugs and feature requests</li>
-	<li><b><a href="https://wiki.eclipse.org/Gerrit"
-		title="https://wiki.eclipse.org/Gerrit">Gerrit</a></b> 
-		- use Gerrit Code Review to create and submit your patches</li>
+	<li><b><a href="https://github.com/eclipse-edapt/edapt"
+		title="https://github.com/eclipse-edapt/edapt">Github</a></b> 
+		- use Github Pull Requests to create and submit your patches</li>
 </ul>
 
 <h3>How to setup your IDE</h3>
@@ -43,9 +43,9 @@
 	</li>
 	<li>
 		<p>Check out the Edapt source code from</p>
-		<p><code>git://git.eclipse.org/gitroot/edapt/org.eclipse.emf.edapt.git</code> (anonymous)</p>
+		<p><code>https://github.com/eclipse-edapt/edapt.git</code> (HTTPS)</p>
 		<p>or</p>
-		<p><code>ssh://committer_id@git.eclipse.org:29418/edapt/org.eclipse.emf.edapt</code> (Gerrit)</p>
+		<p><code>git@github.com:eclipse-edapt/edapt.git</code> (SSH)</p>
 	</li>
 	<li>
 		Import the source code and set the edapt_with_cdo.target target.
@@ -59,7 +59,6 @@
 (Bug &lt;Bug ID&gt; - &lt;Bug Title&gt;) | (TCI - &lt;Fix&gt;)
 
 &lt;Commit Description&gt;?
-Change-Id: &lt;Generated Gerrit Change ID&gt;
 Signed-off-by: &lt;sign off name and email&gt;
 			</pre>
 			<strong>Instructions (Please continue READING):</strong>
