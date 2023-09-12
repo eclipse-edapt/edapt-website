@@ -54,8 +54,8 @@
 		title="http://www.eclipse.org/forums/index.php/f/19/"
 		rel="nofollow">Forum</a></b> - post on the Eclipse forum</li>
 	<li><b><a
-		href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
-		title="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Edapt"
+		href="https://github.com/eclipse-edapt/edapt/issues/new"
+		title="https://github.com/eclipse-edapt/edapt/issues/new"
 		rel="nofollow">File a bug</a></b> - file bugs and feature requests</li>
 	<li><b><a href="documentation.php"
 		title="Documentation">Documentation</a></b> - read to learn about Edapt</li>
